@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asia Ccs on mxgcccc4&#39;s blog</title>
+    <link>http://replace-this-with-your-domain.com/tags/asia-ccs/</link>
+    <description>Recent content in Asia Ccs on mxgcccc4&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Oct 2018 13:50:46 +0200</lastBuildDate>
+    
+	<atom:link href="http://replace-this-with-your-domain.com/tags/asia-ccs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Note for Dazed Droids: A Longitudinal Study of Android Inter App Vulnerabilities</title>
+      <link>http://replace-this-with-your-domain.com/post/2018-10-09-dazed-droids-a-longitudinal-study-of-android-inter-app-vulnerabilities/</link>
+      <pubDate>Tue, 09 Oct 2018 13:50:46 +0200</pubDate>
+      
+      <guid>http://replace-this-with-your-domain.com/post/2018-10-09-dazed-droids-a-longitudinal-study-of-android-inter-app-vulnerabilities/</guid>
+      <description>&lt;hr/&gt;
+
+&lt;p&gt;作者：Ryan Johnson, Mohamed Elsabagh, Angelos Stavrou, Jeff Offutt&lt;/p&gt;
+
+&lt;p&gt;单位：Kryptowire, George Mason University&lt;/p&gt;
+
+&lt;p&gt;出处：ASIA CCS ’18&lt;/p&gt;
+
+&lt;p&gt;资料：&lt;a href=&#34;https://dl.acm.org/authorize?N659832&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Note for Don’t throw me away: Threats Caused by the Abandoned Internet Resources Used by Android Apps</title>
+      <link>http://replace-this-with-your-domain.com/post/2018-07-04-dont-throw-me-away-threats-caused-by-the-abandoned-internet-resources-used-by-android-apps/</link>
+      <pubDate>Wed, 04 Jul 2018 13:50:46 +0200</pubDate>
+      
+      <guid>http://replace-this-with-your-domain.com/post/2018-07-04-dont-throw-me-away-threats-caused-by-the-abandoned-internet-resources-used-by-android-apps/</guid>
+      <description>&lt;hr/&gt;
+
+&lt;p&gt;作者：Elkana Pariwono, Daiki Chiba, Mitsuaki Akiyama, Tatsuya Mori&lt;/p&gt;
+
+&lt;p&gt;单位：Waseda University, NTT Secure Platform Laboratories&lt;/p&gt;
+
+&lt;p&gt;出处：&lt;a href=&#34;http://asiaccs2018.org/?page_id=1141&#34;&gt;Asia CCS&amp;rsquo;18&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;资料：&lt;a href=&#34;https://dl.acm.org/authorize?N659882&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Note for Source Attribution of Cryptographic API Misuse in Android Applications</title>
+      <link>http://replace-this-with-your-domain.com/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/</link>
+      <pubDate>Tue, 09 Jan 2018 13:50:46 +0200</pubDate>
+      
+      <guid>http://replace-this-with-your-domain.com/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/</guid>
+      <description>&lt;p&gt;作者：Ildar Muslukhov, Yazan Boshmaf, Konstantin Beznosov&lt;/p&gt;
+
+&lt;p&gt;单位：The University of British Columbia, Qatar Computing Research Institute&lt;/p&gt;
+
+&lt;p&gt;出处：AsiaCCS‘18&lt;/p&gt;
+
+&lt;p&gt;资料：&lt;a href=&#34;http://lersse-dl.ece.ubc.ca/record/324/files/binsight-asiaccs-2018.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

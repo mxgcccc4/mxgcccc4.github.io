@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Usenix Security on mxgcccc4&#39;s blog</title>
+    <link>http://replace-this-with-your-domain.com/tags/usenix-security/</link>
+    <description>Recent content in Usenix Security on mxgcccc4&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Sep 2018 13:50:46 +0200</lastBuildDate>
+    
+	<atom:link href="http://replace-this-with-your-domain.com/tags/usenix-security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Note for Tackling runtime-based obfuscation in Android with TIRO</title>
+      <link>http://replace-this-with-your-domain.com/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</link>
+      <pubDate>Sat, 08 Sep 2018 13:50:46 +0200</pubDate>
+      
+      <guid>http://replace-this-with-your-domain.com/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</guid>
+      <description>&lt;hr/&gt;
+
+&lt;p&gt;作者： Michelle Y. Wong and David Lie&lt;/p&gt;
+
+&lt;p&gt;单位： University of Toronto&lt;/p&gt;
+
+&lt;p&gt;出处： USENIX Security 18&lt;/p&gt;
+
+&lt;p&gt;资料： &lt;a href=&#34;https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-wong.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://www.usenix.org/sites/default/files/conference/protected-files/security18_slides_wong.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Note for Detecting Android Root Exploits by Learning from Root Providers</title>
+      <link>http://replace-this-with-your-domain.com/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</link>
+      <pubDate>Wed, 25 Oct 2017 13:50:46 +0200</pubDate>
+      
+      <guid>http://replace-this-with-your-domain.com/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</guid>
+      <description>&lt;hr/&gt;
+
+&lt;p&gt;作者： Ioannis Gasparis, Zhiyun Qian, Chengyu Song, Srikanth V. Krishnamurthy&lt;/p&gt;
+
+&lt;p&gt;单位： University of California, Riverside&lt;/p&gt;
+
+&lt;p&gt;出处： USENIX Security 17&lt;/p&gt;
+
+&lt;p&gt;资料： &lt;a href=&#34;http://www.cs.ucr.edu/~zhiyunq/pub/usenix17_root_exploit_detection.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=GzbN-d8q2V4&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ccs on mxgcccc4&#39;s blog</title>
+    <link>http://replace-this-with-your-domain.com/tags/ccs/</link>
+    <description>Recent content in Ccs on mxgcccc4&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Dec 2018 13:50:46 +0200</lastBuildDate>
+    
+	<atom:link href="http://replace-this-with-your-domain.com/tags/ccs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Note for EviHunter: Identifying Digital Evidence in the Permanent Storage of Android Devices via Static Analysis</title>
+      <link>http://replace-this-with-your-domain.com/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</link>
+      <pubDate>Sun, 09 Dec 2018 13:50:46 +0200</pubDate>
+      
+      <guid>http://replace-this-with-your-domain.com/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</guid>
+      <description>&lt;hr/&gt;
+
+&lt;p&gt;作者：Chris Chao-Chun Cheng, Chen Shi, Neil Zhenqiang Gong, Yong Guan&lt;/p&gt;
+
+&lt;p&gt;单位：Iowa State University, NIST Center of Excellence in Forensic Science - CSAFE&lt;/p&gt;
+
+&lt;p&gt;出处：CCS&amp;rsquo;18&lt;/p&gt;
+
+&lt;p&gt;资料：&lt;a href=&#34;https://arxiv.org/pdf/1808.06137.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://drive.google.com/file/d/1BuVSfVueBKidzo8T1cYBQB9jjR7QJuXH/view?usp=sharing&#34;&gt;Slides&lt;/a&gt;, &lt;a href=&#34;https://github.com/paradox5566/EviHunter&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

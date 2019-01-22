@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/about/</loc>
+    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2019-01-07-open-doors-for-bob-and-mallory-open-port-usage-in-android-apps-and-security-implications/</loc>
+    <lastmod>2019-01-07T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</loc>
+    <lastmod>2018-12-09T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2018-10-09-dazed-droids-a-longitudinal-study-of-android-inter-app-vulnerabilities/</loc>
+    <lastmod>2018-10-09T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</loc>
+    <lastmod>2018-09-08T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2018-08-01-understanding-android-obfuscation-techniques-a-large-scale-investigation-in-the-wild/</loc>
+    <lastmod>2018-08-01T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2018-07-04-dont-throw-me-away-threats-caused-by-the-abandoned-internet-resources-used-by-android-apps/</loc>
+    <lastmod>2018-07-04T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2018-07-01-finding-clues-for-your-secrets-semantics-driven-learning-based-privacy-discovery-in-mobile-apps/</loc>
+    <lastmod>2018-07-01T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2018-06-08-supporting-transparent-snapshot-for-bare-metal-malware-analysis-on-mobile-devices/</loc>
+    <lastmod>2018-06-08T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/</loc>
+    <lastmod>2018-05-06T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2018-01-22-obfuscation-resilient-privacy-leak-detection-for-mobile-apps-through-differential-analysis/</loc>
+    <lastmod>2018-01-22T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/</loc>
+    <lastmod>2018-01-09T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2017-12-06-stack-overflow-considered-harmful-the-impact-of-copypaste-on-android-application-security/</loc>
+    <lastmod>2017-12-06T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</loc>
+    <lastmod>2017-10-25T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/acsac/</loc>
+    <lastmod>2018-06-08T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/android/</loc>
+    <lastmod>2019-01-07T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/asia-ccs/</loc>
+    <lastmod>2018-10-09T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/ccs/</loc>
+    <lastmod>2018-12-09T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/malware/</loc>
+    <lastmod>2018-08-01T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/misuse/</loc>
+    <lastmod>2018-01-09T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/ndss/</loc>
+    <lastmod>2018-07-01T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/paper-note/</loc>
+    <lastmod>2019-01-07T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/post/</loc>
+    <lastmod>2019-01-07T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/securecomm/</loc>
+    <lastmod>2018-08-01T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/sp/</loc>
+    <lastmod>2019-01-07T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/</loc>
+    <lastmod>2018-06-08T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/tags/usenix-security/</loc>
+    <lastmod>2018-09-08T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-domain.com/</loc>
+    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

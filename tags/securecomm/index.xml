@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Securecomm on mxgcccc4&#39;s blog</title>
+    <link>http://replace-this-with-your-domain.com/tags/securecomm/</link>
+    <description>Recent content in Securecomm on mxgcccc4&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Aug 2018 13:50:46 +0200</lastBuildDate>
+    
+	<atom:link href="http://replace-this-with-your-domain.com/tags/securecomm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Note for Understanding Android Obfuscation Techniques: A Large-Scale Investigation in the Wild</title>
+      <link>http://replace-this-with-your-domain.com/post/2018-08-01-understanding-android-obfuscation-techniques-a-large-scale-investigation-in-the-wild/</link>
+      <pubDate>Wed, 01 Aug 2018 13:50:46 +0200</pubDate>
+      
+      <guid>http://replace-this-with-your-domain.com/post/2018-08-01-understanding-android-obfuscation-techniques-a-large-scale-investigation-in-the-wild/</guid>
+      <description>&lt;hr/&gt;
+
+&lt;p&gt;作者：Shuaike Dong, Menghao Li, Wenrui Diao, Xiangyu Liu, Jian Liu, Zhou Li, Fenghao Xu, Kai Chen, XiaoFeng Wang, Kehuan Zhang&lt;/p&gt;
+
+&lt;p&gt;单位： The Chinese University of Hong Kong, Chinese Academy of Sciences, Jinan University, Alibaba Inc,
+Indiana University Bloomington&lt;/p&gt;
+
+&lt;p&gt;出处：SecureComm 2018&lt;/p&gt;
+
+&lt;p&gt;资料：&lt;a href=&#34;https://arxiv.org/pdf/1801.01633.pdf&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

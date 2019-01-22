@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Note for InstaGuard: Instantly Deployable Hot-patches for Vulnerable System Programs on Android&middot; mxgcccc4&#39;s blog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="MXGC">
+	<meta name="description" content="A security research blog of MXGC">
+	
+	<meta name="generator" content="Hugo 0.53" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="http://replace-this-with-your-domain.com/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="http://replace-this-with-your-domain.com/favicon.ico" type="image/x-icon">
+
+	<!-- RSS -->
+	
+
+	<!-- Font Awesome -->
+	<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+	<header class="site-header">
+	<div class="branding">
+		<a href="http://replace-this-with-your-domain.com/">
+		<img class="avatar" src="http://replace-this-with-your-domain.com/avatar.ico" alt=""/>
+		</a>
+		<h1 class="site-title">
+			<a href="http://replace-this-with-your-domain.com/">mxgcccc4&#39;s blog</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li><a href="/about/"> About </a></li>
+
+			<li class="icon">
+	<a href="http://replace-this-with-your-domain.com/" title="">
+		<i class="fa fa-fw fa-home"></i>
+	</a>
+</li>
+
+<li class="icon">
+	<a href="http://replace-this-with-your-domain.com/index.xml" title="Subcribe">
+		<i class="fa fa-fw fa-rss"></i>
+	</a>
+</li>
+
+<li class="icon">
+	<a href="mailto:mxgcccc4@gmail.com" title="Email">
+		<i class="fa fa-fw fa-envelope"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+
+	<div class="content">
+	<article>
+		<header>
+			<h1 class="title">Note for InstaGuard: Instantly Deployable Hot-patches for Vulnerable System Programs on Android</h1>
+			<p class="meta">
+	May 6, 2018 &middot; 2 minute read
+
+	
+		&middot; Tags:
+			<a href="http://replace-this-with-your-domain.com/tags/android">Android</a>
+			, <a href="http://replace-this-with-your-domain.com/tags/ndss">NDSS</a>
+			, <a href="http://replace-this-with-your-domain.com/tags/paper-note">Paper Note</a>
+			
+</p>
+
+		</header>
+
+		<section class="post-content">
+			<hr/>
+
+<p>作者：Yaohui Chen, Yuping Li, Long Lu, Yueh-Hsun Lin, Hayawardh Vijayakumar, Zhi Wang, Xinming Ou</p>
+
+<p>单位：Northeastern University, University of South Florida, Northeastern University, JD Research Center, Samsung Research America</p>
+
+<p>出处：NDSS 2018</p>
+
+<p>资料：<a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/ndss2018_08-2_Chen_paper.pdf">Paper</a>, <a href="https://www.youtube.com/watch?v=HhwOotwmo2s&amp;index=2&amp;list=PLfUWWM-POgQuPfShO3X5sJlYtzSPvbBUJ&amp;t=0s">Video</a>, <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/NDSS2018_08-2_Chen_Slides.pdf">Slide</a></p>
+
+<p>由于hotpatch易于开发和更快的部署速度，而且在永久修复漏洞的补丁释出之前有效地阻止已发现漏洞被利用，研究人员建议把hotpatch应用于Android的系统程序和应用之中，以便于缩短严重漏洞在被修复之前被利用的窗口期。但是由于Android系统的碎片化，hotpatch技术虽然在PC上广泛使用，但是很少被厂商采用。作者认为阻碍hotpatch在Android平台推广的因素主要是对于一个漏洞的补丁在释放出来之后通常需要经过设备厂商在推送更新之前漫长的兼容性测试。这种测试和发布过程可能需要几个月的时间，那么hotpatch就失去了可以快速部署的优势。</p>
+
+<p>作者提出了InstaGuard，这是一种新的移动设备的hotpatch方法。与现有的hotpatch技术不同，InstaGuard没有向需要patch的程序注入新的补丁代码，而是通过执行不包含代码的即时更新规则来及时阻止未修补的漏洞，这样做的优势在于不需要经过兼容性测试就可以即时推送给需要修复的设备。在设计InstaGuard的时候，作者使用了一种可以表达能够有效缓解各种漏洞在移动设备上执行的规则语言，其次编写这些规则并不需要使用过于复杂的表示方式。作者使用ARM CPU支持的基本调试原语为hotpatch和强制机制设计了一种新语言。作者还构建了RuleMaker，这是一款基于高级语言并且易于编写的漏洞描述自动生成InstaGuard规则的工具。</p>
+
+<p>作者在Nexus 5X手机上测试了InstaGuard。在测评部分作者验证了InstaGuard可以处理2016年Android安全公告中的所有关键CVE。作者还使用来自4个不同类别的关键漏洞进行单元测试。 InstaGuard平均增加了1.69％的存储空间占用量，并带来了2.70％的overload。</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>作者通过与Android设备厂商合作调查发现，因为在部署安全更新之前，所有需要推送的系统安全更新必须经过冗长的兼容性测试。尽管供应商和运营商都在努力减少更新发布的延迟，但目前的平均延迟时间仍然大约有3-4个月。那么这种情况下hotpatch的优势就不存在了，这是Android生态系统中hotpatch机制所面临的最大阻力。所以看不到设备和操作系统厂商采用现有的hotpatch对系统漏洞进行安全更新。</p>
+
+<p>作者设计InstaGuard的时候参考了运营商允许在不包括代码的情况下向移动设备推送更新，例如三星对于SEAndroid的策略更新就是不包括代码的更新。所以作者在设计InstaGuard的时候就考虑使用向移动设备推送能够拦截未修补漏洞规则的方式进行hotpatch，而不是向设备推送需要向存在漏洞的程序注入的修复代码的方式。</p>
+
+<p>为了设计一个有效的由漏洞拦截规则而不是补丁代码的hotpatch系统，首先需要一种能够在运行时有效地阻止各种漏洞利用规则的表达语言。同时，由于安全原因，这种语言不应该像代码一样不受限制。其次，这些规则应当一种自动化的方式生成，对了解最新披露的漏洞细节的用户可以轻松地为其生成hotpatch规则。</p>
+
+<p>于是作者设计了一种用于编写hotpatch规则的简单语言，称为GuardRule。GuardRule基于ARM CPU支持的基本调试原语，即BreakPoint，WatchPoint和Assertion。 GuardRule包含一系列能够表示必要条件限制的调试原语，当使用使用这些调试原语编写GuardRule的时候可以：</p>
+
+<ol>
+<li>为各种漏洞（即高度表达性）构建hotpatch逻辑;</li>
+<li>能够通过运营商通道快速向终端设备发布新的GuardRule;</li>
+<li>硬件所支持的基本调试原语可有效执行GuardRule。</li>
+</ol>
+
+<p>另外，作者将GuardRule设计为限制性的，而不是增加新的行为来执行易受攻击的程序，确保有缺陷的规则不会导致新的安全问题或影响其他规则提供的保护。</p>
+
+<p>而对于直接推送到终端机器上的GuardRule，作者认为直接由开发人员编写low-level的规则比较困难并且容易出错，所以设计了RuleMaker来辅助设备厂商和安全研究员较容易地生成GuardRule。 作者使用设计用于描述漏洞的高级语言编写GuardSpec，通过输入到RuleMaker中最后生成GuardRule。而在编写GuardSpec的时候不需要了解InstaGuard的运行细节和hotpatch的机制，完全通过漏洞细节报告就可以编写出能够生成hotpatch所需要的GuardRule。作者把Android系统漏洞分为了七类，对于每一类漏洞GuardSpec都支持使用简单的语法来描述此类漏洞。</p>
+
+<p>对于Android系统新发现的漏洞，设备厂商可以快速编写描述该漏洞的GuardSpec，然后使用RuleMaker来生成GuardRule，可以通过OTA快速推送部署在终端设备上。然后，供应商可以开始开发永久性patch并与运营商合作对其进行测试。一般来说这个过程可能需要数月时间，在安装永久性补丁程序之前，易受攻击的设备也会受到InstaGuard的保护。而在终端设备，InstaGuard在收到验证的GuardRule后，相应地设置breakpoint，watchpoint和assertion，并在运行时执行hotpatch中的检查。与其他平台的hotpatch技术类似，InstaGuard并不意味着代替漏洞永久性安全更新补丁。它的目的是及时而暂时地减轻未修补的漏洞的影响。InstaGuard可以帮助显着缩小过去几个月的漏洞利用窗口，从而即时保护Android设备上新近发现的漏洞。 InstaGuard具有以下独特优势，与现有的hotpatching技术相区别。</p>
+
+<ul>
+<li>Rule-driven:发布可执行规则的形式，而不是可执行代码。</li>
+<li>Vulnerability-generic:规则语言足以描述7种不同类型的漏洞。</li>
+<li>Easy-to-use:只需要编写漏洞描述，然后这些描述被自动编译成low-level的规则。</li>
+<li>Efficient:因为使用调试功能执行patch规则，所以带来的开销比较小。</li>
+</ul>
+
+<p>作者在测评中选择了2016年的Android安全公告中的30个关键CVE，表明InstaGuard能够完全缓解所有这些漏洞。 并且编写的每个GuardSpec平均只包含7-8行，只需几分钟即可完成。 在执行这些规则时，InstaGuard在内存上的开销为1.69％，单元测试中性能开销为2.70%</p>
+
+<h2 id="background">BACKGROUND</h2>
+
+<h3 id="a-delayed-android-system-patches">A. Delayed Android System Patches</h3>
+
+<p>Android通常被认为不如iOS安全并不是因为Android更容易受到攻击，而是由于Android设备更长的系统安全更新周期。 事实上，在iOS中发现的漏洞并不比在Android中发现的漏洞少。 但是与苹果独自开发的iOS设备不同，Android生态系统和设备市场高度碎片化。 为Android系统开发和推送系统更新需要多方合作，如操作系统供应商，设备供应商，运营商等。很多时候尽管上游厂商已经修复了许多漏洞，但是这种分散化和复杂的链条导致安全补丁和更新部署会推迟数月甚至数年。</p>
+
+<p><img src="https://i.imgur.com/m9TfC5m.png" alt="1525613766712" /></p>
+
+<p>上表是在三星主流产品线上的Android系统程序漏洞的生命周期进行的调查结果。如表所示，完全修复设备上这些高危安全漏洞（即从最初漏洞披露到部署永久补丁）所需的平均时间为7.6个月。并且第三方库（如OpenSSL）的修补程序推迟的时间更长。该表中的两个至关重要的漏洞（CVE-2015-1539和CVE-2015-3836）至今仍未修复。</p>
+
+<h3 id="b-hot-patching-and-its-adoption-obstacle-on-android">B. Hot-patching and Its Adoption Obstacle on Android</h3>
+
+<p>因为现有hotpatch技术并没有考虑到在Android设备市场上的较为复杂的厂商碎片化的问题，所以没有办法较好地实施hotpatch。在补丁可以发布和部署之前，Android设备上的系统二进制文件的任何代码补丁必须得到操作链中所有各方（包括运营商）的同意。这一要求允许所有各方对新添加的系统代码进行全面测试，以确定潜在的兼容性和安全问题，尽管这些测试可能需要数周或数月时间。但是，现有的热补丁技术与此要求不一致。要禁用或替换易受攻击的代码，这些技术需要向程序二进制文件或程序存储空间注入新代码。因此，如果应用于Android系统程序，这些热补丁（即注入易受攻击程序的新代码）必须经历冗长的测试，因此无法立即部署，这使得供应商无法采用现有的hotpatch技术。简单地说，就是hotpatch所带来的即时部署和高效性与移动设备上二进制代码补丁部署之前经历的冗长测试和流程是互斥的。</p>
+
+<h3 id="c-carrier-passthrough-updates">C. Carrier-passthrough Updates</h3>
+
+<p>根据作者和三星的合作，他们发现在一些情况下向终端设备推送更新是不需要运营商和利益相关方经过测试的。 作者将这些更新称为运营商直通更新（carrier-passthrough updates）。 运营商会允许时间敏感的非代码更新无延迟地推到用户设备上。三星的SEAndroid策略更新就是一个例子。 这一发现启发了他们设计了一种新的热补丁技术，可以利用运营商直通更新通道并为Android设备启用即时可部署的热补丁。</p>
+
+<h3 id="d-design-requirements-for-android-hot-patching-system">D. Design Requirements for Android Hot-patching System</h3>
+
+<ul>
+<li>Non-code patches</li>
+<li>Restrictive patching</li>
+<li>Wide vulnerability coverage</li>
+<li>Ease of use</li>
+</ul>
+
+<h2 id="system-design">SYSTEM DESIGN</h2>
+
+<h3 id="a-overview">A. Overview</h3>
+
+<p><img src="https://i.imgur.com/7NJd3hu.png" alt="1525614604162" /></p>
+
+<p>在漏洞或者bug被报告时，设备或者Android厂商编写漏洞对应的GuardSpec（步骤1）；然后使用RuleMaker生成GuardRule（步骤2）；然后通过运营商的OTA推送给终端设备（步骤3）；在接收到GuardRule后，用户设备上的InstaGuard（offline）会在完成必要的完整性检查（步骤4）之后并开始执行规则（步骤5）。</p>
+
+<p>InstaGuard运行检查机制建立在三个基本的调试原语上：Breakpoint，Watchpoint和Assertion。</p>
+
+<ul>
+<li>断点（BP）允许InstaGuard程序执行到达可以立即触发漏洞的代码位置。</li>
+<li>观察点（WP）允许InstaGuard获取可能导致漏洞利用的内存数据info。</li>
+<li>声明（AS）与前两个原语结合使用，允许InstaGuard执行必要的检查以确定是否满足漏洞触发条件。</li>
+</ul>
+
+<p>GuardRule使用这些原语以特定顺序与具体参数（例如，BP / WP地址和AS表达式）来检测并阻止漏洞的利用。GuardRule的这些基本原语和表达式语法可以涵盖很多关键漏洞类型，包括逻辑错误，整数溢出，越界访问，格式化字符串，竞争条件，以及UAF。</p>
+
+<p>作者在论文中使用CVE-2016-3861举例说明InstaGuard是如何工作的。这是<a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=840">libutils.so中UTF16 到UTF8 转换过程中的一个堆溢出漏洞</a> ，如图2所示，当LoC:9中的表达式计算结果为false时，字符串指针src会++两次（LoC:9和LoC:14），导致字符串的预期长度比实际字符串长度短， 之后，导致缓冲区溢出。</p>
+
+<p><img src="https://i.imgur.com/oInCLCt.png" alt="1525670883291" />w</p>
+
+<p>对于这种漏洞，InstaGuard使用图3所示的GuardRule来阻止对于此漏洞的exp。这个GuardRule的意思为InstaGuard在与图2中的第9行对应的二进制位置设置BP，并且当程序运行到BP时，使用AS来检查漏洞触发条件，即<code>*src&amp;0xFC00 == 0xDC00</code>。 BP和AS的表达式分别在图3中的LoC:7-12和LoC:16-31处，其中BP通过LoC:11使用AS#0处的AS。如果AS为真时则执行AS的动作，在正在当前CVE情况下只是阻止程序执行。如图3中的LoC:16和LoC:4所描述。</p>
+
+<p><img src="https://i.imgur.com/fdR9mUm.png" alt="1525673430616" /></p>
+
+<p>作者认为直接手动编写GuardRule比较困难而且容易出错。因此，作者引入了GuardSpec，以一种用户友好的方式描述漏洞。并通过RuleMaker，使用GuardSpec自动生成GuardRule。然而写GuardSpec，只需要一些漏洞相关的信息，这些信息漏洞报告中轻松提取。图4显示了与图3中的GuardRule相对应的GuardSpec。</p>
+
+<p><img src="https://i.imgur.com/fACblEu.png" alt="1525674126998" /></p>
+
+<p>图5显示了用于填补CVE-2016-3871 patch 的GuardSpec，这也是一个缓冲区溢出漏洞。</p>
+
+<p><img src="https://i.imgur.com/mdoJdVO.png" alt="1525674137508" /></p>
+
+<h3 id="b-usage-scenario-and-threat-model">B. Usage Scenario and Threat Model</h3>
+
+<p>InstaGuard的目的是将Android漏洞受攻击的窗口期从几个月缩短到几天。厂商可以快速开发并立即部署GuardRule以阻止Android系统中的关键漏洞被利用，因为完整的patch通常在漏洞被报告几个月后才会更到设备终端。作者的威胁模型中信任操作系统内核并依靠它作为InstaGuard的TCB。但是假设系统守护进程和lib可能包含漏洞（例如stagefright），并且攻击者能够尝试各种各样的利用。 InstaGuard的目标是作为漏洞利用缓解系统，无法对未定义规则的未知漏洞做出阻止，并且对于已经被破坏或变得恶意的程序是无效的。</p>
+
+<h3 id="c-instaguard-rule-driven-vulnerability-mitigation">C. InstaGuard: Rule-driven Vulnerability Mitigation</h3>
+
+<p>InstaGuard组件和工作流程：InstaGuard系统由用户空间和内核空间组件组成。 用户空间组件接收GuardRule更新并与内核空间组件协作以动态加载和执行更新的规则，真个过程不需要重启设备。 图6显示了InstaGuard的主要组件及其工作流程。</p>
+
+<ul>
+<li>InstaGuard守护进程（iDaemon）是一个用户空间守护进程，负责在规则更新和进程重新启动时启动GuardRule的安装或删除。</li>
+<li>InstaGuard运行时监视器（iMonitor）负责
+
+<ol>
+<li>解析GuardRule;</li>
+<li>请求iDriver根据GuardRule的需要注册BP和WP。</li>
+<li>验证Assertion。</li>
+</ol></li>
+<li>InstaGuard内核驱动程序（iDriver）是内核空间组件，负责
+
+<ol>
+<li>处理来自iMonitor的BP和WP注册请求;</li>
+<li>协调监视的进程以分时共享硬件调试寄存器;</li>
+<li>通过硬件BP / WP异常通知iMonitor;</li>
+<li>如果GuardRule存在错误，处理由iMonitor引起的异常。</li>
+</ol></li>
+</ul>
+
+<p><img src="https://i.imgur.com/emwm5bD.png" alt="1525675946320" /></p>
+
+<p>InstaGuard机制的工作流程如图6所示。在GuardRule更新后，iDaemon会被唤醒以解析GuardRule的header（步骤1）。它会根据header在受影响的进程中向iMonitor发出有关新规则的信号（步骤2）。收到通知后，iMonitor会解析规则body。根据规则，iMonitor然后要求iDriver注册所需要的BP和WP（步骤3）。在验证了iMonitor的请求后，iDriver在请求过程的PCB中初始化BP和WP设置数据。之后，当已注册BP/WP的受监控进程获得CPU并即将开始/恢复执行时，iDriver会将保存的BP/WP设置信息从PCB复制到可用的硬件调试regs（步骤5和6）。在提供BP/WP注册请求时，iDriver将循环遍历所有具有相同线程组ID的PCB并为每一个PCB注册rule。</p>
+
+<p>当BP或WP调试异常被触发时，iDriver会向相应的进程发出一个信号（步骤4）。 当执行从内核模式返回到用户模式时，iMonitor会收到pending信号。iMonitor通过遵循相应GuardRule（步骤7）中定义的操作（例如注册BP/WP或执行AS）对信号作出反应。</p>
+
+<p>###D. GuardRule: Generically Blocking Exploits</p>
+
+<p>GuardRule是一种基于XML的low-level规则，当推送到设备终端时，InstaGuard会使用想用的机制阻止利用漏洞。表II列出了GuardRule的语法。在高层次上，每个规则由一个header和一个body组成。header包含规则ID，漏洞模块ID以及AS为true时的操作。InstaGuard目前的原型支持两种警报决定，分别是“BLOCK”和“AUDIT”，它们将分别终止有漏洞的程序或简单地记录警报事件。在规则body中，断点（BP），观察点（WP）和断言（AS）可以指定。 BP由以下字段定义：<first，address，action>。第一个字段表示在安装规则时是否应该立即注册BP。地址字段表示BP应放置在哪里。当此BP被触发时，动作字段引用下一个部分（例如，AS或另一个BP）以激活。每个规则应至少包含一个BP作为原始链发起者，表示在程序执行期间InstaGuard应该在哪里挂起程序并执行操作。例如，当需要跟踪内存中变量时，规则中会使用WP。 WP包含BP所具有的三个字段以及一个指定要获取的内存<code>size</code>大小的字段。</p>
+
+<p><img src="https://i.imgur.com/jdgrVU8.png" alt="1525689036663" /></p>
+
+<h3 id="e-rulemaker-rule-generation-assistance">E. RuleMaker: Rule Generation Assistance</h3>
+
+<ol>
+<li>漏洞分类：作者通过对漏洞报告的研究把常见的安全漏洞分成7种类型，如表3左列所示。作者认为，许多漏洞通常是由一连串的错误引起的。例如，大多数与libstagefright相关的报告缓冲区溢出漏洞都是由整数溢出引起的。大量报告中的竞争条件和UAF漏洞实际上是由逻辑错误引起的。例如，CVE-2016-8655被标记为竞争条件，CVE-2016-6707被报告为UAF，但它们的根本原因都是存在各种逻辑错误。</li>
+<li>GuardSpec和RuleMaker：作者为InstaGuard设计了GuardSpec格式，以便于描述待patch的漏洞。作者构建了能够从GuardSpec生成GuardRule的RuleMaker。</li>
+</ol>
+
+<p>表III给出了描述常见漏洞的GuardSpec指导。对于每种类型的漏洞，可以在GuardSpec中列出必需的字段。例如，vul_location字段指定漏洞的存在的LoC位置。它是一个包含源码行号，函数名称和源文件的3元组。可以很方便地从漏洞报告中收集这些信息，并组成GuardSpec。论文附录为表III中的展示了更多漏洞的GuardSpec示例。论文对于UAF漏洞提供了两种方法来阻止它们：一种方法是阻塞错误的<code>free</code>操作，另一种方法是阻止错误的<code>use</code>操作。</p>
+
+<p><img src="https://i.imgur.com/3vF4Elz.png" alt="1525689563686" /></p>
+
+<h3 id="f-satisfied-requirements">F. Satisfied Requirements</h3>
+
+<p>作者又把InstaGuard的优点又夸了一遍。</p>
+
+<h2 id="iv-system-implementation">IV. SYSTEM IMPLEMENTATION</h2>
+
+<p>作者把InstaGuard运行在LG Nexus 5X上，Android系统为AOSP_6.0.1_r8 (Marshmallow)，Linux Kernel版本号为3.10 (64-bit).</p>
+
+<h3 id="a-instaguard-implementation-challenges">A. InstaGuard Implementation Challenges</h3>
+
+<ul>
+<li><strong>InstaGuard primitive implementation</strong></li>
+</ul>
+
+<p>硬件调试寄存器通常被Linux的perf子系统所使用。 perf是Linux中与体系结构无关的性能分析框架。 这是通过使用多层抽象来实现的，导致性能较差。 所以作者原型直接在硬件调试寄存器上运行，绕过了perf子系统。 此外，出于性能原因，硬件调试模块未编译到Android内核中。 因此，依赖基于perf的接口（如ADB和GDB）的调试器与硬件调试寄存器无关，所以ADB和InstaGuard可以共存。</p>
+
+<ul>
+<li><strong>Hardware exception pitfall</strong></li>
+</ul>
+
+<p>使用硬件调试寄存器来实现InstaGuard的BP/WP原语。当BP/WP被命中时，CPU在执行异常触发指令之前触发硬件调试异常。异常会以信号的形式返回给被监视的进程进行处理。此场景与传统调试器（如gdb）处理断点的方式不同：传统调试器是独立进程，其自身的执行不会干扰调试的进程。在InstaGuard中，iMonitor既是调试器又是被调试进程。这产生了一个困境：不能简单地恢复被监控进程的执行，因为这将重新触发断点；也不能简单地禁用断点并重新开始这个过程，因为这会消除断点（即下一次函数的调用不能被保护）。在传统的调试器中，当遇到断点时启用单步执行，可以轻松解决该问题。但是，此解决方案在InstaGuard中不可行，否则由断点处理程序（iMonitor）执行的每条指令都将被困在内核中。为了解决这个问题，作者暂时禁用了触发断点，并允许iMonitor处理断点（作为信号）。处理异常后，iMonitor调用sys_rt_sigreturn通知内核恢复执行目标进程。内核然后启用单步执行以允许执行错误指令。 CPU执行错误指令并触发单步异常。在单步异常处理程序中重新执行先前禁用的断点并禁用单步执行。这样可以兼顾功能的完整和安全性。</p>
+
+<ul>
+<li><strong>Address Space Layout Randomization</strong></li>
+</ul>
+
+<p>GuardRules需要绝对地址来运行，但是因为GuardSpec转换为GuardRules是offline的，所以RuleMaker只能对GuardRule中的偏移进行编码。 为了获得正确的运行时地址，当binary被加载到随机地址时，需要知道基地址。 为此，iDriver遍历进程的VMA结构列表以查找binary的加载地址，并将其添加到offset中以完成GuardRules。</p>
+
+<ul>
+<li><strong>Communication between components</strong></li>
+</ul>
+
+<p>InstaGuard的组件使用IPC进行通信。 作者选择SIGUSR2信号的目的是因为SIGUSR2未被任何Android系统组件使用。 作者修改了Android中的bionic linker以在目标进程中加载iMonitor并将iMonitor的函数注册为SIGUSR2的处理程序。 此外，作者还在内核中hook了signal注册routine以保护SIGUSR2处理程序。</p>
+
+<h3 id="b-rulemaker-translation-challenges">B. RuleMaker Translation Challenges</h3>
+
+<ul>
+<li><strong>Variable resolution</strong></li>
+</ul>
+
+<p>我们为InstaGuard用户提供的一项关键支持是可变分辨率，以便他们可以使用源代码符号编写GuardSpec。 我们可以解决全局，本地和堆变量。 为了实现这一点，我们利用调试信息。 DWARF调试格式提供有关变量类型，范围以及在给定范围内定位变量的步骤的有用信息。 范围很重要。 如果要查找的变量在目标断点的范围内处于非活动状态，RuleMaker将提示错误。 RuleMaker的可变分辨率模块建立在<code>pyelftools</code>之上。 它使用DW_AT_LOCATION和DW_AT_TYPE字段来定位变量及其类型。 如GuardRule中所述，变量检索规则在GuardRule中进行编码并在运行时由iMonitor进行解释。</p>
+
+<ul>
+<li><strong>Context-binding watchpoints</strong></li>
+</ul>
+
+<p>和BP与代码地址相关不一样，WP是与变量相关联的。 但是WP可能同时存在多个alive版本。 例如，为了保护基于堆栈的缓冲区溢出漏洞，InstaGuard需要监视本地缓冲区变量，如果易受攻击的函数是递归调用的，那么函数的每个堆栈帧都有不同的缓冲区版本。在这种情况下，可用的硬件WP将很快耗尽。 为了解决这个问题，作者提出了一种称为上下文绑定观察点的技术。 基本思路是将WP与当前执行上下文相关联，并在堆栈帧更改时保存/恢复WP。 通过这样做，可以重复利用每个函数的WP。</p>
+
+<ul>
+<li><strong>Source code location translation</strong></li>
+</ul>
+
+<p>在某些情况下，RuleMaker需要生成规则来验证某些内存访问是否来自指定的源代码位置，例如检测缓冲区溢出。 但是，源代码和编译之后的二进制文件并不总是一对一映射的。 在这种情况下，RuleMaker会对AS基元中的代码范围进行定位。</p>
+
+<h2 id="v-analysis-and-evaluation">V. ANALYSIS AND EVALUATION</h2>
+
+<h3 id="a-security-analysis">A. Security Analysis</h3>
+
+<p>这部分讨论了攻击者攻击InstaGuard的情况。 首先，他可能会试图欺骗iDaemon启动目标进程中的GuardRule删除过程。 但是作者认为不可能实现，因为iDaemon不接受加密签名与可信来源的加密签名不匹配的规则。 这种保护与向终端设备发布OTA更新时验证SEAndroid规则的方式类似。 其次，攻击者可能试图直接发信号给目标iMonitor，作者认为这不会成功，因为iDriver会杀死除了iDaemon之外的任何SIGUSR2发送者的进程。 最后，攻击者可能会尝试滥用iMonitor和iDriver之间的接口（类似于系统调用），从而在目标进程中阻止规则执行。作者认为也不会成功，因为iDriver仅在请求过程的上下文中提供iMonitor请求。</p>
+
+<h3 id="b-empirical-evaluation">B. Empirical Evaluation</h3>
+
+<ul>
+<li><strong>Vulnerability coverage</strong></li>
+</ul>
+
+<p>作者从2016年开始在Android框架的本机代码中抽样了30个关键漏洞。这些漏洞可以大致分为整数溢出，缓冲区溢出，越界访问和逻辑错误。 所有这些漏洞都可以在GuardSpec中描述，并成功生成GuardRule，如表5所示。作者证实InstaGuard可以拦截所有的exp。</p>
+
+<p><img src="https://i.imgur.com/lSoPDXL.png" alt="1525674352708" /></p>
+
+<ul>
+<li><strong>GuardSpec composing efforts</strong></li>
+</ul>
+
+<p>这部分作者测评了编写GuardSpec花费的时间以测评InstaGuard的易用性。他们从表5中选择了4个来自每个类别的关键漏洞，并要求三星的4位安全工程师编写GuardSpec。并统计他们编写GuardSpec并使用RuleMaker将其转换为GuardRule来计时整个过程。表六显示完成任务所需的时间。他们能够制作出有效且正确的GuardSpec，并平均在22.5分钟内将其转化为GuardRule。</p>
+
+<p><img src="https://i.imgur.com/8wSxtc6.png" alt="1525697235943" /></p>
+
+<ul>
+<li><strong>Performance and memory overhead</strong></li>
+</ul>
+
+<p>此部分测评了InstaGuard的性能开销为2.7％，平均内存开销为1.69％。内存开销的主要来源来自iMonitor。这些评估结果表明，InstaGuard在性能和内存开销方面会产生不明显的开销。此外，为了衡量InstaGuard在同一过程中如何保护多个漏洞，作者创建了一个包括4种漏洞的服务和相应的GuardRule，并每20次触发一次exp。平均总性能开销为9.73％。作者估计一个BP引起的性能开销大约为0.97％和一个AS的开销为2.01％。</p>
+
+<p><img src="https://i.imgur.com/l8jzFrq.png" alt="1525697140132" /></p>
+
+			
+		</section>
+	</article>
+	</div>
+
+	<footer class="site-footer">
+	<p class="text">&copy; 2019 - Released under the MIT license<br>Powered by <a href="//gohugo.io/">Hugo</a> with the <a href="//github.com/digitalcraftsman/hugo-type-theme">Type Theme</a></p>
+</footer>
+
+
+</body>
+</html>

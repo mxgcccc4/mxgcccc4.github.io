@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Nope for Obfuscation-Resilient Privacy Leak Detection for Mobile Apps Through Differential Analysis&middot; mxgcccc4&#39;s blog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="MXGC">
+	<meta name="description" content="A security research blog of MXGC">
+	
+	<meta name="generator" content="Hugo 0.53" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="http://replace-this-with-your-domain.com/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="http://replace-this-with-your-domain.com/favicon.ico" type="image/x-icon">
+
+	<!-- RSS -->
+	
+
+	<!-- Font Awesome -->
+	<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+	<header class="site-header">
+	<div class="branding">
+		<a href="http://replace-this-with-your-domain.com/">
+		<img class="avatar" src="http://replace-this-with-your-domain.com/avatar.ico" alt=""/>
+		</a>
+		<h1 class="site-title">
+			<a href="http://replace-this-with-your-domain.com/">mxgcccc4&#39;s blog</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li><a href="/about/"> About </a></li>
+
+			<li class="icon">
+	<a href="http://replace-this-with-your-domain.com/" title="">
+		<i class="fa fa-fw fa-home"></i>
+	</a>
+</li>
+
+<li class="icon">
+	<a href="http://replace-this-with-your-domain.com/index.xml" title="Subcribe">
+		<i class="fa fa-fw fa-rss"></i>
+	</a>
+</li>
+
+<li class="icon">
+	<a href="mailto:mxgcccc4@gmail.com" title="Email">
+		<i class="fa fa-fw fa-envelope"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+
+	<div class="content">
+	<article>
+		<header>
+			<h1 class="title">Nope for Obfuscation-Resilient Privacy Leak Detection for Mobile Apps Through Differential Analysis</h1>
+			<p class="meta">
+	January 22, 2018 &middot; 1 minute read
+
+	
+		&middot; Tags:
+			<a href="http://replace-this-with-your-domain.com/tags/android">Android</a>
+			, <a href="http://replace-this-with-your-domain.com/tags/ndss">NDSS</a>
+			, <a href="http://replace-this-with-your-domain.com/tags/paper-note">Paper Note</a>
+			
+</p>
+
+		</header>
+
+		<section class="post-content">
+			<hr/>
+
+<p>作者：Andrea Continella, Yanick Fratantonio, Martina Lindorfer, Alessandro Puccetti, Ali Zand, Christopher Kruegel, and Giovanni Vigna</p>
+
+<p>单位： Politecnico di Milano、UC Santa Barbara</p>
+
+<p>出处： NDSS 2017</p>
+
+<p>资料：<a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017_05A-4_Continella_paper.pdf">Paper</a>, <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017-05a_4-continella_slides.pdf">Slide</a>, <a href="https://www.youtube.com/watch?v=5aNBBeI9HXw&amp;feature=youtu.be">Video</a></p>
+
+<h1 id="作者背景">作者背景</h1>
+
+<p>这篇文章发表在2017年的NDSS上，第一作者是来自米兰理工大学（Politecnico di Milano）的PhD学生Andrea Continella，他本人还经常参加CTF，同时也是Shellphish的队员。作者的研究方向为针对高级恶意软件的分析和防御机制，包括trojan木马或ransomware家族，他本人的更多信息可以在<a href="https://conand.me">个人主页</a>上看到。而这篇文章具体内容就是作者在UCSB的<a href="https://seclab.cs.ucsb.edu/">SecLab</a>进行为期六个月的交流的时候的工作成果，论文的其他作者就是该实验室的相关成员。</p>
+
+<h1 id="现存问题">现存问题</h1>
+
+<p>因为Android平台应用臭名昭著的隐私泄露问题，作者提出了一种以deviation为核心的应用隐私泄露检测方法，并给出了能够一个名为AGRIGENTO的检测工具。在Android平台，有很多可以用来以及专门设计用来检测应用中用户隐私泄露问题的工具。比如基于静态污点分析的FlowDroid，以及基于动态污点分析的TaintDroid，以及同时包含两种分析方式的数据流分析工具AppAudit。</p>
+
+<p>但是无论哪种分析方法，都已经被证明是可以绕过的。如果一些SDK开发者，如Inmobi这样的广告商，他们故意通过对用户隐私数据进行混淆或者加密以及破坏此类数据流，那么就会导致数据流分析过程中“lose track”。不仅如此，污点分析只能在Dalvik字节码中跟踪数据流，而忽视了native 代码的部分，而且两种污点分析还会经常导致假阳性的结果。另一种检测工具（如ReCon）的原理是根据网络流量去分析应用的流量中是否包含隐私信息，这种方法同样有很大的局限性——不能处理加密或自定义编码之后的数据。</p>
+
+<h1 id="解决方法">解决方法</h1>
+
+<p>作者提出了一种基于黑盒的差异分析去检测是否有隐私泄露的检测方法。这种检测方法分为两个主要阶段。首先，把Android应用放AGRIGENTO的插桩环境中运行多次，并收集所有的包含参数的网络请求和上下文信息。那么这些请求信息中就一定会包含用户隐私和一些其他的参数，如UUID，时间戳，系统状态，Cookie等，作者把除去用户隐私之外的数据称为source of non-deterministic。</p>
+
+<p>同时，在运行过程中AGRIGENTO可以通过插桩来拦截来自应用程序的对某些Android API（尤其是和加解密以及哈希函数相关）的调用并记录其运行之后的返回值。之后，根据AGRIGENTO多次运行应用所记录的数据和网络请求中的参数进行对比，排除能够确定不是隐私数据的参数。</p>
+
+<p>接下来，再与之前相同的插桩环境中运行相同的应用程序，但是修改要跟踪的隐私数据源，如（例如IMEI和定位信息）。然后和前一阶段一样收集网络请求参数和上下文信息，将这个上下文的数据与我们在前一阶段提取的网络行为总结使用Needleman-Wunsch算法进行比较。 最后就可以得出是否有隐私数据被移动应用收集并上传至服务器。</p>
+
+<h1 id="测试">测试</h1>
+
+<p>作者用来测试的数据集是来自ReCon 作者的数据集，包括Google Play2016年不同时段最热门的300个免费应用与来自AppsApk.com的1000个最受欢迎的应用。作者从中挑选了750个应用进行测试并和来自BayesDroid的2013年Google Play上54个最受欢迎的应用一起作为测试数据集。测试的内容是把作者的AGRIGENTO工具与现行的FlowDroid、TaintDroid、AppAudit和ReCon这四个工具就检测出隐私泄露应用数量和正确率做对比。</p>
+
+<p>750个数据集的测试结果中，AGRIGENTO检测出来的最多为278个，Recon检测出来的其次，为229个，AGRIGENTO中多检测出来的49个应用仅有5个为误报。</p>
+
+<p>来自BayesDroid的54个应用的数据集中，有10个因为时间久远无法正常运行。AGRIGENTO共识别出21个应用，BayesDroid识别出15个，其中有10个是双方都检测出来的，BayesDroid所额外识别的5个均为误报。而AGRIGENTO额外识别出来的11个均不是误报。</p>
+
+<h1 id="总体评价">总体评价</h1>
+
+<p>AGRIGENTO的这种检测方式，是完全把应用当做黑盒去做的，所收集的数据仅仅来自于运行时插桩所获取应用Android API的返回值和应用的网络流量，工具的应用范围局限很广泛，不用考虑应用运行的细节。根据测评部分的结果和现行工具相比较，效果和效率也十分具有优势。</p>
+
+<p>我认为在AGRIGENTO中有一个小问题：在第一部分通过插桩来拦截来自应用程序的对某些Android API的结果进行记录的时候，这个API的范围仅仅局限在Android官方提供的如加解密之类的函数，如果开发者在SDK中是使用的是自己实现的加密算法或者自己生成随机标识符而不依赖Android API，那么就会造成误差和漏报。这一点作者提到了，但是没有给出较好的解决方法，如果想要检测出SDK中自定义的加密等方式，我觉得可以通过静态反编译dex和so文件，把一些实现常用密码算法所使用到的常量以及方法名称与二进制文件中的常量和方法名称对比。就相当于根据常用密码算法的实现代码与二进制代码做代码相似性比较，然后再根据比较的结果增加插桩的位置重复作者的分析过程。这样可以消除一部分由于使用自定义加解密之类的代码给排除source of non-deterministic带来的噪声。</p>
+
+			
+		</section>
+	</article>
+	</div>
+
+	<footer class="site-footer">
+	<p class="text">&copy; 2019 - Released under the MIT license<br>Powered by <a href="//gohugo.io/">Hugo</a> with the <a href="//github.com/digitalcraftsman/hugo-type-theme">Type Theme</a></p>
+</footer>
+
+
+</body>
+</html>
