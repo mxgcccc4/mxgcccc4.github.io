@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ccs on mxgcccc4&#39;s blog</title>
-    <link>http://replace-this-with-your-domain.com/tags/ccs/</link>
+    <link>https://mxgcccc4.github.io/tags/ccs/</link>
     <description>Recent content in Ccs on mxgcccc4&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Dec 2018 13:50:46 +0200</lastBuildDate>
     
-	<atom:link href="http://replace-this-with-your-domain.com/tags/ccs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mxgcccc4.github.io/tags/ccs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Note for EviHunter: Identifying Digital Evidence in the Permanent Storage of Android Devices via Static Analysis</title>
-      <link>http://replace-this-with-your-domain.com/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</link>
+      <link>https://mxgcccc4.github.io/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</link>
       <pubDate>Sun, 09 Dec 2018 13:50:46 +0200</pubDate>
       
-      <guid>http://replace-this-with-your-domain.com/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</guid>
+      <guid>https://mxgcccc4.github.io/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</guid>
       <description>&lt;hr/&gt;
 
 &lt;p&gt;作者：Chris Chao-Chun Cheng, Chen Shi, Neil Zhenqiang Gong, Yong Guan&lt;/p&gt;

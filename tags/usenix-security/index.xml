@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Usenix Security on mxgcccc4&#39;s blog</title>
-    <link>http://replace-this-with-your-domain.com/tags/usenix-security/</link>
+    <link>https://mxgcccc4.github.io/tags/usenix-security/</link>
     <description>Recent content in Usenix Security on mxgcccc4&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Sep 2018 13:50:46 +0200</lastBuildDate>
     
-	<atom:link href="http://replace-this-with-your-domain.com/tags/usenix-security/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mxgcccc4.github.io/tags/usenix-security/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Note for Tackling runtime-based obfuscation in Android with TIRO</title>
-      <link>http://replace-this-with-your-domain.com/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</link>
+      <link>https://mxgcccc4.github.io/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</link>
       <pubDate>Sat, 08 Sep 2018 13:50:46 +0200</pubDate>
       
-      <guid>http://replace-this-with-your-domain.com/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</guid>
+      <guid>https://mxgcccc4.github.io/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</guid>
       <description>&lt;hr/&gt;
 
 &lt;p&gt;作者： Michelle Y. Wong and David Lie&lt;/p&gt;
@@ -30,10 +30,10 @@
     
     <item>
       <title>Note for Detecting Android Root Exploits by Learning from Root Providers</title>
-      <link>http://replace-this-with-your-domain.com/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</link>
+      <link>https://mxgcccc4.github.io/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</link>
       <pubDate>Wed, 25 Oct 2017 13:50:46 +0200</pubDate>
       
-      <guid>http://replace-this-with-your-domain.com/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</guid>
+      <guid>https://mxgcccc4.github.io/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</guid>
       <description>&lt;hr/&gt;
 
 &lt;p&gt;作者： Ioannis Gasparis, Zhiyun Qian, Chengyu Song, Srikanth V. Krishnamurthy&lt;/p&gt;

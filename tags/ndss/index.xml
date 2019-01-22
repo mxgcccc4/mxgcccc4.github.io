@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ndss on mxgcccc4&#39;s blog</title>
-    <link>http://replace-this-with-your-domain.com/tags/ndss/</link>
+    <link>https://mxgcccc4.github.io/tags/ndss/</link>
     <description>Recent content in Ndss on mxgcccc4&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Jul 2018 13:50:46 +0200</lastBuildDate>
     
-	<atom:link href="http://replace-this-with-your-domain.com/tags/ndss/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mxgcccc4.github.io/tags/ndss/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Note for Finding Clues for Your Secrets: Semantics-Driven, Learning-Based Privacy Discovery in Mobile Apps</title>
-      <link>http://replace-this-with-your-domain.com/post/2018-07-01-finding-clues-for-your-secrets-semantics-driven-learning-based-privacy-discovery-in-mobile-apps/</link>
+      <link>https://mxgcccc4.github.io/post/2018-07-01-finding-clues-for-your-secrets-semantics-driven-learning-based-privacy-discovery-in-mobile-apps/</link>
       <pubDate>Sun, 01 Jul 2018 13:50:46 +0200</pubDate>
       
-      <guid>http://replace-this-with-your-domain.com/post/2018-07-01-finding-clues-for-your-secrets-semantics-driven-learning-based-privacy-discovery-in-mobile-apps/</guid>
+      <guid>https://mxgcccc4.github.io/post/2018-07-01-finding-clues-for-your-secrets-semantics-driven-learning-based-privacy-discovery-in-mobile-apps/</guid>
       <description>&lt;hr/&gt;
 
 &lt;p&gt;作者：Yuhong Nan, Zhemin Yang, Xiaofeng Wang, Yuan Zhang, Donglai Zhu, Min Yang&lt;/p&gt;
@@ -30,10 +30,10 @@
     
     <item>
       <title>Note for InstaGuard: Instantly Deployable Hot-patches for Vulnerable System Programs on Android</title>
-      <link>http://replace-this-with-your-domain.com/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/</link>
+      <link>https://mxgcccc4.github.io/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/</link>
       <pubDate>Sun, 06 May 2018 13:50:46 +0200</pubDate>
       
-      <guid>http://replace-this-with-your-domain.com/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/</guid>
+      <guid>https://mxgcccc4.github.io/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/</guid>
       <description>&lt;hr/&gt;
 
 &lt;p&gt;作者：Yaohui Chen, Yuping Li, Long Lu, Yueh-Hsun Lin, Hayawardh Vijayakumar, Zhi Wang, Xinming Ou&lt;/p&gt;
@@ -47,10 +47,10 @@
     
     <item>
       <title>Nope for Obfuscation-Resilient Privacy Leak Detection for Mobile Apps Through Differential Analysis</title>
-      <link>http://replace-this-with-your-domain.com/post/2018-01-22-obfuscation-resilient-privacy-leak-detection-for-mobile-apps-through-differential-analysis/</link>
+      <link>https://mxgcccc4.github.io/post/2018-01-22-obfuscation-resilient-privacy-leak-detection-for-mobile-apps-through-differential-analysis/</link>
       <pubDate>Mon, 22 Jan 2018 13:50:46 +0200</pubDate>
       
-      <guid>http://replace-this-with-your-domain.com/post/2018-01-22-obfuscation-resilient-privacy-leak-detection-for-mobile-apps-through-differential-analysis/</guid>
+      <guid>https://mxgcccc4.github.io/post/2018-01-22-obfuscation-resilient-privacy-leak-detection-for-mobile-apps-through-differential-analysis/</guid>
       <description>&lt;hr/&gt;
 
 &lt;p&gt;作者：Andrea Continella, Yanick Fratantonio, Martina Lindorfer, Alessandro Puccetti, Ali Zand, Christopher Kruegel, and Giovanni Vigna&lt;/p&gt;

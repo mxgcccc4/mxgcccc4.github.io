@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Asia Ccs on mxgcccc4&#39;s blog</title>
-    <link>http://replace-this-with-your-domain.com/tags/asia-ccs/</link>
+    <link>https://mxgcccc4.github.io/tags/asia-ccs/</link>
     <description>Recent content in Asia Ccs on mxgcccc4&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 09 Oct 2018 13:50:46 +0200</lastBuildDate>
     
-	<atom:link href="http://replace-this-with-your-domain.com/tags/asia-ccs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mxgcccc4.github.io/tags/asia-ccs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Note for Dazed Droids: A Longitudinal Study of Android Inter App Vulnerabilities</title>
-      <link>http://replace-this-with-your-domain.com/post/2018-10-09-dazed-droids-a-longitudinal-study-of-android-inter-app-vulnerabilities/</link>
+      <link>https://mxgcccc4.github.io/post/2018-10-09-dazed-droids-a-longitudinal-study-of-android-inter-app-vulnerabilities/</link>
       <pubDate>Tue, 09 Oct 2018 13:50:46 +0200</pubDate>
       
-      <guid>http://replace-this-with-your-domain.com/post/2018-10-09-dazed-droids-a-longitudinal-study-of-android-inter-app-vulnerabilities/</guid>
+      <guid>https://mxgcccc4.github.io/post/2018-10-09-dazed-droids-a-longitudinal-study-of-android-inter-app-vulnerabilities/</guid>
       <description>&lt;hr/&gt;
 
 &lt;p&gt;作者：Ryan Johnson, Mohamed Elsabagh, Angelos Stavrou, Jeff Offutt&lt;/p&gt;
@@ -30,10 +30,10 @@
     
     <item>
       <title>Note for Don’t throw me away: Threats Caused by the Abandoned Internet Resources Used by Android Apps</title>
-      <link>http://replace-this-with-your-domain.com/post/2018-07-04-dont-throw-me-away-threats-caused-by-the-abandoned-internet-resources-used-by-android-apps/</link>
+      <link>https://mxgcccc4.github.io/post/2018-07-04-dont-throw-me-away-threats-caused-by-the-abandoned-internet-resources-used-by-android-apps/</link>
       <pubDate>Wed, 04 Jul 2018 13:50:46 +0200</pubDate>
       
-      <guid>http://replace-this-with-your-domain.com/post/2018-07-04-dont-throw-me-away-threats-caused-by-the-abandoned-internet-resources-used-by-android-apps/</guid>
+      <guid>https://mxgcccc4.github.io/post/2018-07-04-dont-throw-me-away-threats-caused-by-the-abandoned-internet-resources-used-by-android-apps/</guid>
       <description>&lt;hr/&gt;
 
 &lt;p&gt;作者：Elkana Pariwono, Daiki Chiba, Mitsuaki Akiyama, Tatsuya Mori&lt;/p&gt;
@@ -47,10 +47,10 @@
     
     <item>
       <title>Note for Source Attribution of Cryptographic API Misuse in Android Applications</title>
-      <link>http://replace-this-with-your-domain.com/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/</link>
+      <link>https://mxgcccc4.github.io/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/</link>
       <pubDate>Tue, 09 Jan 2018 13:50:46 +0200</pubDate>
       
-      <guid>http://replace-this-with-your-domain.com/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/</guid>
+      <guid>https://mxgcccc4.github.io/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/</guid>
       <description>&lt;p&gt;作者：Ildar Muslukhov, Yazan Boshmaf, Konstantin Beznosov&lt;/p&gt;
 
 &lt;p&gt;单位：The University of British Columbia, Qatar Computing Research Institute&lt;/p&gt;
