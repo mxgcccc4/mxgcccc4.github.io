@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Note for Tackling runtime-based obfuscation in Android with TIRO</title>
+      <title>Paper Reading Note</title>
       <link>https://mxgcccc4.github.io/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</link>
       <pubDate>Sat, 08 Sep 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</guid>
-      <description>&lt;hr/&gt;
+      <description>&lt;p&gt;标题： Tackling runtime-based obfuscation in Android with TIRO&lt;/p&gt;
 
 &lt;p&gt;作者： Michelle Y. Wong and David Lie&lt;/p&gt;
 
@@ -29,12 +29,14 @@
     </item>
     
     <item>
-      <title>Note for Detecting Android Root Exploits by Learning from Root Providers</title>
+      <title>Paper Reading Note</title>
       <link>https://mxgcccc4.github.io/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</link>
       <pubDate>Wed, 25 Oct 2017 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</guid>
       <description>&lt;hr/&gt;
+
+&lt;p&gt;标题： Detecting Android Root Exploits by Learning from Root Providers&lt;/p&gt;
 
 &lt;p&gt;作者： Ioannis Gasparis, Zhiyun Qian, Chengyu Song, Srikanth V. Krishnamurthy&lt;/p&gt;
 

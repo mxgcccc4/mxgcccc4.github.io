@@ -12,18 +12,20 @@
     
     
     <item>
-      <title>Note for Source Attribution of Cryptographic API Misuse in Android Applications</title>
+      <title>Paper Reading Note</title>
       <link>https://mxgcccc4.github.io/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/</link>
       <pubDate>Tue, 09 Jan 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/</guid>
-      <description>&lt;p&gt;作者：Ildar Muslukhov, Yazan Boshmaf, Konstantin Beznosov&lt;/p&gt;
+      <description>&lt;p&gt;标题： Source Attribution of Cryptographic API Misuse in Android Applications&lt;/p&gt;
 
-&lt;p&gt;单位：The University of British Columbia, Qatar Computing Research Institute&lt;/p&gt;
+&lt;p&gt;作者： Ildar Muslukhov, Yazan Boshmaf, Konstantin Beznosov&lt;/p&gt;
 
-&lt;p&gt;出处：AsiaCCS‘18&lt;/p&gt;
+&lt;p&gt;单位： The University of British Columbia, Qatar Computing Research Institute&lt;/p&gt;
 
-&lt;p&gt;资料：&lt;a href=&#34;http://lersse-dl.ece.ubc.ca/record/324/files/binsight-asiaccs-2018.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;出处： AsiaCCS‘18&lt;/p&gt;
+
+&lt;p&gt;资料： &lt;a href=&#34;http://lersse-dl.ece.ubc.ca/record/324/files/binsight-asiaccs-2018.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -12,21 +12,21 @@
     
     
     <item>
-      <title>Note for Understanding Android Obfuscation Techniques: A Large-Scale Investigation in the Wild</title>
+      <title>Paper Reading Note</title>
       <link>https://mxgcccc4.github.io/post/2018-08-01-understanding-android-obfuscation-techniques-a-large-scale-investigation-in-the-wild/</link>
       <pubDate>Wed, 01 Aug 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2018-08-01-understanding-android-obfuscation-techniques-a-large-scale-investigation-in-the-wild/</guid>
-      <description>&lt;hr/&gt;
+      <description>&lt;p&gt;标题： Understanding Android Obfuscation Techniques: A Large-Scale Investigation in the Wild&lt;/p&gt;
 
-&lt;p&gt;作者：Shuaike Dong, Menghao Li, Wenrui Diao, Xiangyu Liu, Jian Liu, Zhou Li, Fenghao Xu, Kai Chen, XiaoFeng Wang, Kehuan Zhang&lt;/p&gt;
+&lt;p&gt;作者： Shuaike Dong, Menghao Li, Wenrui Diao, Xiangyu Liu, Jian Liu, Zhou Li, Fenghao Xu, Kai Chen, XiaoFeng Wang, Kehuan Zhang&lt;/p&gt;
 
 &lt;p&gt;单位： The Chinese University of Hong Kong, Chinese Academy of Sciences, Jinan University, Alibaba Inc,
 Indiana University Bloomington&lt;/p&gt;
 
-&lt;p&gt;出处：SecureComm 2018&lt;/p&gt;
+&lt;p&gt;出处： SecureComm 2018&lt;/p&gt;
 
-&lt;p&gt;资料：&lt;a href=&#34;https://arxiv.org/pdf/1801.01633.pdf&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料： &lt;a href=&#34;https://arxiv.org/pdf/1801.01633.pdf&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

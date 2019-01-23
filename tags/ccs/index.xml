@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>Note for EviHunter: Identifying Digital Evidence in the Permanent Storage of Android Devices via Static Analysis</title>
+      <title>Paper Reading Note</title>
       <link>https://mxgcccc4.github.io/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</link>
       <pubDate>Sun, 09 Dec 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</guid>
-      <description>&lt;hr/&gt;
+      <description>&lt;p&gt;标题： EviHunter: Identifying Digital Evidence in the Permanent Storage of Android Devices via Static Analysis&lt;/p&gt;
 
-&lt;p&gt;作者：Chris Chao-Chun Cheng, Chen Shi, Neil Zhenqiang Gong, Yong Guan&lt;/p&gt;
+&lt;p&gt;作者： Chris Chao-Chun Cheng, Chen Shi, Neil Zhenqiang Gong, Yong Guan&lt;/p&gt;
 
-&lt;p&gt;单位：Iowa State University, NIST Center of Excellence in Forensic Science - CSAFE&lt;/p&gt;
+&lt;p&gt;单位： Iowa State University, NIST Center of Excellence in Forensic Science - CSAFE&lt;/p&gt;
 
-&lt;p&gt;出处：CCS&amp;rsquo;18&lt;/p&gt;
+&lt;p&gt;出处： CCS&amp;rsquo;18&lt;/p&gt;
 
-&lt;p&gt;资料：&lt;a href=&#34;https://arxiv.org/pdf/1808.06137.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://drive.google.com/file/d/1BuVSfVueBKidzo8T1cYBQB9jjR7QJuXH/view?usp=sharing&#34;&gt;Slides&lt;/a&gt;, &lt;a href=&#34;https://github.com/paradox5566/EviHunter&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料： &lt;a href=&#34;https://arxiv.org/pdf/1808.06137.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://drive.google.com/file/d/1BuVSfVueBKidzo8T1cYBQB9jjR7QJuXH/view?usp=sharing&#34;&gt;Slides&lt;/a&gt;, &lt;a href=&#34;https://github.com/paradox5566/EviHunter&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

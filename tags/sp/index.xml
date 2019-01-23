@@ -12,33 +12,37 @@
     
     
     <item>
-      <title>Note for Open Doors for Bob and Mallory: Open Port Usage in Android Apps and Security Implications</title>
+      <title>Paper Reading Note</title>
       <link>https://mxgcccc4.github.io/post/2019-01-07-open-doors-for-bob-and-mallory-open-port-usage-in-android-apps-and-security-implications/</link>
       <pubDate>Mon, 07 Jan 2019 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2019-01-07-open-doors-for-bob-and-mallory-open-port-usage-in-android-apps-and-security-implications/</guid>
-      <description>&lt;p&gt;作者：Yunhan Jack Jia, Qi Alfred Chen, Yikai Lin, Chao Kong, Z. Morley Mao&lt;/p&gt;
+      <description>&lt;p&gt;标题： Open Doors for Bob and Mallory: Open Port Usage in Android Apps and Security Implications&lt;/p&gt;
 
-&lt;p&gt;单位：University of Michigan&lt;/p&gt;
+&lt;p&gt;作者： Yunhan Jack Jia, Qi Alfred Chen, Yikai Lin, Chao Kong, Z. Morley Mao&lt;/p&gt;
 
-&lt;p&gt;出处：IEEE European Symposium on S&amp;amp;P&lt;/p&gt;
+&lt;p&gt;单位： University of Michigan&lt;/p&gt;
 
-&lt;p&gt;资料：&lt;a href=&#34;https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7961980&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://github.com/jiayunhan/OPAnalyzer&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;出处： IEEE European Symposium on S&amp;amp;P&lt;/p&gt;
+
+&lt;p&gt;资料： &lt;a href=&#34;https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7961980&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://github.com/jiayunhan/OPAnalyzer&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Note for Stack Overflow Considered Harmful? The Impact of Copy&amp;Paste on Android Application Security</title>
+      <title>Paper Reading Note</title>
       <link>https://mxgcccc4.github.io/post/2017-12-06-stack-overflow-considered-harmful-the-impact-of-copypaste-on-android-application-security/</link>
       <pubDate>Wed, 06 Dec 2017 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2017-12-06-stack-overflow-considered-harmful-the-impact-of-copypaste-on-android-application-security/</guid>
       <description>&lt;hr/&gt;
 
-&lt;p&gt;作者：Felix Fischer, Konstantin Bottinger, Huang Xiao, Christian Stransky, Yasemin Acar, Michael Backes, Sascha Fahl&lt;/p&gt;
+&lt;p&gt;标题： Stack Overflow Considered Harmful? The Impact of Copy&amp;amp;Paste on Android Application Security&lt;/p&gt;
 
-&lt;p&gt;单位：CISPA, Saarland University&lt;/p&gt;
+&lt;p&gt;作者： Felix Fischer, Konstantin Bottinger, Huang Xiao, Christian Stransky, Yasemin Acar, Michael Backes, Sascha Fahl&lt;/p&gt;
 
-&lt;p&gt;出处：IEEE S&amp;amp;P 17&lt;/p&gt;
+&lt;p&gt;单位： CISPA, Saarland University&lt;/p&gt;
+
+&lt;p&gt;出处： IEEE S&amp;amp;P 17&lt;/p&gt;
 
 &lt;p&gt;Paper: &lt;a href=&#34;https://www.aisec.fraunhofer.de/content/dam/aisec/Dokumente/Publikationen/Studien_TechReports/englisch/stackoverflow.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/p&gt;</description>
     </item>
