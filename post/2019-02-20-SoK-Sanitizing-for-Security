@@ -1,0 +1,38 @@
++++
+date = " 2019-02-20T15:25:00+08:00"
+tags = ["Paper Note", "S&P", "Sanitizers"]
+title = "Paper Reading Note"
+
++++
+
+标题：SoK: Sanitizing for Security
+
+作者：Dokyung Song, Julian Lettner, Prabhu Rajasekaran, Yeoul Na, Stijn Volckaert, Per Larsen, Michael Franz
+
+单位：University of California, Irvine
+
+会议：IEEE S&P 19
+
+资料：[Paper](https://csdl.computer.org/csdl/proceedings/sp/2019/6660/00/666000a187.pdf), [Github](https://github.com/securesystemslab/sanitizing-for-security-benchmarks)
+
+<!--more-->
+
+##I. ABSTRACT & INTRODUCTION
+
+鉴于C/C++由于语言本身特性所带来臭名昭著的安全问题，开发者通常会在release之前通过人工review，静态分析工具和动态分析对代码进行安全检查。作者在这里把所有动态分析工具统称为`sanitizers`，sanitizers还会帮助找到一些其他的bugs，还可以在程序运行时辅助观察程序异常行为。目前已经有大量的sanitizers已经被提出并实现了原型，虽然有很多sanitizer已经被广泛使用，并发现了许多漏洞，但是只有很少一部分会被接受并推广。
+
+本篇文章是一篇SoK，作者对用于检测安全问题的sanitizers进行了系统的分析和对比。作者对这些sanitizer进行了分类，统计了它们所能发现的漏洞类型，比较了它们的性能、兼容性和选择时的权衡利弊。并认为研究人员和开发者在设计和使用sanitizer的时候应该遵循以下目标：
+1. 设计能够发现现有工具无法发现的漏洞
+2. 提高sanitizer与现实世界程序的兼容性
+3. 提高发现漏洞的效率
+
+本篇论文的组织方式如下：
+- 第二部分比较了sanitizers和exploit防御工具之前的区别
+- 第三部分描述了现实世界中的漏洞类型
+- 第四部分对检测这些漏洞的技术进行分类
+- 第五部分和第六部分详细描述了设计sanitizers的两种关键方式：插桩和metadata管理
+- 第七部分如何使用有效地使用sanitizers
+- 第八部分重点关注这些工具的准确性、兼容性、性能和时空开销
+- 第九部分统计了这些sanitizers的使用情况
+
+##II. EXPLOIT MITIGATIONS VS. SANITIZERS
