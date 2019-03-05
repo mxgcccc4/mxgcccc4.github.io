@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Paper Reading Note&middot; mxgcccc4&#39;s blog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="MXGC">
+	<meta name="description" content="A security research blog of MXGC">
+	
+	<meta name="generator" content="Hugo 0.54.0" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://mxgcccc4.github.io/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://mxgcccc4.github.io/favicon.ico" type="image/x-icon">
+
+	<!-- RSS -->
+	
+
+	<!-- Font Awesome -->
+	<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+	<header class="site-header">
+	<div class="branding">
+		<a href="https://mxgcccc4.github.io/">
+		<img class="avatar" src="https://mxgcccc4.github.io/avatar.ico" alt=""/>
+		</a>
+		<h1 class="site-title">
+			<a href="https://mxgcccc4.github.io/">mxgcccc4&#39;s blog</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li><a href="/about/"> About </a></li>
+
+			<li class="icon">
+	<a href="https://mxgcccc4.github.io/" title="">
+		<i class="fa fa-fw fa-home"></i>
+	</a>
+</li>
+
+<li class="icon">
+	<a href="https://mxgcccc4.github.io/index.xml" title="Subcribe">
+		<i class="fa fa-fw fa-rss"></i>
+	</a>
+</li>
+
+<li class="icon">
+	<a href="mailto:sec_mxgc@sjtu.edu.cn" title="Email">
+		<i class="fa fa-fw fa-envelope"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+
+	<div class="content">
+	<article>
+		<header>
+			<h1 class="title">Paper Reading Note</h1>
+			<p class="meta">
+    February 20, 2019 &middot; 1 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> , <a href="https://mxgcccc4.github.io/tags/sp">S&amp;P</a> , <a href="https://mxgcccc4.github.io/tags/sanitizers">Sanitizers</a> 
+</p>
+		</header>
+
+		<section class="post-content">
+			<p>标题：SoK: Sanitizing for Security</p>
+
+<p>作者：Dokyung Song, Julian Lettner, Prabhu Rajasekaran, Yeoul Na, Stijn Volckaert, Per Larsen, Michael Franz</p>
+
+<p>单位：University of California, Irvine</p>
+
+<p>会议：IEEE S&amp;P 19</p>
+
+<p>资料：<a href="https://csdl.computer.org/csdl/proceedings/sp/2019/6660/00/666000a187.pdf">Paper</a>, <a href="https://github.com/securesystemslab/sanitizing-for-security-benchmarks">Github</a></p>
+
+<p>##I. ABSTRACT &amp; INTRODUCTION</p>
+
+<p>鉴于C/C++由于语言本身特性所带来臭名昭著的安全问题，开发者通常会在release之前通过人工review，静态分析工具和动态分析对代码进行安全检查。作者在这里把所有动态分析工具统称为<code>sanitizers</code>，sanitizers还会帮助找到一些其他的bugs，还可以在程序运行时辅助观察程序异常行为。目前已经有大量的sanitizers已经被提出并实现了原型，虽然有很多sanitizer已经被广泛使用，并发现了许多漏洞，但是只有很少一部分会被接受并推广。</p>
+
+<p>本篇文章是一篇SoK，作者对用于检测安全问题的sanitizers进行了系统的分析和对比。作者对这些sanitizer进行了分类，统计了它们所能发现的漏洞类型，比较了它们的性能、兼容性和选择时的权衡利弊。并认为研究人员和开发者在设计和使用sanitizer的时候应该遵循以下目标：
+1. 设计能够发现现有工具无法发现的漏洞
+2. 提高sanitizer与现实世界程序的兼容性
+3. 提高发现漏洞的效率</p>
+
+<p>本篇论文的组织方式如下：
+- 第二部分比较了sanitizers和exploit防御工具之前的区别
+- 第三部分描述了现实世界中的漏洞类型
+- 第四部分对检测这些漏洞的技术进行分类
+- 第五部分和第六部分详细描述了设计sanitizers的两种关键方式：插桩和metadata管理
+- 第七部分如何使用有效地使用sanitizers
+- 第八部分重点关注这些工具的准确性、兼容性、性能和时空开销
+- 第九部分统计了这些sanitizers的使用情况</p>
+
+<p>##II. EXPLOIT MITIGATIONS VS. SANITIZERS</p>
+
+			
+		</section>
+	</article>
+	</div>
+
+	<footer class="site-footer">
+	<p class="text">&copy; 2019 - Released under the MIT license<br>Powered by <a href="//gohugo.io/">Hugo</a> with the <a href="//github.com/digitalcraftsman/hugo-type-theme">Type Theme</a></p>
+</footer>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-132921460-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</body>
+</html>

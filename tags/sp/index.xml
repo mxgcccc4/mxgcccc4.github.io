@@ -6,10 +6,27 @@
     <description>Recent content in Sp on mxgcccc4&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Jan 2019 13:50:46 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 20 Feb 2019 15:25:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mxgcccc4.github.io/tags/sp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paper Reading Note</title>
+      <link>https://mxgcccc4.github.io/post/2019-02-20-sok-sanitizing-for-security/</link>
+      <pubDate>Wed, 20 Feb 2019 15:25:00 +0800</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/post/2019-02-20-sok-sanitizing-for-security/</guid>
+      <description>&lt;p&gt;标题：SoK: Sanitizing for Security&lt;/p&gt;
+
+&lt;p&gt;作者：Dokyung Song, Julian Lettner, Prabhu Rajasekaran, Yeoul Na, Stijn Volckaert, Per Larsen, Michael Franz&lt;/p&gt;
+
+&lt;p&gt;单位：University of California, Irvine&lt;/p&gt;
+
+&lt;p&gt;会议：IEEE S&amp;amp;P 19&lt;/p&gt;
+
+&lt;p&gt;资料：&lt;a href=&#34;https://csdl.computer.org/csdl/proceedings/sp/2019/6660/00/666000a187.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/securesystemslab/sanitizing-for-security-benchmarks&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Paper Reading Note</title>
