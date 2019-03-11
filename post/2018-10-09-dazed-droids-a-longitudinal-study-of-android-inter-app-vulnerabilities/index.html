@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title>Paper Reading Note&middot; mxgcccc4&#39;s blog</title>
+	<title>[ASIA CCS 18] Dazed Droids: A Longitudinal Study of Android Inter App Vulnerabilities&middot; mxgcccc4&#39;s blog</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="MXGC">
@@ -109,16 +109,14 @@
 	<div class="content">
 	<article>
 		<header>
-			<h1 class="title">Paper Reading Note</h1>
+			<h1 class="title">[ASIA CCS 18] Dazed Droids: A Longitudinal Study of Android Inter App Vulnerabilities</h1>
 			<p class="meta">
     October 9, 2018 &middot; 1 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/asia-ccs">ASIA CCS</a> , <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
 </p>
 		</header>
 
 		<section class="post-content">
-			<p>标题： Dazed Droids: A Longitudinal Study of Android Inter App Vulnerabilities</p>
-
-<p>作者： Ryan Johnson, Mohamed Elsabagh, Angelos Stavrou, Jeff Offutt</p>
+			<p>作者： Ryan Johnson, Mohamed Elsabagh, Angelos Stavrou, Jeff Offutt</p>
 
 <p>单位： Kryptowire, George Mason University</p>
 
@@ -126,7 +124,9 @@
 
 <p>资料： <a href="https://dl.acm.org/authorize?N659832">Paper</a></p>
 
-<h1 id="1-abstract-introduction">1 ABSTRACT &amp; INTRODUCTION</h1>
+<hr/>
+
+<h2 id="1-abstract-introduction">1 ABSTRACT &amp; INTRODUCTION</h2>
 
 <p>随着Android应用复杂性的提高和功能的丰富，Android更依赖于应用之间的代码和数据共享，以缩短响应时间并提供更丰富的用户体验。</p>
 
@@ -136,7 +136,7 @@
 
 <p>作者分析的样本涵盖了32个不同的Android设备，AOSP4.4-8.0所有版本和18,583个Google Play上的免费App。平均每个设备分析的时间为3小时，每个应用的时间为2分钟。大约有51.7%的Android设备和Google Play上49%的Top300应用至少存在一个inter-app漏洞。</p>
 
-<h1 id="2-background">2 BACKGROUND</h1>
+<h2 id="2-background">2 BACKGROUND</h2>
 
 <p>Android应用被划分为组件以便于code reuse。 app组件是应用中的入口点，在app的上下文中提供特定用途。 App组件通常在<code>AndroidManifest.xml</code>中声明和静态注册。组件即四大组件：activity, service, broadcast receiver, and content provider</p>
 
@@ -156,7 +156,7 @@
 
 <p>在Android OS中组件未处理的异常可能导致关键系统进程崩溃，触发操作系统重新启动以尝试恢复。下图显示的接收intent没有carry bundle对象，则会引起Android系统的crash，这是一个存在Samsung Galaxy S6 Edge手机 Android 6.0.1 版本中的真实代码片段。<img src="https://i.imgur.com/yEgtQNx.png" alt="1539070489678" /></p>
 
-<h1 id="3-overview-of-daze">3 OVERVIEW OF DAZE</h1>
+<h2 id="3-overview-of-daze">3 OVERVIEW OF DAZE</h2>
 
 <p><img src="https://i.imgur.com/TktqxAI.png" alt="1539071084637" /></p>
 
@@ -203,7 +203,7 @@
 </ol>
 </blockquote>
 
-<h1 id="4-study-1-device-evaluation">4 STUDY 1: DEVICE EVALUATION</h1>
+<h2 id="4-study-1-device-evaluation">4 STUDY 1: DEVICE EVALUATION</h2>
 
 <p>此部分，作者测试了覆盖Android 4.4-8.0的21个厂商设备及其所有的预装app</p>
 
@@ -231,7 +231,7 @@
 
 <p><img src="https://i.imgur.com/puFm2Qb.png" alt="1539081822076" /></p>
 
-<h1 id="5-study-2-google-play-app-testing">5 STUDY 2: GOOGLE PLAY APP TESTING</h1>
+<h2 id="5-study-2-google-play-app-testing">5 STUDY 2: GOOGLE PLAY APP TESTING</h2>
 
 <p>此部分的测试样本为Google Play商店March 2016至April 2017的4,972个独立应用的18,583个apk文件。测试结果显示有34.7%的程序会crash，具体crash分类如下：</p>
 
@@ -243,13 +243,13 @@
 
 <p>论文附录中还有更为详尽的测试数据，本篇论文绝大部分篇幅为各种样本的测试数据和测试结果分析。</p>
 
-<h1 id="6-a-generic-android-dos-attack">6 A GENERIC ANDROID DOS ATTACK</h1>
+<h2 id="6-a-generic-android-dos-attack">6 A GENERIC ANDROID DOS ATTACK</h2>
 
 <p>作者发现了一种新方法，可以通过使Android OS中的system_server进程遇到OutOfMemoryError状态来触发Android上的受控引导循环攻击，从而导致系统重启。这是通过零权限app重复使用特定的API方法调用来完成的，其中方法调用的参数最终将存储在system_server进程的堆上，在Android中启动进程（包括system_server）时，会为其分配固定的最大堆大小。一旦system_server分配了它的所有堆内存，如果不能释放任何内存，那么最后会crash。</p>
 
 <p>app还可以通过提供从BroadcastReceiver继承的对象和包含一个或多个操作字符串的IntentFilter对象来动态注册广播接收器。 system_server管理ActivityManagerService类中的所有app组件。当在广播接收器注册期间提供操作字符串时，它存储在可以保存任意数量的数据的变量中（在IntentResolver类中名为mfilters的HashSet变量）。因此app可以提供大超长的字符串以存储在system_server进程的堆上以耗尽其内存，从而导致crash。</p>
 
-<h1 id="7-conclusion">7 CONCLUSION</h1>
+<h2 id="7-conclusion">7 CONCLUSION</h2>
 
 <p>作者设计并实现了Daze用于fuzz Android应用和Android操作系统中的异常。作者发现了超过50％的当前Android设备容易受到系统DoS攻击，这是由Android App和系统代码中的异常处理不足所致。 作者还分析量化了连续版本的应用中致命异常的暴露期。结果显示，应用程序中的大多数致命异常都是从之前的应用版本继承而来的。此外作者还发现系统崩溃导致某些流行的Android设备上的数据泄漏漏洞。最后提出了一种通过使用来自零权限app标准API耗尽堆内存触发Android设备DoS的攻击方式。</p>
 

@@ -114,7 +114,7 @@
         <header>
             <h1>
                 <a class="post-link" href="https://mxgcccc4.github.io/post/2018-10-09-dazed-droids-a-longitudinal-study-of-android-inter-app-vulnerabilities/">
-				Paper Reading Note
+				[ASIA CCS 18] Dazed Droids: A Longitudinal Study of Android Inter App Vulnerabilities
 			</a>
             </h1>
             <p class="meta">
@@ -123,15 +123,25 @@
         </header>
 
         <div class="excerpt">
-            <p>标题： Dazed Droids: A Longitudinal Study of Android Inter App Vulnerabilities</p>
-
-<p>作者： Ryan Johnson, Mohamed Elsabagh, Angelos Stavrou, Jeff Offutt</p>
+            <p>作者： Ryan Johnson, Mohamed Elsabagh, Angelos Stavrou, Jeff Offutt</p>
 
 <p>单位： Kryptowire, George Mason University</p>
 
 <p>出处： ASIA CCS ’18</p>
 
 <p>资料： <a href="https://dl.acm.org/authorize?N659832">Paper</a></p>
+
+<hr/>
+
+<h2 id="1-abstract-introduction">1 ABSTRACT &amp; INTRODUCTION</h2>
+
+<p>随着Android应用复杂性的提高和功能的丰富，Android更依赖于应用之间的代码和数据共享，以缩短响应时间并提供更丰富的用户体验。</p>
+
+<p>绝大部分的Android App之间和其本身发生数据通信的时候使用的都是<code>intent</code>对象：<code>intent</code>类似于消息的抽象，提供了一种便于数据交换的基本通信机制。但是有些时候开发者们有意或无意地暴露了一些App Components内部的接口，让它们可以被本地的其他的一些App可以访问。</p>
+
+<p>这些暴露的接口有些没有实现较强的error catch或数据访问控制就会导致一些安全问题。在本文中，作者发现了如下问题：DoS、提权、系统crash和数据泄露。作者设计并实现了一个Fuzzing工具去自动化地检测inter-app通信时所存在的漏洞。Daze通过null和not-null但不为空的payloads去fuzz App中<code>export=&quot;True&quot;</code>的组件所公开的接口，并通过监控外置存储卡上文件的修改和系统设置的变化来验证漏洞是否存在。</p>
+
+<p>作者分析的样本涵盖了32个不同的Android设备，AOSP4.4-8.0所有版本和18,583个Google Play上的免费App。平均每个设备分析的时间为3小时，每个应用的时间为2分钟。大约有51.7%的Android设备和Google Play上49%的Top300应用至少存在一个inter-app漏洞。</p>
 
             <br>
             <a class="button" href="https://mxgcccc4.github.io/post/2018-10-09-dazed-droids-a-longitudinal-study-of-android-inter-app-vulnerabilities/">
@@ -144,7 +154,7 @@
         <header>
             <h1>
                 <a class="post-link" href="https://mxgcccc4.github.io/post/2018-07-04-dont-throw-me-away-threats-caused-by-the-abandoned-internet-resources-used-by-android-apps/">
-				Paper Reading Note
+				[Asia CCS 18] Don’t throw me away: Threats Caused by the Abandoned Internet Resources Used by Android Apps
 			</a>
             </h1>
             <p class="meta">
@@ -153,15 +163,26 @@
         </header>
 
         <div class="excerpt">
-            <p>标题： Don’t throw me away: Threats Caused by the Abandoned Internet Resources Used by Android Apps</p>
-
-<p>作者： Elkana Pariwono, Daiki Chiba, Mitsuaki Akiyama, Tatsuya Mori</p>
+            <p>作者： Elkana Pariwono, Daiki Chiba, Mitsuaki Akiyama, Tatsuya Mori</p>
 
 <p>单位： Waseda University, NTT Secure Platform Laboratories</p>
 
 <p>出处： <a href="http://asiaccs2018.org/?page_id=1141">Asia CCS&rsquo;18</a></p>
 
 <p>资料： <a href="https://dl.acm.org/authorize?N659882">Paper</a></p>
+
+<hr/>
+
+<h2 id="1-introduction">1 INTRODUCTION</h2>
+
+<p>现代APP为了提供更丰富的额外功能大多会采用一些网络服务，例如语音识别、天气预报等。这些直接由服务端提供的服务使开发者能偶较为容易地在移动端实现这些功能。但是这些支持移动应用的服务因为存在于服务端，当程序被发布之后，开发人员可能会因为维护成本渐渐地不再维护这些网络资源。本文中，作者对Android移动应用程序的开发者们进行调查，发现78%的开发人员没有定期更新发布的应用程序。还有66%的开发人员不是全职开发人员。因此这些应用程序使用的互联网资源将缺乏维护。而且这些资源的所有权会带来变更：域名或IP信息可能会被重新注册。本文中，作者进行了大规模的调查，通过对110万个应用的分析，作者发现尽管很多应用已经很久没有更新而且网络资源不再可用，但是依旧有很多来自移动用户的流量。本文中作者做了如下工作：</p>
+
+<ul>
+<li>分析了移动应用中被废弃的网络资源可能存在安全问题。</li>
+<li>通过对100万+的应用的分析，作者发现7331个应用中有3628个不再可使用的网络资源。其中有15个APP的安装次数超过一百万。</li>
+<li>不仅仅是Android平台，很多应用同时有iOS版本，它们依旧存在这些问题。</li>
+<li>作者讨论了对于由于网络服务归属权的变更带来的问题的解决方案。</li>
+</ul>
 
             <br>
             <a class="button" href="https://mxgcccc4.github.io/post/2018-07-04-dont-throw-me-away-threats-caused-by-the-abandoned-internet-resources-used-by-android-apps/">
@@ -174,7 +195,7 @@
         <header>
             <h1>
                 <a class="post-link" href="https://mxgcccc4.github.io/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/">
-				Paper Reading Note
+				[Asia CCS 18] Aource Attribution of Cryptographic API Misuse in Android Applications
 			</a>
             </h1>
             <p class="meta">
@@ -183,15 +204,25 @@
         </header>
 
         <div class="excerpt">
-            <p>标题： Source Attribution of Cryptographic API Misuse in Android Applications</p>
-
-<p>作者： Ildar Muslukhov, Yazan Boshmaf, Konstantin Beznosov</p>
+            <p>作者： Ildar Muslukhov, Yazan Boshmaf, Konstantin Beznosov</p>
 
 <p>单位： The University of British Columbia, Qatar Computing Research Institute</p>
 
 <p>出处： AsiaCCS‘18</p>
 
 <p>资料： <a href="http://lersse-dl.ece.ubc.ca/record/324/files/binsight-asiaccs-2018.pdf">PDF</a></p>
+
+<hr/>
+
+<h2 id="1-abstract-introduction">1 ABSTRACT &amp; INTRODUCTION</h2>
+
+<p>根据最近的研究表明，88％使用Java密码学API的Android应用程序至少会出现一个密码学误用的问题。但是，目前还不清楚这些错误是来自应用程序还是第三方lib。而在本文中，作者弥补了这一gap，并将误用的来源归属引入到密码学API误用的分析中。本文研究的目标有两个：（1）将密码学API误用的来源归属，以及（2）研究2012年至2016年间误用的变化。</p>
+
+<p>作者使用C#设计并实现了一个静态自动分析系统BinSight：（1）使用静态程序切片识别Java密码学API的调用，（2）验证这些调用 - 针对密码学中常见规则调用，最后（3）使用基于启发式的第三方库检测技术将误用的调用归因于其源。</p>
+
+<p>作者分析了2012年，2015年和2016年收集的132K个Android应用程序。结果表明第三方库是密码学API误用的主要来源。90％的误用应用程序（至少包含一个Java密码学API调用）来自第三方lib。</p>
+
+<p>与2012年相比，作者发现对于应用程序和第三方库代码，2016年对称密码的ECB模式使用率显着下降。然而与应用程序代码不同，第三方库显着增加了对用于CBC模式密码的对称密码和静态IV的静态加密密钥的依赖。最后，作者发现2016年误用的第二和第三大原因是使用了不安全的RC4和DES秘钥。</p>
 
             <br>
             <a class="button" href="https://mxgcccc4.github.io/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/">

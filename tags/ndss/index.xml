@@ -6,60 +6,94 @@
     <description>Recent content in Ndss on mxgcccc4&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jul 2018 13:50:46 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 20 Feb 2019 15:25:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mxgcccc4.github.io/tags/ndss/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[NDSS 19] Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment</title>
+      <link>https://mxgcccc4.github.io/post/2019-03-11-understanding-open-ports-in-android-applications-discovery-diagnosis-and-security-assessment/</link>
+      <pubDate>Wed, 20 Feb 2019 15:25:00 +0800</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/post/2019-03-11-understanding-open-ports-in-android-applications-discovery-diagnosis-and-security-assessment/</guid>
+      <description>&lt;p&gt;作者：Daoyuan Wu, Debin Gao, Rocky K. C. Chang, En He, Eric K. T. Cheng, and Robert H. Deng&lt;/p&gt;
+
+&lt;p&gt;单位：Singapore Management University, The Hong Kong Polytechnic University, China Electronic Technology Cyber Security Co., Ltd&lt;/p&gt;
+
+&lt;p&gt;出处：NDSS 2019&lt;/p&gt;
+
+&lt;p&gt;资料：&lt;a href=&#34;https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_06B-5_Wu_paper.pdf&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;众所周知，服务器是通过开放TCP / UDP端口来提供服务的，这些开放的网络端口页同样存在于许多Android应用程序中。在本文中，作者是针对这些应用程序提出了第一个开放式分析pipeline，包括 discovery, diagnosis和
+security assessment，系统地了解Android应用程序中的开放端口及其潜在威胁。最后发现有15.3％的Android应用程序中开放了网络端口，远高于&lt;a href=&#34;https://securitygossip.com/blog/2019/02/18/open-doors-for-bob-and-mallory-open-port-usage-in-android-apps-and-security-implications/&#34;&gt;之前&lt;/a&gt;分析的6.8％，其中有61.8％的开放端口应用程序完全来自于应用中的SDK，开放端口的应用有20.7％存在使用不安全的API的情况。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[NDSS 18] Finding Clues for Your Secrets: Semantics-Driven, Learning-Based Privacy Discovery in Mobile Apps</title>
       <link>https://mxgcccc4.github.io/post/2018-07-01-finding-clues-for-your-secrets-semantics-driven-learning-based-privacy-discovery-in-mobile-apps/</link>
       <pubDate>Sun, 01 Jul 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2018-07-01-finding-clues-for-your-secrets-semantics-driven-learning-based-privacy-discovery-in-mobile-apps/</guid>
-      <description>&lt;p&gt;标题： Finding Clues for Your Secrets: Semantics-Driven, Learning-Based Privacy Discovery in Mobile Apps&lt;/p&gt;
-
-&lt;p&gt;作者： Yuhong Nan, Zhemin Yang, Xiaofeng Wang, Yuan Zhang, Donglai Zhu, Min Yang&lt;/p&gt;
+      <description>&lt;p&gt;作者： Yuhong Nan, Zhemin Yang, Xiaofeng Wang, Yuan Zhang, Donglai Zhu, Min Yang&lt;/p&gt;
 
 &lt;p&gt;单位： Fudan University, Shanghai Insitute of Intelligent Electronics &amp;amp; Systems, Shanghai Key Laboratory of Data Science&lt;/p&gt;
 
 &lt;p&gt;出处： NDSS&amp;rsquo;18&lt;/p&gt;
 
-&lt;p&gt;资料：&lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_05B-1_Nan_paper.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/NDSS2018_05B-1_Nan_Slides.pdf&#34;&gt;Slide&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=QugddUfb7sY&amp;amp;t=0s&amp;amp;list=PLfUWWM-POgQvj0qkVqVMqDYw_0nhLVSOR&amp;amp;index=1&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料：&lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_05B-1_Nan_paper.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/NDSS2018_05B-1_Nan_Slides.pdf&#34;&gt;Slide&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=QugddUfb7sY&amp;amp;t=0s&amp;amp;list=PLfUWWM-POgQvj0qkVqVMqDYw_0nhLVSOR&amp;amp;index=1&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;对于检测移动应用中的隐私泄露问题来说，自动化检测是一个长期存在的挑战。现有的解决方案则是通过系统API和APP服务端返回内容去着手分析。本文作者提出了一种分析Android APP的新方案。作者认为，程序代码中的方法名、变量名、常量等信息，尽管在轻量级混淆的情况下依旧包含着丰富的语义信息。所以作者通过自然语言处理（NLP）去自动化地定位程序中变量名、方法名等敏感元素，然后使用基于学习的程序框架分析这些真正存在敏感内容的代码。作者通过这种方法分析了445668个app。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[NDSS 18] InstaGuard: Instantly Deployable Hot-patches for Vulnerable System Programs on Android</title>
       <link>https://mxgcccc4.github.io/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/</link>
       <pubDate>Sun, 06 May 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/</guid>
-      <description>&lt;p&gt;标题： InstaGuard: Instantly Deployable Hot-patches for Vulnerable System Programs on Android&lt;/p&gt;
-
-&lt;p&gt;作者： Yaohui Chen, Yuping Li, Long Lu, Yueh-Hsun Lin, Hayawardh Vijayakumar, Zhi Wang, Xinming Ou&lt;/p&gt;
+      <description>&lt;p&gt;作者： Yaohui Chen, Yuping Li, Long Lu, Yueh-Hsun Lin, Hayawardh Vijayakumar, Zhi Wang, Xinming Ou&lt;/p&gt;
 
 &lt;p&gt;单位： Northeastern University, University of South Florida, Northeastern University, JD Research Center, Samsung Research America&lt;/p&gt;
 
 &lt;p&gt;出处： NDSS 2018&lt;/p&gt;
 
-&lt;p&gt;资料： &lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/ndss2018_08-2_Chen_paper.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=HhwOotwmo2s&amp;amp;index=2&amp;amp;list=PLfUWWM-POgQuPfShO3X5sJlYtzSPvbBUJ&amp;amp;t=0s&#34;&gt;Video&lt;/a&gt;, &lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/NDSS2018_08-2_Chen_Slides.pdf&#34;&gt;Slide&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料： &lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/ndss2018_08-2_Chen_paper.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=HhwOotwmo2s&amp;amp;index=2&amp;amp;list=PLfUWWM-POgQuPfShO3X5sJlYtzSPvbBUJ&amp;amp;t=0s&#34;&gt;Video&lt;/a&gt;, &lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/NDSS2018_08-2_Chen_Slides.pdf&#34;&gt;Slide&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;由于hotpatch易于开发和更快的部署速度，而且在永久修复漏洞的补丁释出之前有效地阻止已发现漏洞被利用，研究人员建议把hotpatch应用于Android的系统程序和应用之中，以便于缩短严重漏洞在被修复之前被利用的窗口期。但是由于Android系统的碎片化，hotpatch技术虽然在PC上广泛使用，但是很少被厂商采用。作者认为阻碍hotpatch在Android平台推广的因素主要是对于一个漏洞的补丁在释放出来之后通常需要经过设备厂商在推送更新之前漫长的兼容性测试。这种测试和发布过程可能需要几个月的时间，那么hotpatch就失去了可以快速部署的优势。&lt;/p&gt;
+
+&lt;p&gt;作者提出了InstaGuard，这是一种新的移动设备的hotpatch方法。与现有的hotpatch技术不同，InstaGuard没有向需要patch的程序注入新的补丁代码，而是通过执行不包含代码的即时更新规则来及时阻止未修补的漏洞，这样做的优势在于不需要经过兼容性测试就可以即时推送给需要修复的设备。在设计InstaGuard的时候，作者使用了一种可以表达能够有效缓解各种漏洞在移动设备上执行的规则语言，其次编写这些规则并不需要使用过于复杂的表示方式。作者使用ARM CPU支持的基本调试原语为hotpatch和强制机制设计了一种新语言。作者还构建了RuleMaker，这是一款基于高级语言并且易于编写的漏洞描述自动生成InstaGuard规则的工具。&lt;/p&gt;
+
+&lt;p&gt;作者在Nexus 5X手机上测试了InstaGuard。在测评部分作者验证了InstaGuard可以处理2016年Android安全公告中的所有关键CVE。作者还使用来自4个不同类别的关键漏洞进行单元测试。 InstaGuard平均增加了1.69％的存储空间占用量，并带来了2.70％的overload。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[NDSS 17] Obfuscation-Resilient Privacy Leak Detection for Mobile Apps Through Differential Analysis</title>
       <link>https://mxgcccc4.github.io/post/2018-01-22-obfuscation-resilient-privacy-leak-detection-for-mobile-apps-through-differential-analysis/</link>
       <pubDate>Mon, 22 Jan 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2018-01-22-obfuscation-resilient-privacy-leak-detection-for-mobile-apps-through-differential-analysis/</guid>
-      <description>&lt;p&gt;标题：  Obfuscation-Resilient Privacy Leak Detection for Mobile Apps Through Differential Analysis&lt;/p&gt;
-
-&lt;p&gt;作者： Andrea Continella, Yanick Fratantonio, Martina Lindorfer, Alessandro Puccetti, Ali Zand, Christopher Kruegel, and Giovanni Vigna&lt;/p&gt;
+      <description>&lt;p&gt;作者： Andrea Continella, Yanick Fratantonio, Martina Lindorfer, Alessandro Puccetti, Ali Zand, Christopher Kruegel, and Giovanni Vigna&lt;/p&gt;
 
 &lt;p&gt;单位： Politecnico di Milano、UC Santa Barbara&lt;/p&gt;
 
 &lt;p&gt;出处： NDSS 2017&lt;/p&gt;
 
-&lt;p&gt;资料： &lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017_05A-4_Continella_paper.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017-05a_4-continella_slides.pdf&#34;&gt;Slide&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=5aNBBeI9HXw&amp;amp;feature=youtu.be&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料： &lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017_05A-4_Continella_paper.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017-05a_4-continella_slides.pdf&#34;&gt;Slide&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=5aNBBeI9HXw&amp;amp;feature=youtu.be&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;作者背景&#34;&gt;作者背景&lt;/h2&gt;
+
+&lt;p&gt;这篇文章发表在2017年的NDSS上，第一作者是来自米兰理工大学（Politecnico di Milano）的PhD学生Andrea Continella，他本人还经常参加CTF，同时也是Shellphish的队员。作者的研究方向为针对高级恶意软件的分析和防御机制，包括trojan木马或ransomware家族，他本人的更多信息可以在&lt;a href=&#34;https://conand.me&#34;&gt;个人主页&lt;/a&gt;上看到。而这篇文章具体内容就是作者在UCSB的&lt;a href=&#34;https://seclab.cs.ucsb.edu/&#34;&gt;SecLab&lt;/a&gt;进行为期六个月的交流的时候的工作成果，论文的其他作者就是该实验室的相关成员。&lt;/p&gt;</description>
     </item>
     
   </channel>

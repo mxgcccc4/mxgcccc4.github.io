@@ -12,56 +12,70 @@
     
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[S&amp;P 19] SoK: Sanitizing for Security</title>
       <link>https://mxgcccc4.github.io/post/2019-02-20-sok-sanitizing-for-security/</link>
       <pubDate>Wed, 20 Feb 2019 15:25:00 +0800</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2019-02-20-sok-sanitizing-for-security/</guid>
-      <description>&lt;p&gt;标题：SoK: Sanitizing for Security&lt;/p&gt;
-
-&lt;p&gt;作者：Dokyung Song, Julian Lettner, Prabhu Rajasekaran, Yeoul Na, Stijn Volckaert, Per Larsen, Michael Franz&lt;/p&gt;
+      <description>&lt;p&gt;作者：Dokyung Song, Julian Lettner, Prabhu Rajasekaran, Yeoul Na, Stijn Volckaert, Per Larsen, Michael Franz&lt;/p&gt;
 
 &lt;p&gt;单位：University of California, Irvine&lt;/p&gt;
 
 &lt;p&gt;会议：IEEE S&amp;amp;P 19&lt;/p&gt;
 
-&lt;p&gt;资料：&lt;a href=&#34;https://csdl.computer.org/csdl/proceedings/sp/2019/6660/00/666000a187.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/securesystemslab/sanitizing-for-security-benchmarks&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料：&lt;a href=&#34;https://csdl.computer.org/csdl/proceedings/sp/2019/6660/00/666000a187.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/securesystemslab/sanitizing-for-security-benchmarks&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;i-abstract-introduction&#34;&gt;I. ABSTRACT &amp;amp; INTRODUCTION&lt;/h2&gt;
+
+&lt;p&gt;鉴于C/C++由于语言本身特性所带来臭名昭著的安全问题，开发者通常会在release之前通过人工review，静态分析工具和动态分析对代码进行安全检查。作者在这里把所有动态分析工具统称为&lt;code&gt;sanitizers&lt;/code&gt;，sanitizers还会帮助找到一些其他的bugs，还可以在程序运行时辅助观察程序异常行为。目前已经有大量的sanitizers已经被提出并实现了原型，虽然有很多sanitizer已经被广泛使用，并发现了许多漏洞，但是只有很少一部分会被接受并推广。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[Euro S&amp;P] Open Doors for Bob and Mallory: Open Port Usage in Android Apps and Security Implications</title>
       <link>https://mxgcccc4.github.io/post/2019-01-07-open-doors-for-bob-and-mallory-open-port-usage-in-android-apps-and-security-implications/</link>
       <pubDate>Mon, 07 Jan 2019 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2019-01-07-open-doors-for-bob-and-mallory-open-port-usage-in-android-apps-and-security-implications/</guid>
-      <description>&lt;p&gt;标题： Open Doors for Bob and Mallory: Open Port Usage in Android Apps and Security Implications&lt;/p&gt;
-
-&lt;p&gt;作者： Yunhan Jack Jia, Qi Alfred Chen, Yikai Lin, Chao Kong, Z. Morley Mao&lt;/p&gt;
+      <description>&lt;p&gt;作者： Yunhan Jack Jia, Qi Alfred Chen, Yikai Lin, Chao Kong, Z. Morley Mao&lt;/p&gt;
 
 &lt;p&gt;单位： University of Michigan&lt;/p&gt;
 
 &lt;p&gt;出处： IEEE European Symposium on S&amp;amp;P&lt;/p&gt;
 
-&lt;p&gt;资料： &lt;a href=&#34;https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7961980&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://github.com/jiayunhan/OPAnalyzer&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料： &lt;a href=&#34;https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7961980&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://github.com/jiayunhan/OPAnalyzer&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;本文中，作者对移动平台上的开放端口使用及其安全影响进行了较为系统的研究。作者设计并实现了一种静态分析工具OPAnalyzer，可以有效分析Android应用程序中易受攻击的开放端口使用情况。作者使用OPAnalyzer，对具有超过100K Android应用程序的数据集进行了漏洞分析。 在作者随后的分析中，近一半的开放端口使用是不受保护的，可以直接远程利用。从已识别的易受攻击的用法中，发现了410个易受攻击的应用程序共956个潜在威胁。作者手动确认了57个应用程序的漏洞，包括在官方市场上下载量为1000万到5000万的应用程序，以及一些设备的预装app。这些漏洞可被利用远程窃取联系人，照片甚至安全凭证，还可以执行敏感操作，如恶意软件安装和恶意代码执行。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[S&amp;P 17] Stack Overflow Considered Harmful? The Impact of Copy&amp;Paste on Android Application Security</title>
       <link>https://mxgcccc4.github.io/post/2017-12-06-stack-overflow-considered-harmful-the-impact-of-copypaste-on-android-application-security/</link>
       <pubDate>Wed, 06 Dec 2017 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2017-12-06-stack-overflow-considered-harmful-the-impact-of-copypaste-on-android-application-security/</guid>
-      <description>&lt;hr/&gt;
-
-&lt;p&gt;标题： Stack Overflow Considered Harmful? The Impact of Copy&amp;amp;Paste on Android Application Security&lt;/p&gt;
-
-&lt;p&gt;作者： Felix Fischer, Konstantin Bottinger, Huang Xiao, Christian Stransky, Yasemin Acar, Michael Backes, Sascha Fahl&lt;/p&gt;
+      <description>&lt;p&gt;作者： Felix Fischer, Konstantin Bottinger, Huang Xiao, Christian Stransky, Yasemin Acar, Michael Backes, Sascha Fahl&lt;/p&gt;
 
 &lt;p&gt;单位： CISPA, Saarland University&lt;/p&gt;
 
 &lt;p&gt;出处： IEEE S&amp;amp;P 17&lt;/p&gt;
 
-&lt;p&gt;Paper: &lt;a href=&#34;https://www.aisec.fraunhofer.de/content/dam/aisec/Dokumente/Publikationen/Studien_TechReports/englisch/stackoverflow.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Paper: &lt;a href=&#34;https://www.aisec.fraunhofer.de/content/dam/aisec/Dokumente/Publikationen/Studien_TechReports/englisch/stackoverflow.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;1-introduction&#34;&gt;1.Introduction&lt;/h2&gt;
+
+&lt;p&gt;越来越多的软件开发人员在Stack Overflow这样的在线技术平台讨论技术问题。尤其是缺乏编程经验的程序员会在这样的社区提问的时候，会得到一些技术指导和其他人回答问题的时候提供的代码片段。普遍认为，大量的程序员在开发软件的时候，经常会从这样的平台上复制代码。所以作者认为这样的行为会导致一些不安全的代码，虽然这些代码绝大多数情况下会解决问题，但还是由于其中许多代码片段是不安全的。那么就会存在这样一个传播周期：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;社区提供代码片段-&amp;gt;开发者复制粘贴代码-&amp;gt;用户运行了包含这些代码的程序-&amp;gt;攻击者利用这些程序中的漏洞&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这篇论文中，作者就这个问题做了研究，发现Stack Overflow上的1161份不安全的代码被开发者复制粘贴进了130万个Android应用程序中。&lt;/p&gt;</description>
     </item>
     
   </channel>

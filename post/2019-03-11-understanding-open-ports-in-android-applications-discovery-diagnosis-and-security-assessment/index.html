@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>[NDSS 19] Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment&middot; mxgcccc4&#39;s blog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="MXGC">
+	<meta name="description" content="A security research blog of MXGC">
+	
+	<meta name="generator" content="Hugo 0.54.0" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://mxgcccc4.github.io/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://mxgcccc4.github.io/favicon.ico" type="image/x-icon">
+
+	<!-- RSS -->
+	
+
+	<!-- Font Awesome -->
+	<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+	<header class="site-header">
+	<div class="branding">
+		<a href="https://mxgcccc4.github.io/">
+		<img class="avatar" src="https://mxgcccc4.github.io/avatar.ico" alt=""/>
+		</a>
+		<h1 class="site-title">
+			<a href="https://mxgcccc4.github.io/">mxgcccc4&#39;s blog</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li><a href="/about/"> About </a></li>
+
+			<li class="icon">
+	<a href="https://mxgcccc4.github.io/" title="">
+		<i class="fa fa-fw fa-home"></i>
+	</a>
+</li>
+
+<li class="icon">
+	<a href="https://mxgcccc4.github.io/index.xml" title="Subcribe">
+		<i class="fa fa-fw fa-rss"></i>
+	</a>
+</li>
+
+<li class="icon">
+	<a href="mailto:sec_mxgc@sjtu.edu.cn" title="Email">
+		<i class="fa fa-fw fa-envelope"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+
+	<div class="content">
+	<article>
+		<header>
+			<h1 class="title">[NDSS 19] Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment</h1>
+			<p class="meta">
+    February 20, 2019 &middot; 2 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/ndss">NDSS</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> , <a href="https://mxgcccc4.github.io/tags/sanitizers">Sanitizers</a> 
+</p>
+		</header>
+
+		<section class="post-content">
+			<p>作者：Daoyuan Wu, Debin Gao, Rocky K. C. Chang, En He, Eric K. T. Cheng, and Robert H. Deng</p>
+
+<p>单位：Singapore Management University, The Hong Kong Polytechnic University, China Electronic Technology Cyber Security Co., Ltd</p>
+
+<p>出处：NDSS 2019</p>
+
+<p>资料：<a href="https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_06B-5_Wu_paper.pdf">原文</a></p>
+
+<hr/>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>众所周知，服务器是通过开放TCP / UDP端口来提供服务的，这些开放的网络端口页同样存在于许多Android应用程序中。在本文中，作者是针对这些应用程序提出了第一个开放式分析pipeline，包括 discovery, diagnosis和
+security assessment，系统地了解Android应用程序中的开放端口及其潜在威胁。最后发现有15.3％的Android应用程序中开放了网络端口，远高于<a href="https://securitygossip.com/blog/2019/02/18/open-doors-for-bob-and-mallory-open-port-usage-in-android-apps-and-security-implications/">之前</a>分析的6.8％，其中有61.8％的开放端口应用程序完全来自于应用中的SDK，开放端口的应用有20.7％存在使用不安全的API的情况。</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>根据之前Jia 发表在Euro S&amp;P 17上的<a href="https://securitygossip.com/blog/2019/02/18/open-doors-for-bob-and-mallory-open-port-usage-in-android-apps-and-security-implications/"><code>Open doors for Bob and Mallory: Open port usage in Android apps and security implications</code></a>，他们使用静态分析工具OPAnalyzer分析了 24,000个应用发现有 6.8%的应用存在开放端口的行为，其中400个存在安全问题并手工确认了57个。但是作者认为静态分析无法对抗动态加载、高级混淆、复杂控制流等行为，有比较大的局限性。于是作者设计了一个流水线分析开放端口。</p>
+
+<p><img src="https://i.imgur.com/xkHYVqD.png" alt="1551946576208" /></p>
+
+<p>首先，作者在Google play上发布了一个众包程序——NetMon，目的是和静态分析相比更有效地手机开放端口。NetMon被设计用来收集Andorid用户手机上的开放端口。作者从2016.10.18到2017.7共收集了来自136个国家的3293个设备上2778个app，其中有725个是20个厂商的预装应用。之后这些收集到的数据会上传到在作者部署的服务端openport analytic engine上，作者认为这些在详细的技术分析之前，这些来自真实用户的端口数据和app使用情况本身就有比较大的价值，所以会先着重分析这些</p>
+
+<h2 id="background-and-threat-model">BACKGROUND AND THREAT MODEL</h2>
+
+<p>这里的Open Port特指TCP和UDP端口，BluetoothSocket和NFCSocket以及UNIX domain
+socket不在当前讨论范畴，威胁模型如下：</p>
+
+<ul>
+<li>攻击者App与目标App安装在同一台设备上，并且没有申请任何敏感权限，只有INTERNET权限以访问网络。</li>
+<li>远程攻击者和目标App在同一个WiFi或者蜂窝数据网络，并且可以发送 TCP/UDP 数据。</li>
+<li>攻击者可以诱使受害者打开一个Web页面以加载页面上的恶意Javascript代码 （这种攻击只对仅仅使用固定端口的HTTP端口有效）</li>
+</ul>
+
+<h2 id="discovery-via-crowdsourcing">DISCOVERY VIA CROWDSOURCING</h2>
+
+<p>作者采用发布众包而不是静态分析的方式去分析App开放了哪些端口，是因为众包有如下优势：</p>
+
+<ol>
+<li>可以监测野外的App端口开放情况，包括预装应用</li>
+<li>不会有假阳性结果</li>
+<li>可以检测到开放端口以及开放时间</li>
+<li>可以覆盖UDP和TCP</li>
+<li>比静态分析更高效，不用考虑加固手段</li>
+</ol>
+
+<p>此部分有三个步骤：</p>
+
+<ol>
+<li>手机端端口开放检测阶段</li>
+<li>上传服务端开放端口分析引擎</li>
+<li>根据应用安装状况分析出结果</li>
+</ol>
+
+<p><img src="https://i.imgur.com/KM7FAFt.png" alt="1552117176954" /></p>
+
+<h3 id="a-on-device-open-port-monitoring">A. On-device Open Port Monitoring</h3>
+
+<p>检测端口方式：避免过高的overhead，每5分钟读一次<code>/proc/net/tcp|tcp6|udp|udp6</code>，以获取以下信息：</p>
+
+<ul>
+<li>Socket address</li>
+<li>TCP socket state</li>
+<li>The app UID</li>
+</ul>
+
+<p><img src="https://i.imgur.com/ewz7f6r.png" alt="1552117196900" /></p>
+
+<h3 id="b-server-side-open-port-analytic-engine">B. Server-side Open-Port Analytic Engine</h3>
+
+<p>服务端分析引擎是众包所上传数据分析中比较重要的一步，目的是归纳这些端口开放的时间，类型和端口属性以在静态分析是定位代码。</p>
+
+<p><img src="https://i.imgur.com/LYe9zUA.png" alt="1552117272189" /></p>
+
+<h4 id="step-1-aggregation">Step 1: Aggregation</h4>
+
+<p>按照协议类型TCP/UDP和监听地址分为12个种类</p>
+
+<h4 id="step-2-clustering-by-occurrences">Step 2: Clustering by occurrences</h4>
+
+<p>根据12个种类中的同一个分类判断某个端口是固定的端口，还是随机端口。判断规则如下：</p>
+
+<blockquote>
+<p><code>&gt;80%</code>则是固定端口</p>
+
+<p><code>&lt;50%</code>则是随机端口</p>
+
+<p>其他使用启发式判断</p>
+</blockquote>
+
+<h4 id="step-3-clustering-by-heuristics">Step 3: Clustering by heuristics</h4>
+
+<p>设定<code>random range</code>：32,768-61,000，计算Step1中的每组中的许多未细分的端口，在区间内为Nr不在为Nf</p>
+
+<ul>
+<li><p>Nr &gt; 0 and Nf = 0：random</p></li>
+
+<li><p>Nr &gt; 0 and Nf &gt; 0：random（采取保守策略）</p></li>
+
+<li><p>Nr = 0 and Nf &gt; 0：fixed</p></li>
+</ul>
+
+<h3 id="c-crowdsourcing-results">C. Crowdsourcing Results</h3>
+
+<p>从2016.10.18到2017.7共收集了来自136个国家3293个用户的3293个设备上2778个app，28%来自US。共收集了40,129,929个端口监控记录，发现了2,778个开放端口的应用程序（2,284个开放了TCP、1,092开放了UDP端口）和总共4,954个开放端口（3,327个TCP端口和1,627个UDP端口）。</p>
+
+<p><img src="https://i.imgur.com/gydt61a.png" alt="1552118628475" /></p>
+
+<h4 id="1-open-ports-in-popular-apps">1) Open Ports in Popular Apps</h4>
+
+<p>这部分是对用户自主安装应用的统计</p>
+
+<p><img src="https://i.imgur.com/aXM8M6h.png" alt="1552118917291" /></p>
+
+<h4 id="2-open-ports-in-built-in-app">2) Open Ports in Built-in App</h4>
+
+<p>这部分是对手机设备预装应用的统计，这里去除了在上部分中已经包括的应用，例如手机的预装FB和Amazon</p>
+
+<p><img src="https://i.imgur.com/TSMNK0l.png" alt="1552119027401" /></p>
+
+<p>值得一提的是，很多开放了UDP68端口，这是DHCP端口；开放了5060，这是VoIP服务端口。</p>
+
+<p>还有一些网络发现服务端口，例如1900是UPnP端口，5353是mDNS端口。还有一些厂商特有服务端口.</p>
+
+<blockquote>
+<p>Examples include TCP ports 7080 and 8230 for Samsung’s Accessory Service [30], TCP port 59150 and 59152 for LG’s Smart  hare [22], and TCP port 5000 and UDP port 1024 for Sony’s DLNA technique [33].</p>
+</blockquote>
+
+<h4 id="3-pervasiveness-and-effectiveness">3) Pervasiveness and Effectiveness</h4>
+
+<p>此部分主要和前期其他人的工作做对比，显示优于静态分析的覆盖度和高效。</p>
+
+<h2 id="iv-diagnosis-via-static-analysis">IV. DIAGNOSIS VIA STATIC ANALYSIS</h2>
+
+<p><img src="https://i.imgur.com/K7nTPfz.png" alt="1552119529546" /></p>
+
+<p>接下来是静态分析的部分，这里的静态分析的目的是借助第三部分所发现的开放端口情况来发现不安全的API使用和端口开放的原因以及用途。静态分析的工具叫做OPTool，分析的逻辑是先在APK中查找这些端口开放相关的API，然后跟踪这些调用的参数。</p>
+
+<h3 id="a-open-port-construction-and-our-analysis-objectives">A. Open Port Construction and Our Analysis Objectives</h3>
+
+<p>首先收集这些API包括native和java层</p>
+
+<p>Native：socket(), bind(), listen(), and accept()</p>
+
+<p>Java：ServerSocket等11种</p>
+
+<p><img src="https://i.imgur.com/8UHGhfY.png" alt="1552119918872" /></p>
+
+<h3 id="b-optool-s-design-and-implementation">B. OPTool’s Design and Implementation</h3>
+
+<p>OPTool的设计逻辑是使用<code>backward slicing graph (BSG)</code>，然后借助<code>semantic-aware constant propagation</code>，分别回溯这些API的端口和地址。实现则是使用dexdump把apk中dex转成plaintext，然后再查找方法。</p>
+
+<p>OPTool是控制流和上下文敏感的，处理了函数调用、数组和静态、实例成员变量的引用、异步执行(e.g., in Thread, AsyncTask, and Handler)、组件间通信和Android生命周期等技术问题。并且不考虑没有caller的方法的处理。</p>
+
+<h3 id="c-static-analysis-experiments">C. Static Analysis Experiments</h3>
+
+<p>分析了33个Google Play类别中的前9,900个应用程序和来自AndroZoo的1,027个应用程序。作者使用第一组来衡量不同类别的openport应用程序的分布情况。这9,900个应用程序中，有1,061个应用程序及其相应的1,453个TCP开放端口。在AndroZoo的1,027个应用程序中有459个App开放了端口。</p>
+
+<p><img src="https://i.imgur.com/SMc36Nt.png" alt="1552121238382" /></p>
+
+<h3 id="d-detection-of-open-port-sdks">D. Detection of Open-Port SDKs</h3>
+
+<p>在这1,520个应用程序中，能够检测到13个openport SDK，这些SDK在数据集中至少影响了三个应用程序。</p>
+
+<p><img src="https://i.imgur.com/Vg7OYbf.png" alt="1552121447540" /></p>
+
+<h2 id="v-security-assessment">V. SECURITY ASSESSMENT</h2>
+
+<p>A. Vulnerability Analysis of Open Ports</p>
+
+<p>这里作者通过JEB逆向和手工动态分析总结了五中漏洞模型。</p>
+
+<p><img src="https://i.imgur.com/8YgbwcU.png" alt="1552121627843" /></p>
+
+<ol>
+<li>例如 <code>http://127.0.0.1:1234//filename</code>这种没有验证的信息泄露</li>
+<li>没有经过验证的代码执行</li>
+<li>代码鲁棒性不佳导致crash</li>
+<li>例如视频缓存或其他大型文件读取导致用户流量偷跑</li>
+<li>不安全的数据接口</li>
+</ol>
+
+<p><img src="https://i.imgur.com/WTUN4mT.png" alt="1552121903898" /></p>
+
+<h3 id="b-denial-of-service-attack-evaluation">B. Denial-of-Service Attack Evaluation</h3>
+
+<p>这部分作者对App开放的端口发起DoS，判断对用户正常使用App的影响。</p>
+
+<p><img src="https://i.imgur.com/fO546Bv.png" alt="1552121976240" /></p>
+
+			
+		</section>
+	</article>
+	</div>
+
+	<footer class="site-footer">
+	<p class="text">&copy; 2019 - Released under the MIT license<br>Powered by <a href="//gohugo.io/">Hugo</a> with the <a href="//github.com/digitalcraftsman/hugo-type-theme">Type Theme</a></p>
+</footer>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-132921460-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</body>
+</html>

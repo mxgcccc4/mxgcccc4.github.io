@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title>Paper Reading Note&middot; mxgcccc4&#39;s blog</title>
+	<title>[NDSS 17] Obfuscation-Resilient Privacy Leak Detection for Mobile Apps Through Differential Analysis&middot; mxgcccc4&#39;s blog</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="MXGC">
@@ -109,16 +109,14 @@
 	<div class="content">
 	<article>
 		<header>
-			<h1 class="title">Paper Reading Note</h1>
+			<h1 class="title">[NDSS 17] Obfuscation-Resilient Privacy Leak Detection for Mobile Apps Through Differential Analysis</h1>
 			<p class="meta">
     January 22, 2018 &middot; 1 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/ndss">NDSS</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
 </p>
 		</header>
 
 		<section class="post-content">
-			<p>标题：  Obfuscation-Resilient Privacy Leak Detection for Mobile Apps Through Differential Analysis</p>
-
-<p>作者： Andrea Continella, Yanick Fratantonio, Martina Lindorfer, Alessandro Puccetti, Ali Zand, Christopher Kruegel, and Giovanni Vigna</p>
+			<p>作者： Andrea Continella, Yanick Fratantonio, Martina Lindorfer, Alessandro Puccetti, Ali Zand, Christopher Kruegel, and Giovanni Vigna</p>
 
 <p>单位： Politecnico di Milano、UC Santa Barbara</p>
 
@@ -126,17 +124,19 @@
 
 <p>资料： <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017_05A-4_Continella_paper.pdf">Paper</a>, <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017-05a_4-continella_slides.pdf">Slide</a>, <a href="https://www.youtube.com/watch?v=5aNBBeI9HXw&amp;feature=youtu.be">Video</a></p>
 
-<h1 id="作者背景">作者背景</h1>
+<hr/>
+
+<h2 id="作者背景">作者背景</h2>
 
 <p>这篇文章发表在2017年的NDSS上，第一作者是来自米兰理工大学（Politecnico di Milano）的PhD学生Andrea Continella，他本人还经常参加CTF，同时也是Shellphish的队员。作者的研究方向为针对高级恶意软件的分析和防御机制，包括trojan木马或ransomware家族，他本人的更多信息可以在<a href="https://conand.me">个人主页</a>上看到。而这篇文章具体内容就是作者在UCSB的<a href="https://seclab.cs.ucsb.edu/">SecLab</a>进行为期六个月的交流的时候的工作成果，论文的其他作者就是该实验室的相关成员。</p>
 
-<h1 id="现存问题">现存问题</h1>
+<h2 id="现存问题">现存问题</h2>
 
 <p>因为Android平台应用臭名昭著的隐私泄露问题，作者提出了一种以deviation为核心的应用隐私泄露检测方法，并给出了能够一个名为AGRIGENTO的检测工具。在Android平台，有很多可以用来以及专门设计用来检测应用中用户隐私泄露问题的工具。比如基于静态污点分析的FlowDroid，以及基于动态污点分析的TaintDroid，以及同时包含两种分析方式的数据流分析工具AppAudit。</p>
 
 <p>但是无论哪种分析方法，都已经被证明是可以绕过的。如果一些SDK开发者，如Inmobi这样的广告商，他们故意通过对用户隐私数据进行混淆或者加密以及破坏此类数据流，那么就会导致数据流分析过程中“lose track”。不仅如此，污点分析只能在Dalvik字节码中跟踪数据流，而忽视了native 代码的部分，而且两种污点分析还会经常导致假阳性的结果。另一种检测工具（如ReCon）的原理是根据网络流量去分析应用的流量中是否包含隐私信息，这种方法同样有很大的局限性——不能处理加密或自定义编码之后的数据。</p>
 
-<h1 id="解决方法">解决方法</h1>
+<h2 id="解决方法">解决方法</h2>
 
 <p>作者提出了一种基于黑盒的差异分析去检测是否有隐私泄露的检测方法。这种检测方法分为两个主要阶段。首先，把Android应用放AGRIGENTO的插桩环境中运行多次，并收集所有的包含参数的网络请求和上下文信息。那么这些请求信息中就一定会包含用户隐私和一些其他的参数，如UUID，时间戳，系统状态，Cookie等，作者把除去用户隐私之外的数据称为source of non-deterministic。</p>
 
@@ -144,7 +144,7 @@
 
 <p>接下来，再与之前相同的插桩环境中运行相同的应用程序，但是修改要跟踪的隐私数据源，如（例如IMEI和定位信息）。然后和前一阶段一样收集网络请求参数和上下文信息，将这个上下文的数据与我们在前一阶段提取的网络行为总结使用Needleman-Wunsch算法进行比较。 最后就可以得出是否有隐私数据被移动应用收集并上传至服务器。</p>
 
-<h1 id="测试">测试</h1>
+<h2 id="测试">测试</h2>
 
 <p>作者用来测试的数据集是来自ReCon 作者的数据集，包括Google Play2016年不同时段最热门的300个免费应用与来自AppsApk.com的1000个最受欢迎的应用。作者从中挑选了750个应用进行测试并和来自BayesDroid的2013年Google Play上54个最受欢迎的应用一起作为测试数据集。测试的内容是把作者的AGRIGENTO工具与现行的FlowDroid、TaintDroid、AppAudit和ReCon这四个工具就检测出隐私泄露应用数量和正确率做对比。</p>
 
@@ -152,7 +152,7 @@
 
 <p>来自BayesDroid的54个应用的数据集中，有10个因为时间久远无法正常运行。AGRIGENTO共识别出21个应用，BayesDroid识别出15个，其中有10个是双方都检测出来的，BayesDroid所额外识别的5个均为误报。而AGRIGENTO额外识别出来的11个均不是误报。</p>
 
-<h1 id="总体评价">总体评价</h1>
+<h2 id="总体评价">总体评价</h2>
 
 <p>AGRIGENTO的这种检测方式，是完全把应用当做黑盒去做的，所收集的数据仅仅来自于运行时插桩所获取应用Android API的返回值和应用的网络流量，工具的应用范围局限很广泛，不用考虑应用运行的细节。根据测评部分的结果和现行工具相比较，效果和效率也十分具有优势。</p>
 

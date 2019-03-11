@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title>Paper Reading Note&middot; mxgcccc4&#39;s blog</title>
+	<title>[Asia CCS 18] Aource Attribution of Cryptographic API Misuse in Android Applications&middot; mxgcccc4&#39;s blog</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="MXGC">
@@ -109,16 +109,14 @@
 	<div class="content">
 	<article>
 		<header>
-			<h1 class="title">Paper Reading Note</h1>
+			<h1 class="title">[Asia CCS 18] Aource Attribution of Cryptographic API Misuse in Android Applications</h1>
 			<p class="meta">
     January 9, 2018 &middot; 1 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/asia-ccs">Asia CCS</a> , <a href="https://mxgcccc4.github.io/tags/misuse">Misuse</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
 </p>
 		</header>
 
 		<section class="post-content">
-			<p>标题： Source Attribution of Cryptographic API Misuse in Android Applications</p>
-
-<p>作者： Ildar Muslukhov, Yazan Boshmaf, Konstantin Beznosov</p>
+			<p>作者： Ildar Muslukhov, Yazan Boshmaf, Konstantin Beznosov</p>
 
 <p>单位： The University of British Columbia, Qatar Computing Research Institute</p>
 
@@ -126,7 +124,9 @@
 
 <p>资料： <a href="http://lersse-dl.ece.ubc.ca/record/324/files/binsight-asiaccs-2018.pdf">PDF</a></p>
 
-<h1 id="1-abstract-introduction">1 ABSTRACT &amp; INTRODUCTION</h1>
+<hr/>
+
+<h2 id="1-abstract-introduction">1 ABSTRACT &amp; INTRODUCTION</h2>
 
 <p>根据最近的研究表明，88％使用Java密码学API的Android应用程序至少会出现一个密码学误用的问题。但是，目前还不清楚这些错误是来自应用程序还是第三方lib。而在本文中，作者弥补了这一gap，并将误用的来源归属引入到密码学API误用的分析中。本文研究的目标有两个：（1）将密码学API误用的来源归属，以及（2）研究2012年至2016年间误用的变化。</p>
 
@@ -136,11 +136,11 @@
 
 <p>与2012年相比，作者发现对于应用程序和第三方库代码，2016年对称密码的ECB模式使用率显着下降。然而与应用程序代码不同，第三方库显着增加了对用于CBC模式密码的对称密码和静态IV的静态加密密钥的依赖。最后，作者发现2016年误用的第二和第三大原因是使用了不安全的RC4和DES秘钥。</p>
 
-<h1 id="2-common-rules-in-cryptography">2 COMMON RULES IN CRYPTOGRAPHY</h1>
+<h2 id="2-common-rules-in-cryptography">2 COMMON RULES IN CRYPTOGRAPHY</h2>
 
 <p>作者定义了一系列判断无用的rules便于后续针对是否属于误用的分析。</p>
 
-<h2 id="2-1-symmetric-key-encryption">2.1 Symmetric key encryption</h2>
+<h3 id="2-1-symmetric-key-encryption">2.1 Symmetric key encryption</h3>
 
 <h4 id="rule-1-在加密算法中使用ecb模式">Rule 1. 在加密算法中使用ECB模式。</h4>
 
@@ -148,17 +148,17 @@
 
 <h4 id="rule-3-不使用常量当做加密秘钥">Rule 3. 不使用常量当做加密秘钥。</h4>
 
-<h2 id="2-2-password-based-encryption">2.2 Password-based encryption</h2>
+<h3 id="2-2-password-based-encryption">2.2 Password-based encryption</h3>
 
 <h4 id="rule-4-不在pbe中使用常量静态salt">Rule 4. 不在PBE中使用常量静态salt</h4>
 
 <h4 id="rule-5-不在pbe中使用少于1000次的迭代">Rule 5. 不在PBE中使用少于1000次的迭代。</h4>
 
-<h2 id="2-3-random-number-generation">2.3 Random number generation</h2>
+<h3 id="2-3-random-number-generation">2.3 Random number generation</h3>
 
 <h4 id="rule-6-不在securerandom中使用常量种子">Rule 6. 不在SecureRandom中使用常量种子</h4>
 
-<h1 id="3-datasets">3 DATASETS</h1>
+<h2 id="3-datasets">3 DATASETS</h2>
 
 <p>作者收集并分析了三个数据集如下图，总共有132,590个APK文件。 R12是CryptoLint数据集的子集，包含10,990个APK文件。最初的CryptoLint数据集有145,095个APK文件，并在2012年5月至7月期间通过Google Play市场收集的。</p>
 
@@ -170,49 +170,49 @@
 
 <p>最后，T15数据集包括2015年6月以来每个类别中的前100个Android应用程序。对于此数据集，首先通过Google Play商店API获取每个类别中前100个应用程序的列表。然后使用ApkDownloader工具单独下载每个APK文件。</p>
 
-<h1 id="4-measuring-crypto-api-misuse">4 MEASURING CRYPTO API MISUSE</h1>
+<h2 id="4-measuring-crypto-api-misuse">4 MEASURING CRYPTO API MISUSE</h2>
 
 <p><img src="https://i.imgur.com/yf5LLYX.png" alt="1541752930492" /></p>
 
 <p>本节介绍和讨论109,642个APK文件的分析结果，这些文件至少有一次调用密码学API。</p>
 
-<h2 id="4-1-preprocessing">4.1 Preprocessing</h2>
+<h3 id="4-1-preprocessing">4.1 Preprocessing</h3>
 
-<h3 id="反汇编">反汇编</h3>
+<h4 id="反汇编">反汇编</h4>
 
 <p>与CryptoLint不同的是，作者为了提高分析的可靠性，使用ApkTool反汇编为一组Smali文件。，而不是像CryptoLint使用的AndroGuard作者能够分析三个数据集中除6个应用程序之外的所有应用程序，而CryptoLint无法分析原始数据集中23％的应用程序。 在反汇编应用程序后，搜索其生成的所有Smali文件，以找到密码学API的入口点。 如果未找到此类入口点，则无视该应用程序进一步分析。 否则，进行重复数据删除步骤。</p>
 
-<h3 id="重复数据删除">重复数据删除</h3>
+<h4 id="重复数据删除">重复数据删除</h4>
 
 <p>对于每个数据集，作何分别生成了所有APK文件名列表，相应的应用程序ID及其下载时间。 然后，作者通过使用相同的应用程序ID对文件进行分组来识别数据集中的所有重复项。 对于数据集中已识别的重复项，则保留了最新的版本。</p>
 
-<h2 id="4-2-linting">4.2 Linting</h2>
+<h3 id="4-2-linting">4.2 Linting</h3>
 
 <p>为了评估2中定义的规则，BinSight检查在对密码学API的调用程序片段，然后从这些片段中提取必要的信息以检查是否违反了相应的规则。主要分为三个步骤：</p>
 
-<h3 id="超级控制流程图提取">超级控制流程图提取</h3>
+<h4 id="超级控制流程图提取">超级控制流程图提取</h4>
 
 <p>BinSight按如下方式构造预处理应用程序的sCFG：首先，它从Smali文件中提取所有方法的程序内CFG。，并提取应用程序中所有类的类层次结构。之后，BinSight将控制流图叠加在各个方法的CFG上，从而生成sCFG。与CryptoLint类似，BinSight在调用指令和方法入口点之间添加调用边。与CryptoLint类似，BinSight重建了应用程序的过度近似的sCFG。</p>
 
-<h3 id="目标静态程序切片">目标静态程序切片</h3>
+<h4 id="目标静态程序切片">目标静态程序切片</h4>
 
 <p>BinSight在sCFG上应用静态程序切片，以识别分析的应用程序是否使用任何API。BinSight在sCFG中搜索属于Java的密码学API端点的节点。如果找到这些节点，它将使用其传入边缘来定位应用程序中的所有调用来源。</p>
 
-<h3 id="对定义的规则进行检测">对定义的规则进行检测</h3>
+<h4 id="对定义的规则进行检测">对定义的规则进行检测</h4>
 
 <p>规则评估取决于分配给crypto API调用参数的值，其中值赋值可以是包含方法的本地或外部。对于早期的情况，BinSight计算程序的后向切片到所有可能的位置，其中设置了所涉及的参数，之后对其值应用验证逻辑。</p>
 
-<h2 id="4-3-归属">4.3 归属</h2>
+<h3 id="4-3-归属">4.3 归属</h3>
 
-<h2 id="混淆分析">混淆分析</h2>
+<h3 id="混淆分析">混淆分析</h3>
 
 <p>作者把混淆分类分为不更改标识符，仅重命名类，重命名类及其部分包，或重命名整个类标识符。对于前三个级别，如果包名称具有可识别的前缀，可以将类映射到库或应用程序。至于第四级，则不能将包名称用于源归属。如果不确定的话，还可以使用BinSight GUI来检查类的内部及其源文件名（如果可用）。</p>
 
-<h2 id="第三方库">第三方库</h2>
+<h3 id="第三方库">第三方库</h3>
 
 <p>作者将包名称分为以下四类之一：应用程序（app），库（libs），可能的库和混淆。首先，作者将已经完全混淆的所有包名称分配到模糊类别。然后在单个应用程序中找到的所有包名称分配给类别应用程序。对于在两个或更多应用程序中找到的其余包，作者根据每个数据集中使用它们的应用程序数量对它们进行排序，然后按排名的降序执行手动检查。对于每个包名称，如果能够找到库源或网站，将包名称标记为库。此外，如果不行，同样还可以使用BinSight的GUI进行手动检查。</p>
 
-<h1 id="7-evaluation">7 EVALUATION</h1>
+<h2 id="7-evaluation">7 EVALUATION</h2>
 
 <p>出现至少一此密码学API误用的APK文件和调用的比率。 “所有”类别结果基于所有调用，而不考虑源（即库或应用程序）。 Libs和Apps代表源自库或应用程序的APK文件。</p>
 

@@ -116,8 +116,42 @@
      <div class="post-teaser">
         <header>
             <h1>
+                <a class="post-link" href="https://mxgcccc4.github.io/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/">
+				[NDSS 18] InstaGuard: Instantly Deployable Hot-patches for Vulnerable System Programs on Android
+			</a>
+            </h1>
+            <p class="meta">
+    May 6, 2018 &middot; 2 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/ndss">NDSS</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
+</p>
+        </header>
+
+        <div class="excerpt">
+            <p>作者： Yaohui Chen, Yuping Li, Long Lu, Yueh-Hsun Lin, Hayawardh Vijayakumar, Zhi Wang, Xinming Ou</p>
+
+<p>单位： Northeastern University, University of South Florida, Northeastern University, JD Research Center, Samsung Research America</p>
+
+<p>出处： NDSS 2018</p>
+
+<p>资料： <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/ndss2018_08-2_Chen_paper.pdf">Paper</a>, <a href="https://www.youtube.com/watch?v=HhwOotwmo2s&amp;index=2&amp;list=PLfUWWM-POgQuPfShO3X5sJlYtzSPvbBUJ&amp;t=0s">Video</a>, <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/NDSS2018_08-2_Chen_Slides.pdf">Slide</a></p>
+
+<hr/>
+
+<p>由于hotpatch易于开发和更快的部署速度，而且在永久修复漏洞的补丁释出之前有效地阻止已发现漏洞被利用，研究人员建议把hotpatch应用于Android的系统程序和应用之中，以便于缩短严重漏洞在被修复之前被利用的窗口期。但是由于Android系统的碎片化，hotpatch技术虽然在PC上广泛使用，但是很少被厂商采用。作者认为阻碍hotpatch在Android平台推广的因素主要是对于一个漏洞的补丁在释放出来之后通常需要经过设备厂商在推送更新之前漫长的兼容性测试。这种测试和发布过程可能需要几个月的时间，那么hotpatch就失去了可以快速部署的优势。</p>
+
+<p>作者提出了InstaGuard，这是一种新的移动设备的hotpatch方法。与现有的hotpatch技术不同，InstaGuard没有向需要patch的程序注入新的补丁代码，而是通过执行不包含代码的即时更新规则来及时阻止未修补的漏洞，这样做的优势在于不需要经过兼容性测试就可以即时推送给需要修复的设备。在设计InstaGuard的时候，作者使用了一种可以表达能够有效缓解各种漏洞在移动设备上执行的规则语言，其次编写这些规则并不需要使用过于复杂的表示方式。作者使用ARM CPU支持的基本调试原语为hotpatch和强制机制设计了一种新语言。作者还构建了RuleMaker，这是一款基于高级语言并且易于编写的漏洞描述自动生成InstaGuard规则的工具。</p>
+
+<p>作者在Nexus 5X手机上测试了InstaGuard。在测评部分作者验证了InstaGuard可以处理2016年Android安全公告中的所有关键CVE。作者还使用来自4个不同类别的关键漏洞进行单元测试。 InstaGuard平均增加了1.69％的存储空间占用量，并带来了2.70％的overload。</p>
+
+            <br>
+            <a class="button" href="https://mxgcccc4.github.io/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/">
+				Read more
+			</a>
+        </div>
+    </div><div class="post-teaser">
+        <header>
+            <h1>
                 <a class="post-link" href="https://mxgcccc4.github.io/post/2018-01-22-obfuscation-resilient-privacy-leak-detection-for-mobile-apps-through-differential-analysis/">
-				Paper Reading Note
+				[NDSS 17] Obfuscation-Resilient Privacy Leak Detection for Mobile Apps Through Differential Analysis
 			</a>
             </h1>
             <p class="meta">
@@ -126,15 +160,19 @@
         </header>
 
         <div class="excerpt">
-            <p>标题：  Obfuscation-Resilient Privacy Leak Detection for Mobile Apps Through Differential Analysis</p>
-
-<p>作者： Andrea Continella, Yanick Fratantonio, Martina Lindorfer, Alessandro Puccetti, Ali Zand, Christopher Kruegel, and Giovanni Vigna</p>
+            <p>作者： Andrea Continella, Yanick Fratantonio, Martina Lindorfer, Alessandro Puccetti, Ali Zand, Christopher Kruegel, and Giovanni Vigna</p>
 
 <p>单位： Politecnico di Milano、UC Santa Barbara</p>
 
 <p>出处： NDSS 2017</p>
 
 <p>资料： <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017_05A-4_Continella_paper.pdf">Paper</a>, <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017-05a_4-continella_slides.pdf">Slide</a>, <a href="https://www.youtube.com/watch?v=5aNBBeI9HXw&amp;feature=youtu.be">Video</a></p>
+
+<hr/>
+
+<h2 id="作者背景">作者背景</h2>
+
+<p>这篇文章发表在2017年的NDSS上，第一作者是来自米兰理工大学（Politecnico di Milano）的PhD学生Andrea Continella，他本人还经常参加CTF，同时也是Shellphish的队员。作者的研究方向为针对高级恶意软件的分析和防御机制，包括trojan木马或ransomware家族，他本人的更多信息可以在<a href="https://conand.me">个人主页</a>上看到。而这篇文章具体内容就是作者在UCSB的<a href="https://seclab.cs.ucsb.edu/">SecLab</a>进行为期六个月的交流的时候的工作成果，论文的其他作者就是该实验室的相关成员。</p>
 
             <br>
             <a class="button" href="https://mxgcccc4.github.io/post/2018-01-22-obfuscation-resilient-privacy-leak-detection-for-mobile-apps-through-differential-analysis/">
@@ -145,7 +183,7 @@
         <header>
             <h1>
                 <a class="post-link" href="https://mxgcccc4.github.io/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/">
-				Paper Reading Note
+				[Asia CCS 18] Aource Attribution of Cryptographic API Misuse in Android Applications
 			</a>
             </h1>
             <p class="meta">
@@ -154,15 +192,25 @@
         </header>
 
         <div class="excerpt">
-            <p>标题： Source Attribution of Cryptographic API Misuse in Android Applications</p>
-
-<p>作者： Ildar Muslukhov, Yazan Boshmaf, Konstantin Beznosov</p>
+            <p>作者： Ildar Muslukhov, Yazan Boshmaf, Konstantin Beznosov</p>
 
 <p>单位： The University of British Columbia, Qatar Computing Research Institute</p>
 
 <p>出处： AsiaCCS‘18</p>
 
 <p>资料： <a href="http://lersse-dl.ece.ubc.ca/record/324/files/binsight-asiaccs-2018.pdf">PDF</a></p>
+
+<hr/>
+
+<h2 id="1-abstract-introduction">1 ABSTRACT &amp; INTRODUCTION</h2>
+
+<p>根据最近的研究表明，88％使用Java密码学API的Android应用程序至少会出现一个密码学误用的问题。但是，目前还不清楚这些错误是来自应用程序还是第三方lib。而在本文中，作者弥补了这一gap，并将误用的来源归属引入到密码学API误用的分析中。本文研究的目标有两个：（1）将密码学API误用的来源归属，以及（2）研究2012年至2016年间误用的变化。</p>
+
+<p>作者使用C#设计并实现了一个静态自动分析系统BinSight：（1）使用静态程序切片识别Java密码学API的调用，（2）验证这些调用 - 针对密码学中常见规则调用，最后（3）使用基于启发式的第三方库检测技术将误用的调用归因于其源。</p>
+
+<p>作者分析了2012年，2015年和2016年收集的132K个Android应用程序。结果表明第三方库是密码学API误用的主要来源。90％的误用应用程序（至少包含一个Java密码学API调用）来自第三方lib。</p>
+
+<p>与2012年相比，作者发现对于应用程序和第三方库代码，2016年对称密码的ECB模式使用率显着下降。然而与应用程序代码不同，第三方库显着增加了对用于CBC模式密码的对称密码和静态IV的静态加密密钥的依赖。最后，作者发现2016年误用的第二和第三大原因是使用了不安全的RC4和DES秘钥。</p>
 
             <br>
             <a class="button" href="https://mxgcccc4.github.io/post/2018-01-09-source-attribution-of-cryptographic-api-misuse-in-android-applications/">
@@ -173,7 +221,7 @@
         <header>
             <h1>
                 <a class="post-link" href="https://mxgcccc4.github.io/post/2017-12-06-stack-overflow-considered-harmful-the-impact-of-copypaste-on-android-application-security/">
-				Paper Reading Note
+				[S&amp;P 17] Stack Overflow Considered Harmful? The Impact of Copy&amp;Paste on Android Application Security
 			</a>
             </h1>
             <p class="meta">
@@ -182,17 +230,23 @@
         </header>
 
         <div class="excerpt">
-            <hr/>
-
-<p>标题： Stack Overflow Considered Harmful? The Impact of Copy&amp;Paste on Android Application Security</p>
-
-<p>作者： Felix Fischer, Konstantin Bottinger, Huang Xiao, Christian Stransky, Yasemin Acar, Michael Backes, Sascha Fahl</p>
+            <p>作者： Felix Fischer, Konstantin Bottinger, Huang Xiao, Christian Stransky, Yasemin Acar, Michael Backes, Sascha Fahl</p>
 
 <p>单位： CISPA, Saarland University</p>
 
 <p>出处： IEEE S&amp;P 17</p>
 
 <p>Paper: <a href="https://www.aisec.fraunhofer.de/content/dam/aisec/Dokumente/Publikationen/Studien_TechReports/englisch/stackoverflow.pdf">PDF</a></p>
+
+<hr/>
+
+<h2 id="1-introduction">1.Introduction</h2>
+
+<p>越来越多的软件开发人员在Stack Overflow这样的在线技术平台讨论技术问题。尤其是缺乏编程经验的程序员会在这样的社区提问的时候，会得到一些技术指导和其他人回答问题的时候提供的代码片段。普遍认为，大量的程序员在开发软件的时候，经常会从这样的平台上复制代码。所以作者认为这样的行为会导致一些不安全的代码，虽然这些代码绝大多数情况下会解决问题，但还是由于其中许多代码片段是不安全的。那么就会存在这样一个传播周期：</p>
+
+<p><code>社区提供代码片段-&gt;开发者复制粘贴代码-&gt;用户运行了包含这些代码的程序-&gt;攻击者利用这些程序中的漏洞</code></p>
+
+<p>这篇论文中，作者就这个问题做了研究，发现Stack Overflow上的1161份不安全的代码被开发者复制粘贴进了130万个Android应用程序中。</p>
 
             <br>
             <a class="button" href="https://mxgcccc4.github.io/post/2017-12-06-stack-overflow-considered-harmful-the-impact-of-copypaste-on-android-application-security/">
@@ -203,7 +257,7 @@
         <header>
             <h1>
                 <a class="post-link" href="https://mxgcccc4.github.io/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/">
-				Paper Reading Note
+				[USENIX Security 17] Detecting Android Root Exploits by Learning from Root Providers
 			</a>
             </h1>
             <p class="meta">
@@ -212,17 +266,19 @@
         </header>
 
         <div class="excerpt">
-            <hr/>
-
-<p>标题： Detecting Android Root Exploits by Learning from Root Providers</p>
-
-<p>作者： Ioannis Gasparis, Zhiyun Qian, Chengyu Song, Srikanth V. Krishnamurthy</p>
+            <p>作者： Ioannis Gasparis, Zhiyun Qian, Chengyu Song, Srikanth V. Krishnamurthy</p>
 
 <p>单位： University of California, Riverside</p>
 
 <p>出处： USENIX Security 17</p>
 
 <p>资料： <a href="http://www.cs.ucr.edu/~zhiyunq/pub/usenix17_root_exploit_detection.pdf">Paper</a>, <a href="https://www.youtube.com/watch?v=GzbN-d8q2V4">Video</a></p>
+
+<hr/>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>在android平台的众多恶意软件中，最危险的一类就是包含可以root用户手机的Malware。但是同时检测这种恶意软件也是非常困难的，这是因为这样的恶意软件所包含的root exp通常针对特定的设备或者系统版本，并且恶意程序在检测到不存在预期的运行时环境时就直接停止运行。使用Google Bouncer这种模拟器很难触发并分析这种root exp。所以作者设计了一个叫做RootExplorer的原型机去检测这种包含root exp的恶意软件。这个RootExplorer会根据一些商业公司提供给用户用来一键root的APP去分析学习exp的先决条件和环境要求，然后使用这些信息构建分析真机或者虚拟机的环境去检测包含root exp的恶意软件。</p>
 
             <br>
             <a class="button" href="https://mxgcccc4.github.io/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/">

@@ -12,39 +12,47 @@
     
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[USENIX Security 18] Tackling runtime based obfuscation in Android with TIRO</title>
       <link>https://mxgcccc4.github.io/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</link>
       <pubDate>Sat, 08 Sep 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2018-09-08-tackling-runtime-based-obfuscation-in-android-with-tiro/</guid>
-      <description>&lt;p&gt;标题： Tackling runtime-based obfuscation in Android with TIRO&lt;/p&gt;
-
-&lt;p&gt;作者： Michelle Y. Wong and David Lie&lt;/p&gt;
+      <description>&lt;p&gt;作者： Michelle Y. Wong and David Lie&lt;/p&gt;
 
 &lt;p&gt;单位： University of Toronto&lt;/p&gt;
 
 &lt;p&gt;出处： USENIX Security 18&lt;/p&gt;
 
-&lt;p&gt;资料： &lt;a href=&#34;https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-wong.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://www.usenix.org/sites/default/files/conference/protected-files/security18_slides_wong.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料： &lt;a href=&#34;https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-wong.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://www.usenix.org/sites/default/files/conference/protected-files/security18_slides_wong.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;1-abstract-introduction&#34;&gt;1 Abstract &amp;amp; Introduction&lt;/h2&gt;
+
+&lt;p&gt;混淆技术经常被使用在恶意软件上对抗自动化的程序分析。在Android 平台恶意软件经常使用Java反射、加壳还有字符串加密等方式。作者把常见的混淆技术如字符串加密、动态解密、Java反射、调用native方法归类为&lt;code&gt;language-based&lt;/code&gt;混淆，而完全避开Java完全在Native代码中执行的混淆方式叫做&lt;code&gt;full-native&lt;/code&gt;混淆。作者在文中提出了一种新型的混淆技术，它会破坏Android运行时完整性的同时使用混淆技术，作者称之为&lt;code&gt;runtime-based&lt;/code&gt; 混淆。&lt;code&gt;runtime-based&lt;/code&gt;混淆优于&lt;code&gt;language-based&lt;/code&gt;混淆和&lt;code&gt;full-native&lt;/code&gt;代码混淆。 虽然&lt;code&gt;language-based&lt;/code&gt;的混淆技术必须在调用混淆代码之前立即发生，但&lt;code&gt;runtime-based&lt;/code&gt;混淆技术可以在同地方发生，并在应用程序看似无关的部分中改变代码执行。一旦程序的完整性被破坏，在运行时就不会遵循正常情况下所期望的代码执行和方法调用流程，&lt;code&gt;runtime-based&lt;/code&gt;混淆修改了方法调用的解析方式和代码执行方式。&lt;/p&gt;
+
+&lt;p&gt;作者提出了一个Android平台去混淆的框架TIRO(Target-Instrument-Run-Observe)。TIRO既可以对抗传统的混淆方式，也可以处理&lt;code&gt;runtime-based&lt;/code&gt;混淆技术。作者最后测评了来自VT的2000个恶意软件样本，最后有80%左右的样本都使用了runtime-based混淆。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[USENIX Security 17] Detecting Android Root Exploits by Learning from Root Providers</title>
       <link>https://mxgcccc4.github.io/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</link>
       <pubDate>Wed, 25 Oct 2017 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2017-10-25-detecting-android-root-exploits-by-learning-from-root-providers/</guid>
-      <description>&lt;hr/&gt;
-
-&lt;p&gt;标题： Detecting Android Root Exploits by Learning from Root Providers&lt;/p&gt;
-
-&lt;p&gt;作者： Ioannis Gasparis, Zhiyun Qian, Chengyu Song, Srikanth V. Krishnamurthy&lt;/p&gt;
+      <description>&lt;p&gt;作者： Ioannis Gasparis, Zhiyun Qian, Chengyu Song, Srikanth V. Krishnamurthy&lt;/p&gt;
 
 &lt;p&gt;单位： University of California, Riverside&lt;/p&gt;
 
 &lt;p&gt;出处： USENIX Security 17&lt;/p&gt;
 
-&lt;p&gt;资料： &lt;a href=&#34;http://www.cs.ucr.edu/~zhiyunq/pub/usenix17_root_exploit_detection.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=GzbN-d8q2V4&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料： &lt;a href=&#34;http://www.cs.ucr.edu/~zhiyunq/pub/usenix17_root_exploit_detection.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=GzbN-d8q2V4&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;在android平台的众多恶意软件中，最危险的一类就是包含可以root用户手机的Malware。但是同时检测这种恶意软件也是非常困难的，这是因为这样的恶意软件所包含的root exp通常针对特定的设备或者系统版本，并且恶意程序在检测到不存在预期的运行时环境时就直接停止运行。使用Google Bouncer这种模拟器很难触发并分析这种root exp。所以作者设计了一个叫做RootExplorer的原型机去检测这种包含root exp的恶意软件。这个RootExplorer会根据一些商业公司提供给用户用来一键root的APP去分析学习exp的先决条件和环境要求，然后使用这些信息构建分析真机或者虚拟机的环境去检测包含root exp的恶意软件。&lt;/p&gt;</description>
     </item>
     
   </channel>

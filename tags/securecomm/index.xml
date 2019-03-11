@@ -12,21 +12,37 @@
     
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[SecureComm 2018] Understanding Android Obfuscation Techniques: A Large-Scale Investigation in the Wild</title>
       <link>https://mxgcccc4.github.io/post/2018-08-01-understanding-android-obfuscation-techniques-a-large-scale-investigation-in-the-wild/</link>
       <pubDate>Wed, 01 Aug 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2018-08-01-understanding-android-obfuscation-techniques-a-large-scale-investigation-in-the-wild/</guid>
-      <description>&lt;p&gt;标题： Understanding Android Obfuscation Techniques: A Large-Scale Investigation in the Wild&lt;/p&gt;
-
-&lt;p&gt;作者： Shuaike Dong, Menghao Li, Wenrui Diao, Xiangyu Liu, Jian Liu, Zhou Li, Fenghao Xu, Kai Chen, XiaoFeng Wang, Kehuan Zhang&lt;/p&gt;
+      <description>&lt;p&gt;作者： Shuaike Dong, Menghao Li, Wenrui Diao, Xiangyu Liu, Jian Liu, Zhou Li, Fenghao Xu, Kai Chen, XiaoFeng Wang, Kehuan Zhang&lt;/p&gt;
 
 &lt;p&gt;单位： The Chinese University of Hong Kong, Chinese Academy of Sciences, Jinan University, Alibaba Inc,
 Indiana University Bloomington&lt;/p&gt;
 
 &lt;p&gt;出处： SecureComm 2018&lt;/p&gt;
 
-&lt;p&gt;资料： &lt;a href=&#34;https://arxiv.org/pdf/1801.01633.pdf&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料： &lt;a href=&#34;https://arxiv.org/pdf/1801.01633.pdf&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;在Android程序中，由于Java程序具有易于逆向的特性，所以其代码保护尤为重要。代码混淆技术被常规的应用程序开发人员和恶意软件作者广泛使用，为逆向分析增加了许多难度。尽管在混淆技术上已经有很多研究，但是对现实世界开发人员如何使用混淆技术的了解仍然有限。在本文中，作者通过大规模的野外调查来展现真实世界中Android混淆技术的使用情况。在文中作者重点关注4种流行的混淆方法：标识符重命名，字符串加密，Java反射和加壳。作者的APK数据集来自于Google Play，多个第三方市场和恶意软件数据库中。作者发现恶意软件作者更频繁地使用字符串加密，而加壳技术的应用在第三方市场中比Google Play更普遍。&lt;/p&gt;
+
+&lt;p&gt;截止2017年三月，仅仅在Google Play上已经有2.8m个app可供用户下载。同样混淆技术也无处不在，合法的软件公司使用混淆技术防止程序被轻易逆向或者被抄袭代码，恶意软件作者使用混淆技术规避杀软和自动化分析。有许多混淆器被开发并公开，有些混淆器的作者声称他们的工具被超过30万的app所使用。这一现象吸引了大量研究人员分析app混淆技术，但是到目前为止，所有研究的关注点在于使用了什么样的混淆技术，某种混淆的具体实现是什么，这种混淆如何抵御最先进的分析工具，以及如何自动化地反混淆这种混淆技术。然而本文作者的重点在于消除混淆技术分析领域存在的gap：这些混淆技术在现实世界中是如何被众多的开发者所使用的。&lt;/p&gt;
+
+&lt;p&gt;作者认为了解混淆技术的使用可以更好地帮助设计代码分析工具，并优先处理最需要解决的挑战。&lt;/p&gt;
+
+&lt;p&gt;作者的主要贡献如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;系统研究： 系统地研究了应用程序开发人员使用的当前主流Android混淆技术。&lt;/li&gt;
+&lt;li&gt;新技术：作者提出了几种准确检测不同混淆技术的技术，如基于n-gram的重命名检测模型和基于反向切片的反射检测算法。&lt;/li&gt;
+&lt;li&gt;大规模评估： 作者进行了大规模的实验，从三个不同来源收集的超过10万的APK文件。 并根据分析结果对混淆代码的深入分析提供了解释。&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

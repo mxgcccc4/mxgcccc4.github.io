@@ -12,20 +12,30 @@
     
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[CCS 18] EviHunter: Identifying Digital Evidence in the Permanent Storage of Android Devices via Static Analysis</title>
       <link>https://mxgcccc4.github.io/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</link>
       <pubDate>Sun, 09 Dec 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2018-12-09-evihunter-identifying-digital-evidence-in-the-permanent-storage-of-android-devices-via-static-analysis/</guid>
-      <description>&lt;p&gt;标题： EviHunter: Identifying Digital Evidence in the Permanent Storage of Android Devices via Static Analysis&lt;/p&gt;
-
-&lt;p&gt;作者： Chris Chao-Chun Cheng, Chen Shi, Neil Zhenqiang Gong, Yong Guan&lt;/p&gt;
+      <description>&lt;p&gt;作者： Chris Chao-Chun Cheng, Chen Shi, Neil Zhenqiang Gong, Yong Guan&lt;/p&gt;
 
 &lt;p&gt;单位： Iowa State University, NIST Center of Excellence in Forensic Science - CSAFE&lt;/p&gt;
 
 &lt;p&gt;出处： CCS&amp;rsquo;18&lt;/p&gt;
 
-&lt;p&gt;资料： &lt;a href=&#34;https://arxiv.org/pdf/1808.06137.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://drive.google.com/file/d/1BuVSfVueBKidzo8T1cYBQB9jjR7QJuXH/view?usp=sharing&#34;&gt;Slides&lt;/a&gt;, &lt;a href=&#34;https://github.com/paradox5566/EviHunter&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料： &lt;a href=&#34;https://arxiv.org/pdf/1808.06137.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://drive.google.com/file/d/1BuVSfVueBKidzo8T1cYBQB9jjR7QJuXH/view?usp=sharing&#34;&gt;Slides&lt;/a&gt;, &lt;a href=&#34;https://github.com/paradox5566/EviHunter&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;abstract-introduction&#34;&gt;ABSTRACT &amp;amp; INTRODUCTION&lt;/h2&gt;
+
+&lt;p&gt;由于移动网络的发展，智能手机上的数字证据在犯罪调查中发挥着越来越重要的作用。数字证据可以存在于智能手机的内存和文件系统中。虽然内存取证方面有很大的进展，但在针对文件系统的取证仍然比较困难。大多数关于文件系统取证的现有研究依赖于手动分析或基于关键字的静态扫描。手动分析代价很高，而关键字匹配通常会错过不包含关键字的数据。在本文中，作者开发了一个名为EviHunter的工具，用于自动识别Android设备文件系统中的数据。&lt;/p&gt;
+
+&lt;p&gt;作者认为数据是由应用程序产生的，应用程序的代码包含有关应用程序可能写入文件系统的数据类型以及所写入数据的文件相关的信息。因此，EviHunter首先通过对大量应用程序的静态分析来预先计算App Evidence Database（AED）。 然后，EviHunter将Android文件系统上的存在的文件与AED进行匹配，以识别可存储证据数据的文件，所以构建AED是EviHunter的重点。&lt;/p&gt;
+
+&lt;p&gt;事实上，已经有大量的静态分析工具用于检测Android应用程序中从Source到Sinks的敏感数据流。这些工具可以检测到App会收集GPS并将其保存到文件系统，但是它们并不关心GPS信息写入了哪个文件。作者认为，这些工具是出于安全和隐私检测的目的而设计的，在隐私泄漏方面写入敏感数据的文件的位置并不重要。所以EviHunter在几个方面扩展了Android现有的静态数据流分析能力。&lt;/p&gt;
+
+&lt;p&gt;作者最后使用EviHunter评估了8690个真实应用程序。最后，作者对60个随机抽样的真实应用程序的结果进行了手动验证。EviHunter在识别可能包含证据的文件时达到了90％的精度和89％的召回率。&lt;/p&gt;</description>
     </item>
     
   </channel>

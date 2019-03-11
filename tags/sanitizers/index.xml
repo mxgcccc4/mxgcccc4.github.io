@@ -12,20 +12,46 @@
     
     
     <item>
-      <title>Paper Reading Note</title>
+      <title>[NDSS 19] Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment</title>
+      <link>https://mxgcccc4.github.io/post/2019-03-11-understanding-open-ports-in-android-applications-discovery-diagnosis-and-security-assessment/</link>
+      <pubDate>Wed, 20 Feb 2019 15:25:00 +0800</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/post/2019-03-11-understanding-open-ports-in-android-applications-discovery-diagnosis-and-security-assessment/</guid>
+      <description>&lt;p&gt;作者：Daoyuan Wu, Debin Gao, Rocky K. C. Chang, En He, Eric K. T. Cheng, and Robert H. Deng&lt;/p&gt;
+
+&lt;p&gt;单位：Singapore Management University, The Hong Kong Polytechnic University, China Electronic Technology Cyber Security Co., Ltd&lt;/p&gt;
+
+&lt;p&gt;出处：NDSS 2019&lt;/p&gt;
+
+&lt;p&gt;资料：&lt;a href=&#34;https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_06B-5_Wu_paper.pdf&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;众所周知，服务器是通过开放TCP / UDP端口来提供服务的，这些开放的网络端口页同样存在于许多Android应用程序中。在本文中，作者是针对这些应用程序提出了第一个开放式分析pipeline，包括 discovery, diagnosis和
+security assessment，系统地了解Android应用程序中的开放端口及其潜在威胁。最后发现有15.3％的Android应用程序中开放了网络端口，远高于&lt;a href=&#34;https://securitygossip.com/blog/2019/02/18/open-doors-for-bob-and-mallory-open-port-usage-in-android-apps-and-security-implications/&#34;&gt;之前&lt;/a&gt;分析的6.8％，其中有61.8％的开放端口应用程序完全来自于应用中的SDK，开放端口的应用有20.7％存在使用不安全的API的情况。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[S&amp;P 19] SoK: Sanitizing for Security</title>
       <link>https://mxgcccc4.github.io/post/2019-02-20-sok-sanitizing-for-security/</link>
       <pubDate>Wed, 20 Feb 2019 15:25:00 +0800</pubDate>
       
       <guid>https://mxgcccc4.github.io/post/2019-02-20-sok-sanitizing-for-security/</guid>
-      <description>&lt;p&gt;标题：SoK: Sanitizing for Security&lt;/p&gt;
-
-&lt;p&gt;作者：Dokyung Song, Julian Lettner, Prabhu Rajasekaran, Yeoul Na, Stijn Volckaert, Per Larsen, Michael Franz&lt;/p&gt;
+      <description>&lt;p&gt;作者：Dokyung Song, Julian Lettner, Prabhu Rajasekaran, Yeoul Na, Stijn Volckaert, Per Larsen, Michael Franz&lt;/p&gt;
 
 &lt;p&gt;单位：University of California, Irvine&lt;/p&gt;
 
 &lt;p&gt;会议：IEEE S&amp;amp;P 19&lt;/p&gt;
 
-&lt;p&gt;资料：&lt;a href=&#34;https://csdl.computer.org/csdl/proceedings/sp/2019/6660/00/666000a187.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/securesystemslab/sanitizing-for-security-benchmarks&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;资料：&lt;a href=&#34;https://csdl.computer.org/csdl/proceedings/sp/2019/6660/00/666000a187.pdf&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/securesystemslab/sanitizing-for-security-benchmarks&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;i-abstract-introduction&#34;&gt;I. ABSTRACT &amp;amp; INTRODUCTION&lt;/h2&gt;
+
+&lt;p&gt;鉴于C/C++由于语言本身特性所带来臭名昭著的安全问题，开发者通常会在release之前通过人工review，静态分析工具和动态分析对代码进行安全检查。作者在这里把所有动态分析工具统称为&lt;code&gt;sanitizers&lt;/code&gt;，sanitizers还会帮助找到一些其他的bugs，还可以在程序运行时辅助观察程序异常行为。目前已经有大量的sanitizers已经被提出并实现了原型，虽然有很多sanitizer已经被广泛使用，并发现了许多漏洞，但是只有很少一部分会被接受并推广。&lt;/p&gt;</description>
     </item>
     
   </channel>

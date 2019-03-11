@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title>Paper Reading Note&middot; mxgcccc4&#39;s blog</title>
+	<title>[NDSS 18] Finding Clues for Your Secrets: Semantics-Driven, Learning-Based Privacy Discovery in Mobile Apps&middot; mxgcccc4&#39;s blog</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="MXGC">
@@ -109,16 +109,14 @@
 	<div class="content">
 	<article>
 		<header>
-			<h1 class="title">Paper Reading Note</h1>
+			<h1 class="title">[NDSS 18] Finding Clues for Your Secrets: Semantics-Driven, Learning-Based Privacy Discovery in Mobile Apps</h1>
 			<p class="meta">
     July 1, 2018 &middot; 2 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/ndss">NDSS</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
 </p>
 		</header>
 
 		<section class="post-content">
-			<p>标题： Finding Clues for Your Secrets: Semantics-Driven, Learning-Based Privacy Discovery in Mobile Apps</p>
-
-<p>作者： Yuhong Nan, Zhemin Yang, Xiaofeng Wang, Yuan Zhang, Donglai Zhu, Min Yang</p>
+			<p>作者： Yuhong Nan, Zhemin Yang, Xiaofeng Wang, Yuan Zhang, Donglai Zhu, Min Yang</p>
 
 <p>单位： Fudan University, Shanghai Insitute of Intelligent Electronics &amp; Systems, Shanghai Key Laboratory of Data Science</p>
 
@@ -126,9 +124,11 @@
 
 <p>资料：<a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_05B-1_Nan_paper.pdf">Paper</a>, <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/NDSS2018_05B-1_Nan_Slides.pdf">Slide</a>, <a href="https://www.youtube.com/watch?v=QugddUfb7sY&amp;t=0s&amp;list=PLfUWWM-POgQvj0qkVqVMqDYw_0nhLVSOR&amp;index=1">Video</a></p>
 
+<hr/>
+
 <p>对于检测移动应用中的隐私泄露问题来说，自动化检测是一个长期存在的挑战。现有的解决方案则是通过系统API和APP服务端返回内容去着手分析。本文作者提出了一种分析Android APP的新方案。作者认为，程序代码中的方法名、变量名、常量等信息，尽管在轻量级混淆的情况下依旧包含着丰富的语义信息。所以作者通过自然语言处理（NLP）去自动化地定位程序中变量名、方法名等敏感元素，然后使用基于学习的程序框架分析这些真正存在敏感内容的代码。作者通过这种方法分析了445668个app。</p>
 
-<h1 id="i-introduction">I. INTRODUCTION</h1>
+<h2 id="i-introduction">I. INTRODUCTION</h2>
 
 <p>许多移动APP都是采用了使用第三方SDK的方式组合在一起而不是直接编写的方式，这些SDK通常建立在现有Web服务之上（例如，分析或单点登录）。 然而这种功能组合就有可能通过第三方的SDK泄露用户的隐私。大多数研究员都揭示了第三方lib，例如广告lib，和和数据收集软件会手机敏感设备信息，例如IMEI，手机号，GPS定位数据。作者给出了一个国产的新闻APP——The-Paper使用第三方的ShareSDK去分享新的文章到微博的流程示例。</p>
 
@@ -168,7 +168,7 @@
 <li>大规模地分析了APP中第三方库隐私泄露的风险。</li>
 </ul>
 
-<h1 id="ii-background">II. BACKGROUND</h1>
+<h2 id="ii-background">II. BACKGROUND</h2>
 
 <h3 id="app-leakage-analysis">App leakage analysis</h3>
 
@@ -200,17 +200,17 @@
 
 <p>作者并不考虑那些经过了很强的混淆的APP，因为它们移除了绝大部分丰富的语义信息。作者只考虑被轻量级混淆的应用或者开发者所使用的第三方lib没有被混淆的应用。事实上许多APP开发者处于避免影响自己应用正常运行的目的， 并没有混淆自己应用中数据相关的代码和第三方lib。</p>
 
-<h1 id="iii-cluefinder-design">III. CLUEFINDER DESIGN</h1>
+<h2 id="iii-cluefinder-design">III. CLUEFINDER DESIGN</h2>
 
-<h2 id="a-design-overview">A. Design Overview</h2>
+<h3 id="a-design-overview">A. Design Overview</h3>
 
 <p><img src="https://i.imgur.com/NG6kb4U.png" alt="1530519360783" /></p>
 
 <p>ClueFinder有三部分组成：Semantic Locater，Semantic Checker， Structure Analyzer， Leakage Tracker。对于一个APP，<code>Semantic Locater</code>首先会反汇编然后确定程序是否包含敏感的token。这些敏感元素包含字符串常量，变量，和方法名在内都是由<code>Semantic Chekcer</code>使用NLP进行识别处理。接下来会判断这些元素，是否是敏感的。最后通过Tracker结合APP代码中语义信息使用数据流和可达分析这些敏感信息的传播。</p>
 
-<h2 id="b-semantic-clue-locating">B. Semantic Clue Locating</h2>
+<h3 id="b-semantic-clue-locating">B. Semantic Clue Locating</h3>
 
-<h3 id="semantics-locator">Semantics Locator</h3>
+<h4 id="semantics-locator">Semantics Locator</h4>
 
 <p>为了确认程序中的元素是否是隐私相关的，作者使用数据集去判断是否敏感并使用关键词与之绑定。作者使用Google Privacy Policies 去区分35种数据是否是隐私内容。这些数据进一步被被ClueFinder分成四类，包括用户ID，用户属性，定位信息和账户信息。一共有121个关键词或关键词对，如下表所示：</p>
 
@@ -218,7 +218,7 @@
 
 <p>对于反编译的程序代码中的所有元素，ClueFinder对它们进行分词， 然后使用四种数据类别及其表示的token匹配这些元素。 涉及隐私相关标记的元素会在接下来进行的语义分析步骤中进一步分析。因为这并不一定意味着这些元素确实与隐私有关。 例如，getStreetViewActivity方法包含敏感关键字<code>street</code>，但实际上与用户的位置信息无关。 为了消除这些误报，作者使用Semantic Checker来进一步分析这些元素的语义。</p>
 
-<h3 id="semantics-checker">Semantics Checker</h3>
+<h4 id="semantics-checker">Semantics Checker</h4>
 
 <p>Checker运行POS机制去标记于语句中的依赖关系，简单地说就是分析语句的真是语义而不是仅仅靠关键字来判断语句是否是设计用户隐私。Checker会把这些语句之间的关系描述为使用如下几种方式：</p>
 
@@ -233,9 +233,9 @@
 
 <p>这些元素接下来还会被Analyzer分析进一步降低误报率。</p>
 
-<h2 id="c-sensitive-data-discovery-and-tracking">C. Sensitive Data Discovery and Tracking</h2>
+<h3 id="c-sensitive-data-discovery-and-tracking">C. Sensitive Data Discovery and Tracking</h3>
 
-<h3 id="structure-analyzer">Structure Analyzer</h3>
+<h4 id="structure-analyzer">Structure Analyzer</h4>
 
 <p>尽管语义分析是很重要的一个步骤，但是单独的语义分析还是会带来误报，例如图四中第五行的代码<code>if(userJson .contains(&quot;home_addr&quot;))</code>，只是判断Json中的key——<code>home addr</code>对应的value是否是为空。因此还要判断包含关键元素的代码的行为是否是属于敏感操作。</p>
 
@@ -279,23 +279,23 @@
 
 <p>以上的过程会输出被标记好的涉及敏感操作的语句。Tracker分析的目的是找到这些敏感数据有没有被未授权的第三方lib所使用。最理想的情况下，第三方不信任的lib会使用API发送被标记的数据到服务端。但是使用数据流跟踪的方式去深入到第三方lib中去分析缺乏精度并且效率上得不偿失。 作者使用一种叫做<code>expsure risk</code>的表示方式，当被标记的数据流进入到不受信任的lib的时候，这个数据就不再安全并且它的内容就有可能被通过多种方式暴露出去。</p>
 
-<h1 id="iv-evaluation-of-cluefinder">IV. EVALUATION OF CLUEFINDER</h1>
+<h2 id="iv-evaluation-of-cluefinder">IV. EVALUATION OF CLUEFINDER</h2>
 
 <p>这部分是测评和实验部分，以及implementation。</p>
 
-<h2 id="a-experiment-setting">A. Experiment Setting</h2>
+<h3 id="a-experiment-setting">A. Experiment Setting</h3>
 
 <p>ClueFinder的实现是基于<code>FlowDroid</code>框架使用Jimple格式分析反编译的dex。对于自然语言处理分析部分，ClueFinder使用<code>Stanford Parser</code>去处理。Structure Analyzer部分在对Jimple 语句进行提取之后，使用基于Python的SVM分类器<code>Scikit-Learn</code>去训练分类器。实验环境是64 GB、内存32 Core的服务器，操作系统是内核版本为2.6.32的Linux。</p>
 
-<h3 id="training-data">Training Data</h3>
+<h4 id="training-data">Training Data</h4>
 
 <p>分类器使用的4326条语句（一般为阴性一般为阳性）是2016年八月份从Google Play随机选取的100个APP中提取并标记好的。</p>
 
-<h2 id="b-effectiveness">B. Effectiveness</h2>
+<h3 id="b-effectiveness">B. Effectiveness</h3>
 
 <p>作者首先在已经标记的数据集上进行<code>ten-fold</code>交叉验证，ClueFinder的准确率达到92.7％，召回率达到97.2％，F1-Score达到94.8％。之后作者又随机选取了100个APP，得到的结果是2775个语句中又320个是假阳性，准确率为92.5%。分析的时间为97分钟，平均每个APP的时间少于1分钟。</p>
 
-<h3 id="false-positives-and-false-negatives">False positives and false negatives</h3>
+<h4 id="false-positives-and-false-negatives">False positives and false negatives</h4>
 
 <p>作者认为大部分误报的原因是数据集的覆盖面不够高，导致有些情况下的语句不能有效地排除。简单地说就是分类的细化程度不够高。例如图五中的第二行方法<code>saveAppKeyAndAppSecret</code>，包含敏感关键字<code>key</code>和<code>secret</code>，但是此类私有数据仅出现在方法中，并且调用语句实际上是非敏感的。</p>
 
@@ -303,23 +303,23 @@
 
 <p><img src="https://i.imgur.com/vNWzJvL.png" alt="1530597520953" /></p>
 
-<h3 id="code-obfuscation">Code obfuscation</h3>
+<h4 id="code-obfuscation">Code obfuscation</h4>
 
 <p>作者虽然并没有考虑重量级混淆之后的代码，但是被轻量级混淆（ProGuard）的代码还是可以分析的，图六显示了使用ProGuard混淆之后的代码。在作者的100个训练样本中，有11.3%的代码是被混淆过的，但是并不影响整个分析的过程，因为在分析的过程中，作者并没有刻意地区分是否被混淆过（在能够分析的限度之内）。其实在某种程度上，尤其是大规模使用的第三方lib中开发者为了避免带来程序在执行时候的错误会尽量不使用混淆工具。就比如说作者发现Inmobi（国外第三方广告SDK）的代码为了保证开发者较为容易地使用他们的SDK鲜有混淆SDK中代码。</p>
 
 <p><img src="https://i.imgur.com/J9n3D7Z.png" alt="1530598273552" /></p>
 
-<h2 id="c-comparing-with-prior-approaches">C. Comparing with Prior Approaches</h2>
+<h3 id="c-comparing-with-prior-approaches">C. Comparing with Prior Approaches</h3>
 
-<h3 id="api-based-labeling">API-based labeling</h3>
+<h4 id="api-based-labeling">API-based labeling</h4>
 
 <p>基于API的检测，作者是和SUSI进行比较。作者随机选取了100个APP提取了10116条语句。其中SUSI检测出来的77.6% (7,850)条语句都是误报。ClueFinder的准确率是92.7%回归检测准确率是97.2%。</p>
 
-<h3 id="ui-based-labeling">UI-based labeling</h3>
+<h4 id="ui-based-labeling">UI-based labeling</h4>
 
 <p>基于UI的标记的检测，作者和UIPicker以及SUPOR进行比较。作者在100个应用程序上运行了ClueFinder，这些应用程序报告了2388个独特的敏感数据源。 作者进一步手动验证表明在大多数情况下ClueFinder会识别所有UIPicker和SUPOR的来源，并且能够检测出UIPicker和SUPOR等方案无法检测出的非UI敏感数据源。</p>
 
-<h3 id="semantics-based-taint-tracking">Semantics-based taint tracking</h3>
+<h4 id="semantics-based-taint-tracking">Semantics-based taint tracking</h4>
 
 <p>表三显示了</p>
 
