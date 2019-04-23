@@ -6,10 +6,31 @@
     <description>Recent content in Posts on mxgcccc4&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2019 15:25:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 13:46:26 +0800</lastBuildDate>
     
 	<atom:link href="https://mxgcccc4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[USENIX Security 18] Discovering Flaws in Security-Focused Static Analysis Tools for Android using Systematic Mutation</title>
+      <link>https://mxgcccc4.github.io/post/2019-04-23-discovering-flaws-in-security-focused-static-analysis-tools-for-android-using-systematic-mutation/</link>
+      <pubDate>Tue, 23 Apr 2019 13:46:26 +0800</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/post/2019-04-23-discovering-flaws-in-security-focused-static-analysis-tools-for-android-using-systematic-mutation/</guid>
+      <description>&lt;p&gt;作者：Richard Bonett, Kaushal Kafle, Kevin Moran, Adwait Nadkarni, and Denys Poshyvanyk&lt;/p&gt;
+
+&lt;p&gt;单位：The College of William &amp;amp; Mary&lt;/p&gt;
+
+&lt;p&gt;出处：USENIX Security 18&lt;/p&gt;
+
+&lt;p&gt;资料：&lt;a href=&#34;http://www.cs.wm.edu/~rfbonett/pubs/usenix18.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://www.usenix.org/sites/default/files/conference/protected-files/security18_slides_kafle.pdf&#34;&gt;Slides&lt;/a&gt;, &lt;a href=&#34;https://youtu.be/pmvGazllK2M&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;现有移动应用程序分析工具，特别是静态分析工具虽然有很高的覆盖率，但是在分析的精度和性能上有较大的损失——这是静态分析工具trade-off的结果。但是这些工具在设计中不够合理的分析和存在的缺陷通常不会在文档中描述，也通常不被研究人员，开发者和用户所知。作者实现了一个Mutation-based soundness evaluation (µSE) 框架，旨在系统地评估现行的Android静态分析工具并发现，记录和修复存在的缺陷，最终发现了FlowDroid的13个分析缺陷，并与工具的开发人员合作成功修复了其中一个缺陷。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>[NDSS 19] Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment</title>

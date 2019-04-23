@@ -116,6 +116,38 @@
      <div class="post-teaser">
         <header>
             <h1>
+                <a class="post-link" href="https://mxgcccc4.github.io/post/2019-04-23-discovering-flaws-in-security-focused-static-analysis-tools-for-android-using-systematic-mutation/">
+				[USENIX Security 18] Discovering Flaws in Security-Focused Static Analysis Tools for Android using Systematic Mutation
+			</a>
+            </h1>
+            <p class="meta">
+    April 23, 2019 &middot; 1 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> , <a href="https://mxgcccc4.github.io/tags/static-analysis">Static Analysis</a> , <a href="https://mxgcccc4.github.io/tags/usenix">USENIX</a> 
+</p>
+        </header>
+
+        <div class="excerpt">
+            <p>作者：Richard Bonett, Kaushal Kafle, Kevin Moran, Adwait Nadkarni, and Denys Poshyvanyk</p>
+
+<p>单位：The College of William &amp; Mary</p>
+
+<p>出处：USENIX Security 18</p>
+
+<p>资料：<a href="http://www.cs.wm.edu/~rfbonett/pubs/usenix18.pdf">PDF</a>, <a href="https://www.usenix.org/sites/default/files/conference/protected-files/security18_slides_kafle.pdf">Slides</a>, <a href="https://youtu.be/pmvGazllK2M">Video</a></p>
+
+<hr/>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>现有移动应用程序分析工具，特别是静态分析工具虽然有很高的覆盖率，但是在分析的精度和性能上有较大的损失——这是静态分析工具trade-off的结果。但是这些工具在设计中不够合理的分析和存在的缺陷通常不会在文档中描述，也通常不被研究人员，开发者和用户所知。作者实现了一个Mutation-based soundness evaluation (µSE) 框架，旨在系统地评估现行的Android静态分析工具并发现，记录和修复存在的缺陷，最终发现了FlowDroid的13个分析缺陷，并与工具的开发人员合作成功修复了其中一个缺陷。</p>
+
+            <br>
+            <a class="button" href="https://mxgcccc4.github.io/post/2019-04-23-discovering-flaws-in-security-focused-static-analysis-tools-for-android-using-systematic-mutation/">
+				Read more
+			</a>
+        </div>
+    </div><div class="post-teaser">
+        <header>
+            <h1>
                 <a class="post-link" href="https://mxgcccc4.github.io/post/2019-03-11-understanding-open-ports-in-android-applications-discovery-diagnosis-and-security-assessment/">
 				[NDSS 19] Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment
 			</a>
@@ -431,40 +463,6 @@ Indiana University Bloomington</p>
 
             <br>
             <a class="button" href="https://mxgcccc4.github.io/post/2018-07-01-finding-clues-for-your-secrets-semantics-driven-learning-based-privacy-discovery-in-mobile-apps/">
-				Read more
-			</a>
-        </div>
-    </div><div class="post-teaser">
-        <header>
-            <h1>
-                <a class="post-link" href="https://mxgcccc4.github.io/post/2018-06-08-supporting-transparent-snapshot-for-bare-metal-malware-analysis-on-mobile-devices/">
-				[ACSAC 2017] Supporting Transparent Snapshot for Bare-metal Malware Analysis on Mobile Devices
-			</a>
-            </h1>
-            <p class="meta">
-    June 8, 2018 &middot; 1 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/acsac">ACSAC</a> , <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/malware">Malware</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
-</p>
-        </header>
-
-        <div class="excerpt">
-            <p>作者： Le Guan, Shijie Jia, Bo Chen, Fengwei Zhang, Bo Luo&hellip;</p>
-
-<p>单位： Pennsylvania State University, Data Assurance and Communication Security Research Center, Michigan Technological University</p>
-
-<p>出处： ACSAC 2017</p>
-
-<p>资料： <a href="http://www.cs.wayne.edu/fengwei/paper/bolt-acsac17.pdf">Paper</a></p>
-
-<hr/>
-
-<h2 id="abstract">ABSTRACT</h2>
-
-<p>随着针对移动设备的网络犯罪数量的激增，对于移动恶意软件分析平台有很大的需求。因为许多恶意软件都包含出虚拟机检测能力，所以大多数情况下都直接采用真机作为分析平台。然而现有的工作的关注点主要在如何能够通过真机分析提取恶意软件的行为。但是当恶意应用分析结束之后，能够把真机恢复到分析恶意软件之前也很重要。然而对于移动平台现有的最佳的解决方案只能恢复硬盘存储空间，并且需要花费时间重启。另外先有的工作还需要在分析平台中依赖一部分组件才能完成恢复工作。因此，有些kernel-level级别的恶意软件仍然能够检测到这些组件的存在。</p>
-
-<p>作者提出了Bolt这样一个透明的恢复机制在不需要重启的情况下把移动分析平台恢复到恶意软件分析之前的状态。 Bolt这种不需要重启的恢复机制能够同时对disk和memory制作快照。内存快照是通过存在于ARM TrustZone的一个独立的操作系统（BoltOS）去实现的。而disk的快照是通过一块固件经过定制（BoltFTl）的闪存设备去实现的。因为BoltOS和BoltFTL都独立于guestOS（论文中为了方便，作者把所有直接运行恶意软件的操作系统统一称为guestOS），所以就算是kernel-level的恶意软件也不会影响恢复行为。而且，Bolt不需要对guestOS进行任何的修改。因此，Bolt是第一个做到能够高效，独立，并且隐蔽地从被恶意软件感染之后的状态恢复。</p>
-
-            <br>
-            <a class="button" href="https://mxgcccc4.github.io/post/2018-06-08-supporting-transparent-snapshot-for-bare-metal-malware-analysis-on-mobile-devices/">
 				Read more
 			</a>
         </div>

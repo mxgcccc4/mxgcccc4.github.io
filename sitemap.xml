@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mxgcccc4.github.io/post/2019-04-23-discovering-flaws-in-security-focused-static-analysis-tools-for-android-using-systematic-mutation/</loc>
+    <lastmod>2019-04-23T13:46:26+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mxgcccc4.github.io/post/2019-03-11-understanding-open-ports-in-android-applications-discovery-diagnosis-and-security-assessment/</loc>
     <lastmod>2019-03-11T15:25:00+08:00</lastmod>
   </url>
@@ -90,7 +95,7 @@
   
   <url>
     <loc>https://mxgcccc4.github.io/tags/android/</loc>
-    <lastmod>2019-01-07T13:50:46+02:00</lastmod>
+    <lastmod>2019-04-23T13:46:26+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -126,13 +131,13 @@
   
   <url>
     <loc>https://mxgcccc4.github.io/tags/paper-note/</loc>
-    <lastmod>2019-03-11T15:25:00+08:00</lastmod>
+    <lastmod>2019-04-23T13:46:26+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mxgcccc4.github.io/post/</loc>
-    <lastmod>2019-03-11T15:25:00+08:00</lastmod>
+    <lastmod>2019-04-23T13:46:26+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -155,8 +160,20 @@
   </url>
   
   <url>
+    <loc>https://mxgcccc4.github.io/tags/static-analysis/</loc>
+    <lastmod>2019-04-23T13:46:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mxgcccc4.github.io/tags/</loc>
     <lastmod>2018-06-08T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mxgcccc4.github.io/tags/usenix/</loc>
+    <lastmod>2019-04-23T13:46:26+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -168,7 +185,7 @@
   
   <url>
     <loc>https://mxgcccc4.github.io/</loc>
-    <lastmod>2019-03-11T15:25:00+08:00</lastmod>
+    <lastmod>2019-04-23T13:46:26+08:00</lastmod>
     <priority>0</priority>
   </url>
   
