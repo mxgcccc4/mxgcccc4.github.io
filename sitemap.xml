@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mxgcccc4.github.io/post/2019-05-30-iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzing/</loc>
-    <lastmod>2019-05-30T02:57:13+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mxgcccc4.github.io/tags/android/</loc>
     <lastmod>2019-05-30T02:57:13+08:00</lastmod>
     <priority>0</priority>
@@ -47,6 +42,11 @@
     <loc>https://mxgcccc4.github.io/tags/</loc>
     <lastmod>2019-05-30T02:57:13+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mxgcccc4.github.io/post/2019-05-30-iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzing/</loc>
+    <lastmod>2019-05-30T02:57:13+08:00</lastmod>
   </url>
   
   <url>
