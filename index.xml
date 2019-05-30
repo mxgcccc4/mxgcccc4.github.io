@@ -6,10 +6,35 @@
     <description>Recent content on mxgcccc4&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Apr 2019 13:46:26 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 May 2019 02:57:13 +0800</lastBuildDate>
     
 	<atom:link href="https://mxgcccc4.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://mxgcccc4.github.io/post/2019-05-30-iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzing/</link>
+      <pubDate>Thu, 30 May 2019 02:57:13 +0800</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/post/2019-05-30-iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzing/</guid>
+      <description>&lt;p&gt;作者：Jiongyi Chen, Wenrui Diao, Qingchuan Zhao, Chaoshun Zuo, Zhiqiang Lin, XiaoFeng Wang,Wing Cheong Lau, Menghan Sun, Ronghai Yang, and Kehuan Zhang&lt;/p&gt;
+
+&lt;p&gt;单位：The Chinese University of Hong Kong, Jinan University, The University of Texas at Dallas, Indiana University Bloomington&lt;/p&gt;
+
+&lt;p&gt;出处：NDSS 2018&lt;/p&gt;
+
+&lt;p&gt;资料： &lt;a href=&#34;https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_01A-1_Chen_paper.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://www.ndss-symposium.org/wp-content/uploads/2018/03/NDSS2018_01A-1_Chen_Slides.pdf&#34;&gt;Slides&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=Ys2FBmdbdIw&amp;amp;t=0s&amp;amp;index=1&amp;amp;list=PLfUWWM-POgQvCdI-XrMkIVtkD1_gDS42r&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;现有的针对IoT设备的安全分析工作都是基于固件来展开的，这样会引入如何获取固件以及如何分析固件的问题。&lt;/p&gt;
+
+&lt;p&gt;考虑到设备以及架构的多样性，作者借助IoT设备的移动端App设计了一个黑盒模糊测试工具来避开这类问题以分析IoT设备上的内存错误漏洞。&lt;/p&gt;
+
+&lt;p&gt;作者设计并实现了IOTFUZZER并测试了17个不同的IoT设备，最终发现15个内存错误漏洞，其中包括了8个未知的漏洞。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>[USENIX Security 18] Discovering Flaws in Security-Focused Static Analysis Tools for Android using Systematic Mutation</title>

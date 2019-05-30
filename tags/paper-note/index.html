@@ -7,7 +7,7 @@
 	<meta name="author" content="MXGC">
 	<meta name="description" content="A security research blog of MXGC">
 	
-	<meta name="generator" content="Hugo 0.54.0" />
+	<meta name="generator" content="Hugo 0.55.6" />
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://mxgcccc4.github.io/css/main.css">
@@ -110,6 +110,44 @@
 	<div class="content">
 	<div class="posts">
       
+    <div class="post-teaser">
+        <header>
+            <h1>
+                <a class="post-link" href="https://mxgcccc4.github.io/post/2019-05-30-iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzing/">
+				
+			</a>
+            </h1>
+            <p class="meta">
+    May 30, 2019 &middot; 2 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/fuzzer">Fuzzer</a> , <a href="https://mxgcccc4.github.io/tags/iot">IoT</a> , <a href="https://mxgcccc4.github.io/tags/ndss-18">NDSS 18</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
+</p>
+        </header>
+
+        <div class="excerpt">
+            <p>作者：Jiongyi Chen, Wenrui Diao, Qingchuan Zhao, Chaoshun Zuo, Zhiqiang Lin, XiaoFeng Wang,Wing Cheong Lau, Menghan Sun, Ronghai Yang, and Kehuan Zhang</p>
+
+<p>单位：The Chinese University of Hong Kong, Jinan University, The University of Texas at Dallas, Indiana University Bloomington</p>
+
+<p>出处：NDSS 2018</p>
+
+<p>资料： <a href="https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_01A-1_Chen_paper.pdf">PDF</a>, <a href="https://www.ndss-symposium.org/wp-content/uploads/2018/03/NDSS2018_01A-1_Chen_Slides.pdf">Slides</a>, <a href="https://www.youtube.com/watch?v=Ys2FBmdbdIw&amp;t=0s&amp;index=1&amp;list=PLfUWWM-POgQvCdI-XrMkIVtkD1_gDS42r">Video</a></p>
+
+<hr/>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>现有的针对IoT设备的安全分析工作都是基于固件来展开的，这样会引入如何获取固件以及如何分析固件的问题。</p>
+
+<p>考虑到设备以及架构的多样性，作者借助IoT设备的移动端App设计了一个黑盒模糊测试工具来避开这类问题以分析IoT设备上的内存错误漏洞。</p>
+
+<p>作者设计并实现了IOTFUZZER并测试了17个不同的IoT设备，最终发现15个内存错误漏洞，其中包括了8个未知的漏洞。</p>
+
+            <br>
+            <a class="button" href="https://mxgcccc4.github.io/post/2019-05-30-iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzing/">
+				Read more
+			</a>
+        </div>
+    </div>
+    
     <div class="post-teaser">
         <header>
             <h1>
@@ -446,38 +484,6 @@ Indiana University Bloomington</p>
 
             <br>
             <a class="button" href="https://mxgcccc4.github.io/post/2018-07-04-dont-throw-me-away-threats-caused-by-the-abandoned-internet-resources-used-by-android-apps/">
-				Read more
-			</a>
-        </div>
-    </div>
-    
-    <div class="post-teaser">
-        <header>
-            <h1>
-                <a class="post-link" href="https://mxgcccc4.github.io/post/2018-07-01-finding-clues-for-your-secrets-semantics-driven-learning-based-privacy-discovery-in-mobile-apps/">
-				[NDSS 18] Finding Clues for Your Secrets: Semantics-Driven, Learning-Based Privacy Discovery in Mobile Apps
-			</a>
-            </h1>
-            <p class="meta">
-    July 1, 2018 &middot; 2 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/ndss">NDSS</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
-</p>
-        </header>
-
-        <div class="excerpt">
-            <p>作者： Yuhong Nan, Zhemin Yang, Xiaofeng Wang, Yuan Zhang, Donglai Zhu, Min Yang</p>
-
-<p>单位： Fudan University, Shanghai Insitute of Intelligent Electronics &amp; Systems, Shanghai Key Laboratory of Data Science</p>
-
-<p>出处： NDSS&rsquo;18</p>
-
-<p>资料：<a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_05B-1_Nan_paper.pdf">Paper</a>, <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/NDSS2018_05B-1_Nan_Slides.pdf">Slide</a>, <a href="https://www.youtube.com/watch?v=QugddUfb7sY&amp;t=0s&amp;list=PLfUWWM-POgQvj0qkVqVMqDYw_0nhLVSOR&amp;index=1">Video</a></p>
-
-<hr/>
-
-<p>对于检测移动应用中的隐私泄露问题来说，自动化检测是一个长期存在的挑战。现有的解决方案则是通过系统API和APP服务端返回内容去着手分析。本文作者提出了一种分析Android APP的新方案。作者认为，程序代码中的方法名、变量名、常量等信息，尽管在轻量级混淆的情况下依旧包含着丰富的语义信息。所以作者通过自然语言处理（NLP）去自动化地定位程序中变量名、方法名等敏感元素，然后使用基于学习的程序框架分析这些真正存在敏感内容的代码。作者通过这种方法分析了445668个app。</p>
-
-            <br>
-            <a class="button" href="https://mxgcccc4.github.io/post/2018-07-01-finding-clues-for-your-secrets-semantics-driven-learning-based-privacy-discovery-in-mobile-apps/">
 				Read more
 			</a>
         </div>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Fuzzer&middot; mxgcccc4&#39;s blog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="MXGC">
+	<meta name="description" content="A security research blog of MXGC">
+	
+	<meta name="generator" content="Hugo 0.55.6" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://mxgcccc4.github.io/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://mxgcccc4.github.io/favicon.ico" type="image/x-icon">
+
+	<!-- RSS -->
+	<link href="https://mxgcccc4.github.io/tags/fuzzer/index.xml" rel="alternate" type="application/rss+xml" title="mxgcccc4&#39;s blog" />
+		<link href="https://mxgcccc4.github.io/tags/fuzzer/index.xml" rel="feed" type="application/rss+xml" title="mxgcccc4&#39;s blog" />
+
+	<!-- Font Awesome -->
+	<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+	<header class="site-header">
+	<div class="branding">
+		<a href="https://mxgcccc4.github.io/">
+		<img class="avatar" src="https://mxgcccc4.github.io/avatar.ico" alt=""/>
+		</a>
+		<h1 class="site-title">
+			<a href="https://mxgcccc4.github.io/">mxgcccc4&#39;s blog</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			<li><a href="/about/"> About </a></li>
+
+			<li class="icon">
+	<a href="https://mxgcccc4.github.io/" title="">
+		<i class="fa fa-fw fa-home"></i>
+	</a>
+</li>
+
+<li class="icon">
+	<a href="https://mxgcccc4.github.io/index.xml" title="Subcribe">
+		<i class="fa fa-fw fa-rss"></i>
+	</a>
+</li>
+
+<li class="icon">
+	<a href="mailto:sec_mxgc@sjtu.edu.cn" title="Email">
+		<i class="fa fa-fw fa-envelope"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+
+	<div class="content">
+	<div class="posts">
+      
+    <div class="post-teaser">
+        <header>
+            <h1>
+                <a class="post-link" href="https://mxgcccc4.github.io/post/2019-05-30-iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzing/">
+				
+			</a>
+            </h1>
+            <p class="meta">
+    May 30, 2019 &middot; 2 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/fuzzer">Fuzzer</a> , <a href="https://mxgcccc4.github.io/tags/iot">IoT</a> , <a href="https://mxgcccc4.github.io/tags/ndss-18">NDSS 18</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
+</p>
+        </header>
+
+        <div class="excerpt">
+            <p>作者：Jiongyi Chen, Wenrui Diao, Qingchuan Zhao, Chaoshun Zuo, Zhiqiang Lin, XiaoFeng Wang,Wing Cheong Lau, Menghan Sun, Ronghai Yang, and Kehuan Zhang</p>
+
+<p>单位：The Chinese University of Hong Kong, Jinan University, The University of Texas at Dallas, Indiana University Bloomington</p>
+
+<p>出处：NDSS 2018</p>
+
+<p>资料： <a href="https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_01A-1_Chen_paper.pdf">PDF</a>, <a href="https://www.ndss-symposium.org/wp-content/uploads/2018/03/NDSS2018_01A-1_Chen_Slides.pdf">Slides</a>, <a href="https://www.youtube.com/watch?v=Ys2FBmdbdIw&amp;t=0s&amp;index=1&amp;list=PLfUWWM-POgQvCdI-XrMkIVtkD1_gDS42r">Video</a></p>
+
+<hr/>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>现有的针对IoT设备的安全分析工作都是基于固件来展开的，这样会引入如何获取固件以及如何分析固件的问题。</p>
+
+<p>考虑到设备以及架构的多样性，作者借助IoT设备的移动端App设计了一个黑盒模糊测试工具来避开这类问题以分析IoT设备上的内存错误漏洞。</p>
+
+<p>作者设计并实现了IOTFUZZER并测试了17个不同的IoT设备，最终发现15个内存错误漏洞，其中包括了8个未知的漏洞。</p>
+
+            <br>
+            <a class="button" href="https://mxgcccc4.github.io/post/2019-05-30-iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzing/">
+				Read more
+			</a>
+        </div>
+    </div>
+     <div class="pagination">
+	
+</div>
+
+</div>
+	</div>
+
+	<footer class="site-footer">
+	<p class="text">&copy; 2019 - Released under the MIT license<br>Powered by <a href="//gohugo.io/">Hugo</a> with the <a href="//github.com/digitalcraftsman/hugo-type-theme">Type Theme</a></p>
+</footer>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-132921460-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</body>
+</html>

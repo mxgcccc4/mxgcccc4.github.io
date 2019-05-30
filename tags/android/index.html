@@ -7,7 +7,7 @@
 	<meta name="author" content="MXGC">
 	<meta name="description" content="A security research blog of MXGC">
 	
-	<meta name="generator" content="Hugo 0.54.0" />
+	<meta name="generator" content="Hugo 0.55.6" />
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://mxgcccc4.github.io/css/main.css">
@@ -110,6 +110,44 @@
 	<div class="content">
 	<div class="posts">
       
+    <div class="post-teaser">
+        <header>
+            <h1>
+                <a class="post-link" href="https://mxgcccc4.github.io/post/2019-05-30-iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzing/">
+				
+			</a>
+            </h1>
+            <p class="meta">
+    May 30, 2019 &middot; 2 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/fuzzer">Fuzzer</a> , <a href="https://mxgcccc4.github.io/tags/iot">IoT</a> , <a href="https://mxgcccc4.github.io/tags/ndss-18">NDSS 18</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
+</p>
+        </header>
+
+        <div class="excerpt">
+            <p>作者：Jiongyi Chen, Wenrui Diao, Qingchuan Zhao, Chaoshun Zuo, Zhiqiang Lin, XiaoFeng Wang,Wing Cheong Lau, Menghan Sun, Ronghai Yang, and Kehuan Zhang</p>
+
+<p>单位：The Chinese University of Hong Kong, Jinan University, The University of Texas at Dallas, Indiana University Bloomington</p>
+
+<p>出处：NDSS 2018</p>
+
+<p>资料： <a href="https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_01A-1_Chen_paper.pdf">PDF</a>, <a href="https://www.ndss-symposium.org/wp-content/uploads/2018/03/NDSS2018_01A-1_Chen_Slides.pdf">Slides</a>, <a href="https://www.youtube.com/watch?v=Ys2FBmdbdIw&amp;t=0s&amp;index=1&amp;list=PLfUWWM-POgQvCdI-XrMkIVtkD1_gDS42r">Video</a></p>
+
+<hr/>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>现有的针对IoT设备的安全分析工作都是基于固件来展开的，这样会引入如何获取固件以及如何分析固件的问题。</p>
+
+<p>考虑到设备以及架构的多样性，作者借助IoT设备的移动端App设计了一个黑盒模糊测试工具来避开这类问题以分析IoT设备上的内存错误漏洞。</p>
+
+<p>作者设计并实现了IOTFUZZER并测试了17个不同的IoT设备，最终发现15个内存错误漏洞，其中包括了8个未知的漏洞。</p>
+
+            <br>
+            <a class="button" href="https://mxgcccc4.github.io/post/2019-05-30-iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzing/">
+				Read more
+			</a>
+        </div>
+    </div>
+    
     <div class="post-teaser">
         <header>
             <h1>
@@ -445,42 +483,6 @@ Indiana University Bloomington</p>
 
             <br>
             <a class="button" href="https://mxgcccc4.github.io/post/2018-06-08-supporting-transparent-snapshot-for-bare-metal-malware-analysis-on-mobile-devices/">
-				Read more
-			</a>
-        </div>
-    </div>
-    
-    <div class="post-teaser">
-        <header>
-            <h1>
-                <a class="post-link" href="https://mxgcccc4.github.io/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/">
-				[NDSS 18] InstaGuard: Instantly Deployable Hot-patches for Vulnerable System Programs on Android
-			</a>
-            </h1>
-            <p class="meta">
-    May 6, 2018 &middot; 2 minute read  &middot; Tags: <a href="https://mxgcccc4.github.io/tags/android">Android</a> , <a href="https://mxgcccc4.github.io/tags/ndss">NDSS</a> , <a href="https://mxgcccc4.github.io/tags/paper-note">Paper Note</a> 
-</p>
-        </header>
-
-        <div class="excerpt">
-            <p>作者： Yaohui Chen, Yuping Li, Long Lu, Yueh-Hsun Lin, Hayawardh Vijayakumar, Zhi Wang, Xinming Ou</p>
-
-<p>单位： Northeastern University, University of South Florida, Northeastern University, JD Research Center, Samsung Research America</p>
-
-<p>出处： NDSS 2018</p>
-
-<p>资料： <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/ndss2018_08-2_Chen_paper.pdf">Paper</a>, <a href="https://www.youtube.com/watch?v=HhwOotwmo2s&amp;index=2&amp;list=PLfUWWM-POgQuPfShO3X5sJlYtzSPvbBUJ&amp;t=0s">Video</a>, <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/03/NDSS2018_08-2_Chen_Slides.pdf">Slide</a></p>
-
-<hr/>
-
-<p>由于hotpatch易于开发和更快的部署速度，而且在永久修复漏洞的补丁释出之前有效地阻止已发现漏洞被利用，研究人员建议把hotpatch应用于Android的系统程序和应用之中，以便于缩短严重漏洞在被修复之前被利用的窗口期。但是由于Android系统的碎片化，hotpatch技术虽然在PC上广泛使用，但是很少被厂商采用。作者认为阻碍hotpatch在Android平台推广的因素主要是对于一个漏洞的补丁在释放出来之后通常需要经过设备厂商在推送更新之前漫长的兼容性测试。这种测试和发布过程可能需要几个月的时间，那么hotpatch就失去了可以快速部署的优势。</p>
-
-<p>作者提出了InstaGuard，这是一种新的移动设备的hotpatch方法。与现有的hotpatch技术不同，InstaGuard没有向需要patch的程序注入新的补丁代码，而是通过执行不包含代码的即时更新规则来及时阻止未修补的漏洞，这样做的优势在于不需要经过兼容性测试就可以即时推送给需要修复的设备。在设计InstaGuard的时候，作者使用了一种可以表达能够有效缓解各种漏洞在移动设备上执行的规则语言，其次编写这些规则并不需要使用过于复杂的表示方式。作者使用ARM CPU支持的基本调试原语为hotpatch和强制机制设计了一种新语言。作者还构建了RuleMaker，这是一款基于高级语言并且易于编写的漏洞描述自动生成InstaGuard规则的工具。</p>
-
-<p>作者在Nexus 5X手机上测试了InstaGuard。在测评部分作者验证了InstaGuard可以处理2016年Android安全公告中的所有关键CVE。作者还使用来自4个不同类别的关键漏洞进行单元测试。 InstaGuard平均增加了1.69％的存储空间占用量，并带来了2.70％的overload。</p>
-
-            <br>
-            <a class="button" href="https://mxgcccc4.github.io/post/2018-05-06-instaguard-instantly-deployable-hot-patches-for-vulnerable-system-programs-on-android/">
 				Read more
 			</a>
         </div>

@@ -6,107 +6,53 @@
     <description>Recent content in Tags on mxgcccc4&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jun 2018 13:50:46 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 30 May 2019 02:57:13 +0800</lastBuildDate>
     
 	<atom:link href="https://mxgcccc4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Acsac</title>
-      <link>https://mxgcccc4.github.io/tags/acsac/</link>
-      <pubDate>Fri, 08 Jun 2018 13:50:46 +0200</pubDate>
-      
-      <guid>https://mxgcccc4.github.io/tags/acsac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Android</title>
       <link>https://mxgcccc4.github.io/tags/android/</link>
-      <pubDate>Tue, 23 Apr 2019 13:46:26 +0800</pubDate>
+      <pubDate>Thu, 30 May 2019 02:57:13 +0800</pubDate>
       
       <guid>https://mxgcccc4.github.io/tags/android/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Asia Ccs</title>
-      <link>https://mxgcccc4.github.io/tags/asia-ccs/</link>
-      <pubDate>Tue, 09 Oct 2018 13:50:46 +0200</pubDate>
+      <title>Fuzzer</title>
+      <link>https://mxgcccc4.github.io/tags/fuzzer/</link>
+      <pubDate>Thu, 30 May 2019 02:57:13 +0800</pubDate>
       
-      <guid>https://mxgcccc4.github.io/tags/asia-ccs/</guid>
+      <guid>https://mxgcccc4.github.io/tags/fuzzer/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ccs</title>
-      <link>https://mxgcccc4.github.io/tags/ccs/</link>
-      <pubDate>Sun, 09 Dec 2018 13:50:46 +0200</pubDate>
+      <title>IoT</title>
+      <link>https://mxgcccc4.github.io/tags/iot/</link>
+      <pubDate>Thu, 30 May 2019 02:57:13 +0800</pubDate>
       
-      <guid>https://mxgcccc4.github.io/tags/ccs/</guid>
+      <guid>https://mxgcccc4.github.io/tags/iot/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Malware</title>
-      <link>https://mxgcccc4.github.io/tags/malware/</link>
-      <pubDate>Wed, 01 Aug 2018 13:50:46 +0200</pubDate>
+      <title>NDSS 18</title>
+      <link>https://mxgcccc4.github.io/tags/ndss-18/</link>
+      <pubDate>Thu, 30 May 2019 02:57:13 +0800</pubDate>
       
-      <guid>https://mxgcccc4.github.io/tags/malware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Misuse</title>
-      <link>https://mxgcccc4.github.io/tags/misuse/</link>
-      <pubDate>Tue, 09 Jan 2018 13:50:46 +0200</pubDate>
-      
-      <guid>https://mxgcccc4.github.io/tags/misuse/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ndss</title>
-      <link>https://mxgcccc4.github.io/tags/ndss/</link>
-      <pubDate>Mon, 11 Mar 2019 15:25:00 +0800</pubDate>
-      
-      <guid>https://mxgcccc4.github.io/tags/ndss/</guid>
+      <guid>https://mxgcccc4.github.io/tags/ndss-18/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Paper Note</title>
       <link>https://mxgcccc4.github.io/tags/paper-note/</link>
-      <pubDate>Tue, 23 Apr 2019 13:46:26 +0800</pubDate>
+      <pubDate>Thu, 30 May 2019 02:57:13 +0800</pubDate>
       
       <guid>https://mxgcccc4.github.io/tags/paper-note/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sanitizers</title>
-      <link>https://mxgcccc4.github.io/tags/sanitizers/</link>
-      <pubDate>Mon, 11 Mar 2019 15:25:00 +0800</pubDate>
-      
-      <guid>https://mxgcccc4.github.io/tags/sanitizers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Securecomm</title>
-      <link>https://mxgcccc4.github.io/tags/securecomm/</link>
-      <pubDate>Wed, 01 Aug 2018 13:50:46 +0200</pubDate>
-      
-      <guid>https://mxgcccc4.github.io/tags/securecomm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sp</title>
-      <link>https://mxgcccc4.github.io/tags/sp/</link>
-      <pubDate>Wed, 20 Feb 2019 15:25:00 +0800</pubDate>
-      
-      <guid>https://mxgcccc4.github.io/tags/sp/</guid>
       <description></description>
     </item>
     
@@ -120,7 +66,7 @@
     </item>
     
     <item>
-      <title>Usenix</title>
+      <title>USENIX</title>
       <link>https://mxgcccc4.github.io/tags/usenix/</link>
       <pubDate>Tue, 23 Apr 2019 13:46:26 +0800</pubDate>
       
@@ -129,11 +75,92 @@
     </item>
     
     <item>
-      <title>Usenix Security</title>
+      <title>NDSS</title>
+      <link>https://mxgcccc4.github.io/tags/ndss/</link>
+      <pubDate>Mon, 11 Mar 2019 15:25:00 +0800</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/tags/ndss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sanitizers</title>
+      <link>https://mxgcccc4.github.io/tags/sanitizers/</link>
+      <pubDate>Mon, 11 Mar 2019 15:25:00 +0800</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/tags/sanitizers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S&amp;P</title>
+      <link>https://mxgcccc4.github.io/tags/sp/</link>
+      <pubDate>Wed, 20 Feb 2019 15:25:00 +0800</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/tags/sp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CCS</title>
+      <link>https://mxgcccc4.github.io/tags/ccs/</link>
+      <pubDate>Sun, 09 Dec 2018 13:50:46 +0200</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/tags/ccs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ASIA CCS</title>
+      <link>https://mxgcccc4.github.io/tags/asia-ccs/</link>
+      <pubDate>Tue, 09 Oct 2018 13:50:46 +0200</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/tags/asia-ccs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>USENIX Security</title>
       <link>https://mxgcccc4.github.io/tags/usenix-security/</link>
       <pubDate>Sat, 08 Sep 2018 13:50:46 +0200</pubDate>
       
       <guid>https://mxgcccc4.github.io/tags/usenix-security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Malware</title>
+      <link>https://mxgcccc4.github.io/tags/malware/</link>
+      <pubDate>Wed, 01 Aug 2018 13:50:46 +0200</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/tags/malware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SecureComm</title>
+      <link>https://mxgcccc4.github.io/tags/securecomm/</link>
+      <pubDate>Wed, 01 Aug 2018 13:50:46 +0200</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/tags/securecomm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ACSAC</title>
+      <link>https://mxgcccc4.github.io/tags/acsac/</link>
+      <pubDate>Fri, 08 Jun 2018 13:50:46 +0200</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/tags/acsac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Misuse</title>
+      <link>https://mxgcccc4.github.io/tags/misuse/</link>
+      <pubDate>Tue, 09 Jan 2018 13:50:46 +0200</pubDate>
+      
+      <guid>https://mxgcccc4.github.io/tags/misuse/</guid>
       <description></description>
     </item>
     
